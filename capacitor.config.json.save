@@ -1,0 +1,6 @@
+{
+  "appId": "com.example.app",
+  "appName": "MyApp",
+  "webDir": "build",  # або "dist", "out" тощо
+  "bundledWebRuntime": false
+}
