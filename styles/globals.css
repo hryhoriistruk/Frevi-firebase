@@ -25,3 +25,45 @@
         @apply px-3 py-1 bg-[#f2f7f2] rounded-full text-zinc-700 font-semibold;
     }
 }
+/* Chat styles */
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.messages {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.message.user {
+    background-color: #e3f2fd;
+    text-align: right;
+}
+
+.message.other {
+    background-color: #f1f1f1;
+}
+
+/* Orders page */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
