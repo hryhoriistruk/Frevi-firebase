@@ -47,7 +47,7 @@ const About = () => {
 
                                 <div>
                                     <h2 className="text-zinc-800 font-semibold text-2xl">
-                                        Hryhorii-Volodymyr Struk
+                                        Michel Petarson
                                     </h2>
                                     <p className="text-zinc-700 font-semibold text-lg">
                                         President & CEO
@@ -124,7 +124,7 @@ const About = () => {
 
                                     <div>
                                         <h4 className="text-zinc-600 font-semibold text-lg">
-                                            Hryhorii-Volodymyr Struk
+                                            Michel Peterson
                                         </h4>
                                         <p className="text-zinc-600 font-semibold text-lg">
                                             President and CEO
