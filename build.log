@@ -1,0 +1,21 @@
+
+> frevi@0.1.0 build
+> next build
+
+   ▲ Next.js 15.3.5
+
+   Linting and checking validity of types ...
+   Creating an optimized production build ...
+Failed to compile.
+
+Error: Prevent writing to file that only differs in casing or query string from already written file.
+This will lead to a race-condition and corrupted files on case-insensitive file systems.
+/Users/grigorii/IdeaProjects/Frevi-firebase0/.next/server/pages/messages.js
+/Users/grigorii/IdeaProjects/Frevi-firebase0/.next/server/pages/Messages.js
+    at checkSimilarFile (/Users/grigorii/IdeaProjects/Frevi-firebase0/node_modules/next/dist/compiled/webpack/bundle5.js:29:143075)
+    at writeOut (/Users/grigorii/IdeaProjects/Frevi-firebase0/node_modules/next/dist/compiled/webpack/bundle5.js:29:145047)
+    at /Users/grigorii/IdeaProjects/Frevi-firebase0/node_modules/next/dist/compiled/webpack/bundle5.js:29:1428848
+    at FSReqCallback.oncomplete (node:fs:187:23)
+
+
+> Build failed because of webpack errors
