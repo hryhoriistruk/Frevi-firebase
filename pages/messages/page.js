@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ChatSocket } from '@/lib/websocket';
+import { ChatSocket } from '@/lib/api/websocket';
 
 export default function ChatPage() {
     const [messages, setMessages] = useState([]);

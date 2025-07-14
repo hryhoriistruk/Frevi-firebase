@@ -17,10 +17,7 @@ export default function OrdersPage() {
     const [selectedOrder, setSelectedOrder] = useState(null);
     const [showModal, setShowModal] = useState(false);
     const [showCreateModal, setShowCreateModal] = useState(false);
-    const [filters, setFilters] = useState({
-        status: '',
-        customer: ''
-    });
+    const [filters, setFilters] = useState({ status: '', customer: '' });
     const [searchQuery, setSearchQuery] = useState('');
     const [statistics, setStatistics] = useState(null);
 
@@ -51,16 +48,19 @@ export default function OrdersPage() {
     }, [loadOrders, loadStatistics]);
 
     const handleOrderCreated = (newOrder) => {
-        setOrders(prev => [newOrder, ...prev]);
+        setOrders((prev) => [newOrder, ...prev]);
+        setShowCreateModal(false);
         loadStatistics();
     };
 
     const handleStatusChange = async (orderId, newStatus) => {
         try {
             await updateOrderStatus(orderId, newStatus);
-            setOrders(orders.map(order =>
-                order.id === orderId ? { ...order, status: newStatus } : order
-            ));
+            setOrders((prev) =>
+                prev.map((order) =>
+                    order.id === orderId ? { ...order, status: newStatus } : order
+                )
+            );
             loadStatistics();
         } catch (error) {
             console.error('Error updating order status:', error);
@@ -71,7 +71,7 @@ export default function OrdersPage() {
         if (typeof window !== 'undefined' && window.confirm('Are you sure you want to delete this order?')) {
             try {
                 await deleteOrder(orderId);
-                setOrders(orders.filter(order => order.id !== orderId));
+                setOrders((prev) => prev.filter((order) => order.id !== orderId));
                 loadStatistics();
             } catch (error) {
                 console.error('Error deleting order:', error);
@@ -91,10 +91,11 @@ export default function OrdersPage() {
 
     const handleSearch = async (e) => {
         e.preventDefault();
-        if (searchQuery.trim()) {
+        const trimmed = searchQuery.trim();
+        if (trimmed) {
             try {
                 setLoading(true);
-                const response = await searchOrders(searchQuery);
+                const response = await searchOrders(trimmed);
                 setOrders(response.data);
             } catch (error) {
                 console.error('Error searching orders:', error);
@@ -108,11 +109,16 @@ export default function OrdersPage() {
 
     const getStatusColor = (status) => {
         switch (status) {
-            case 'pending': return 'bg-yellow-100 text-yellow-800';
-            case 'in-progress': return 'bg-blue-100 text-blue-800';
-            case 'completed': return 'bg-green-100 text-green-800';
-            case 'cancelled': return 'bg-red-100 text-red-800';
-            default: return 'bg-gray-100 text-gray-800';
+            case 'pending':
+                return 'bg-yellow-100 text-yellow-800';
+            case 'in-progress':
+                return 'bg-blue-100 text-blue-800';
+            case 'completed':
+                return 'bg-green-100 text-green-800';
+            case 'cancelled':
+                return 'bg-red-100 text-red-800';
+            default:
+                return 'bg-gray-100 text-gray-800';
         }
     };
 
@@ -125,14 +131,6 @@ export default function OrdersPage() {
             minute: '2-digit'
         });
     };
-
-    if (loading) {
-        return (
-            <div className="flex justify-center items-center h-64">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-            </div>
-        );
-    }
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -153,30 +151,22 @@ export default function OrdersPage() {
             {/* Statistics */}
             {statistics && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-                    <div className="bg-white rounded-lg shadow p-6">
-                        <h3 className="text-sm font-medium text-gray-500">Total Orders</h3>
-                        <p className="text-2xl font-bold text-gray-900">{statistics.totalOrders}</p>
-                    </div>
-                    <div className="bg-white rounded-lg shadow p-6">
-                        <h3 className="text-sm font-medium text-gray-500">Pending</h3>
-                        <p className="text-2xl font-bold text-yellow-600">{statistics.pendingOrders}</p>
-                    </div>
-                    <div className="bg-white rounded-lg shadow p-6">
-                        <h3 className="text-sm font-medium text-gray-500">In Progress</h3>
-                        <p className="text-2xl font-bold text-blue-600">{statistics.inProgressOrders}</p>
-                    </div>
-                    <div className="bg-white rounded-lg shadow p-6">
-                        <h3 className="text-sm font-medium text-gray-500">Completed</h3>
-                        <p className="text-2xl font-bold text-green-600">{statistics.completedOrders}</p>
-                    </div>
-                    <div className="bg-white rounded-lg shadow p-6">
-                        <h3 className="text-sm font-medium text-gray-500">Total Revenue</h3>
-                        <p className="text-2xl font-bold text-gray-900">${statistics.totalRevenue}</p>
-                    </div>
+                    {[
+                        ['Total Orders', statistics.totalOrders, 'text-gray-900'],
+                        ['Pending', statistics.pendingOrders, 'text-yellow-600'],
+                        ['In Progress', statistics.inProgressOrders, 'text-blue-600'],
+                        ['Completed', statistics.completedOrders, 'text-green-600'],
+                        ['Total Revenue', `$${statistics.totalRevenue}`, 'text-gray-900']
+                    ].map(([label, value, color], i) => (
+                        <div key={i} className="bg-white rounded-lg shadow p-6">
+                            <h3 className="text-sm font-medium text-gray-500">{label}</h3>
+                            <p className={`text-2xl font-bold ${color}`}>{value}</p>
+                        </div>
+                    ))}
                 </div>
             )}
 
-            {/* Search and Filters */}
+            {/* Filters */}
             <div className="bg-white rounded-lg shadow p-6 mb-6">
                 <div className="flex flex-col md:flex-row gap-4">
                     <form onSubmit={handleSearch} className="flex-1">
@@ -199,7 +189,7 @@ export default function OrdersPage() {
 
                     <select
                         value={filters.status}
-                        onChange={(e) => setFilters({...filters, status: e.target.value})}
+                        onChange={(e) => setFilters((prev) => ({ ...prev, status: e.target.value }))}
                         className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                         <option value="">All Statuses</option>
@@ -213,42 +203,35 @@ export default function OrdersPage() {
                         type="text"
                         placeholder="Filter by customer..."
                         value={filters.customer}
-                        onChange={(e) => setFilters({...filters, customer: e.target.value})}
+                        onChange={(e) => setFilters((prev) => ({ ...prev, customer: e.target.value }))}
                         className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                 </div>
             </div>
 
-            {/* Orders Table */}
+            {/* Table */}
             <div className="bg-white rounded-lg shadow overflow-hidden">
                 <div className="overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">
                         <tr>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Order ID
-                            </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Customer
-                            </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Service
-                            </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Provider
-                            </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Price
-                            </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Status
-                            </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Order Date
-                            </th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Actions
-                            </th>
+                            {[
+                                'Order ID',
+                                'Customer',
+                                'Service',
+                                'Provider',
+                                'Price',
+                                'Status',
+                                'Order Date',
+                                'Actions'
+                            ].map((h, i) => (
+                                <th
+                                    key={i}
+                                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                >
+                                    {h}
+                                </th>
+                            ))}
                         </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
@@ -261,23 +244,15 @@ export default function OrdersPage() {
                                     <div className="text-sm text-gray-900">{order.customer}</div>
                                     <div className="text-sm text-gray-500">{order.customerEmail}</div>
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                    {order.serviceName}
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                    {order.provider}
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                    ${order.price}
-                                </td>
+                                <td className="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">{order.serviceName}</td>
+                                <td className="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">{order.provider}</td>
+                                <td className="px-6 py-4 text-sm font-medium text-gray-900 whitespace-nowrap">${order.price}</td>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(order.status)}`}>
-                      {order.status}
-                    </span>
+                                        <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(order.status)}`}>
+                                            {order.status}
+                                        </span>
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                    {formatDate(order.orderDate)}
-                                </td>
+                                <td className="px-6 py-4 text-sm text-gray-900 whitespace-nowrap">{formatDate(order.orderDate)}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                     <div className="flex space-x-2">
                                         <button
@@ -317,7 +292,7 @@ export default function OrdersPage() {
                 )}
             </div>
 
-            {/* Order Details Modal */}
+            {/* Order Modal */}
             {showModal && selectedOrder && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
@@ -333,10 +308,9 @@ export default function OrdersPage() {
                                     </svg>
                                 </button>
                             </div>
-
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <h3 className="font-semibold mb-2">Order Information</h3>
+                                    <h3 className="font-semibold mb-2">Order Info</h3>
                                     <div className="space-y-2 text-sm">
                                         <p><strong>Order ID:</strong> #{selectedOrder.id}</p>
                                         <p><strong>Service:</strong> {selectedOrder.serviceName}</p>
@@ -344,36 +318,30 @@ export default function OrdersPage() {
                                         <p><strong>Price:</strong> ${selectedOrder.price}</p>
                                         <p><strong>Status:</strong>
                                             <span className={`ml-2 px-2 py-1 rounded-full text-xs ${getStatusColor(selectedOrder.status)}`}>
-                        {selectedOrder.status}
-                      </span>
+                                                {selectedOrder.status}
+                                            </span>
                                         </p>
                                     </div>
                                 </div>
-
                                 <div>
-                                    <h3 className="font-semibold mb-2">Customer Information</h3>
+                                    <h3 className="font-semibold mb-2">Customer Info</h3>
                                     <div className="space-y-2 text-sm">
                                         <p><strong>Name:</strong> {selectedOrder.customer}</p>
                                         <p><strong>Email:</strong> {selectedOrder.customerEmail}</p>
-                                        <p><strong>Payment Method:</strong> {selectedOrder.paymentMethod}</p>
-                                        <p><strong>Delivery Address:</strong> {selectedOrder.deliveryAddress}</p>
+                                        <p><strong>Payment:</strong> {selectedOrder.paymentMethod}</p>
+                                        <p><strong>Address:</strong> {selectedOrder.deliveryAddress}</p>
                                     </div>
                                 </div>
-
                                 <div className="md:col-span-2">
                                     <h3 className="font-semibold mb-2">Dates</h3>
-                                    <div className="space-y-2 text-sm">
-                                        <p><strong>Order Date:</strong> {formatDate(selectedOrder.orderDate)}</p>
-                                        <p><strong>Expected Delivery:</strong> {formatDate(selectedOrder.deliveryDate)}</p>
-                                    </div>
+                                    <p className="text-sm"><strong>Order Date:</strong> {formatDate(selectedOrder.orderDate)}</p>
+                                    <p className="text-sm"><strong>Expected Delivery:</strong> {formatDate(selectedOrder.deliveryDate)}</p>
                                 </div>
-
                                 <div className="md:col-span-2">
                                     <h3 className="font-semibold mb-2">Description</h3>
                                     <p className="text-sm text-gray-700">{selectedOrder.description}</p>
                                 </div>
                             </div>
-
                             <div className="mt-6 flex justify-end space-x-3">
                                 <button
                                     onClick={() => setShowModal(false)}

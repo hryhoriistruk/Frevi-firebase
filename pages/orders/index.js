@@ -1,4 +1,11 @@
-import { getOrders } from '@/lib/orderService';
+'use client';
+
+import {
+    getOrders,
+    createOrder,
+    updateOrder,
+    deleteOrder
+} from '@/lib/api/orderService';
 
 export default function OrdersPage({ orders }) {
     return (
