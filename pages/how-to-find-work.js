@@ -465,7 +465,7 @@ const HowToFindWork = () => {
                                 </ul>
 
                                <div className="mt-3">
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <a className="font-semibold underline text-blue-700"> 
                                             Learn more about service fees. 
                                         </a>
@@ -559,7 +559,7 @@ const HowToFindWork = () => {
                         whileInView={{opacity:1}}
                         transition={{duration:0.7}}
                     >
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="flex flex-col justify-between bg-[#dcf5f0] transition hover:bg-[#d3eee8] px-4 py-4 rounded-lg min-h-[8rem] cursor-pointer">
                                 <h3 className="text-zinc-800 lg:text-2xl text-xl font-semibold">
                                     Getting started
@@ -572,7 +572,7 @@ const HowToFindWork = () => {
                             </div>
                         </Link>
 
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="flex flex-col justify-between bg-[#dcf5f0] transition hover:bg-[#d3eee8] px-4 py-4 rounded-lg min-h-[8rem] cursor-pointer">
                                 <h3 className="text-zinc-800 lg:text-2xl text-xl font-semibold">
                                     Growing your Career
@@ -585,7 +585,7 @@ const HowToFindWork = () => {
                             </div>
                         </Link>
 
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="flex flex-col justify-between bg-[#dcf5f0] transition hover:bg-[#d3eee8] px-4 py-4 rounded-lg min-h-[8rem] cursor-pointer">
                                 <h3 className="text-zinc-800 lg:text-2xl text-xl font-semibold">
                                     Finding Support

@@ -31,7 +31,7 @@ const SeSixProjectSec = (props) => {
             </button>
                 <div className="flex 2xl:space-x-10 lg:space-x-7 space-x-5 overflow-x-scroll scroll scroll-smooth scrollbar-hide lg:mt-5 mt-4 md:mx-0 mx-2" ref={slider}>
                         {props.projectList.map((curVal) => (
-                           <Link href={curVal.link} key={curVal.id}>
+                           <Link href={curVal.link} key={curVal.id} legacyBehavior>
                                 <div className="bg-transparent border bg-[#CCFBF1] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4] 2xl:min-w-[400px] xl:min-w-[350px] lg:min-w-[300px] min-w-[220px]" ref={scrollDiv}>
                                     <div>
                                         <Image

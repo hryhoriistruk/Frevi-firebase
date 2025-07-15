@@ -235,7 +235,7 @@ const Navbar = () => {
                                             <span className="block text-sm font-semibold text-zinc-500 my-3">
                                                 {SubLinks1[0].subhead.des}
                                             </span>
-                                            <Link href={SubLinks1[0].subhead.subheadlink.link}>
+                                            <Link href={SubLinks1[0].subhead.subheadlink.link} legacyBehavior>
                                                 <span className="text-sm font-semibold cursor-pointer text-cyan-700 hover:underline">
                                                     {SubLinks1[0].subhead.subheadlink.name}
                                                     <FaLongArrowAltRight className="inline ml-2 text-lg"/> 
@@ -247,7 +247,7 @@ const Navbar = () => {
                                             <ul className="grid grid-cols-2 gap-x-10 xl:gap-x-0 xl:grid-cols-1">
                                                {SubLinks1[0].sublink.map((curVal) => (
                                                     <li key={curVal.id} className="px-3 py-2 hover:bg-[#e1f7fa] hover:text-cyan-800 rounded-sm text-zinc-700">
-                                                        <Link href={curVal.link}>
+                                                        <Link href={curVal.link} legacyBehavior>
                                                             {curVal.linktext}
                                                         </Link>
                                                     </li> 
@@ -267,7 +267,7 @@ const Navbar = () => {
                                             <span className="block text-sm font-semibold text-zinc-500 my-3">
                                                 {SubLinks1[1].subhead.des}
                                             </span>
-                                            <Link href={SubLinks1[1].subhead.subheadlink.link}>
+                                            <Link href={SubLinks1[1].subhead.subheadlink.link} legacyBehavior>
                                                 <span className="text-sm font-semibold cursor-pointer text-cyan-700 hover:underline">
                                                     {SubLinks1[1].subhead.subheadlink.name}
                                                     <FaLongArrowAltRight className="inline ml-2 text-lg"/> 
@@ -279,7 +279,7 @@ const Navbar = () => {
                                            <ul className="grid 2xl:grid-cols-3 grid-cols-2 gap-x-10">
                                                 {SubLinks1[1].sublink.map((curVal) => (
                                                     <li key={curVal.id} className="bg-transparent xl:my-4 my-2 border border-gray-200 rounded-md cursor-pointer transition transition-duration hover:bg-[#e1f7fa]">
-                                                        <Link href={curVal.link}>
+                                                        <Link href={curVal.link} legacyBehavior>
                                                             <div className="flex xl:flex-col flex-row xl:items-stretch items-center xl:w-40 w-50 h-full">
                                                                 <Image src={curVal.img} height={90} width={140} alt="card-image" className="xl:rounded-t-md rounded-l-md xl:rounded-b-none"  />
                                                                 <span className="text-center py-2 xl:px-1 px-3 text-zinc-700">{curVal.linktext}</span>
@@ -302,7 +302,7 @@ const Navbar = () => {
                                             <span className="block text-sm font-semibold text-zinc-500 my-3">
                                                 {SubLinks1[2].subhead.des}
                                             </span>
-                                            <Link href={SubLinks1[2].subhead.subheadlink.link}>
+                                            <Link href={SubLinks1[2].subhead.subheadlink.link} legacyBehavior>
                                                 <span className="text-sm font-semibold cursor-pointer text-cyan-700 hover:underline">
                                                     {SubLinks1[2].subhead.subheadlink.name}
                                                     <FaLongArrowAltRight className="inline ml-2 text-lg"/> 
@@ -314,7 +314,7 @@ const Navbar = () => {
                                             <ul className="grid grid-cols-1 gap-x-10 xl:gap-x-0">
                                                {SubLinks1[2].sublink.map((curVal) => (
                                                     <li key={curVal.id} className="px-3 py-2 hover:bg-[#e1f7fa] hover:text-cyan-800 rounded-sm text-zinc-700">
-                                                        <Link href={curVal.link}>
+                                                        <Link href={curVal.link} legacyBehavior>
                                                             {curVal.linktext}
                                                         </Link>
                                                     </li> 
@@ -338,7 +338,7 @@ const Navbar = () => {
                                 <ul className="container flex xl:space-x-28 space-x-20 mx-auto py-5 px-3">
                                     {SubLinks2.map((curVal) => (
                                         <li className="px-2 py-4 cursor-pointer rounded-sm hover:bg-gradient-to-tr from-[#eeecec] to-[#c3f0f5]" key={curVal.id}>
-                                            <Link href={curVal.link}>
+                                            <Link href={curVal.link} legacyBehavior>
                                                 <div className="flex flex-col space-y-2 2xl:ml-11 ml-7 max-w-[17rem]">
                                                     <strong className="font-semibold text-zinc-700">
                                                         {curVal.name}
@@ -366,7 +366,7 @@ const Navbar = () => {
                                     <ul className="inline-grid grid-cols-2 gap-x-20 mb-5">
                                         {SubLinks3.map((curVal) => (
                                             <li className="pr-5 py-7 cursor-pointer rounded-sm hover:bg-gradient-to-tr from-[#eeecec] to-[#c3f0f5]" key={curVal.id}>
-                                                <Link href={curVal.link}>
+                                                <Link href={curVal.link} legacyBehavior>
                                                     <div className="flex flex-col space-y-2 2xl:ml-11 ml-7">
                                                         <strong className="font-semibold text-zinc-700">
                                                             {curVal.name}
@@ -384,7 +384,7 @@ const Navbar = () => {
                         </li>
 
                         <li className="text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700">
-                            <Link href="/enterprise"> 
+                            <Link href="/enterprise" legacyBehavior> 
                                 Enterprise 
                             </Link>
                         </li>
@@ -421,7 +421,7 @@ const Navbar = () => {
                         <ul className={`absolute ${searchState} top-10 border left-3 w-[91.5%] shadow-lg border-gray-300 bg-[#F3FFFC] rounded-b-lg py-1 z-20`}>
                             {SearchLink.map((curVal) => (
                                 <li className="py-2 xl:px-3 px-2 cursor-pointer hover:bg-[#eaf6f8]" key={curVal.id}>
-                                    <Link href="/">
+                                    <Link href="/" legacyBehavior>
                                         <div className="flex items-center space-x-2">
                                             <span className="xl:text-2xl text-xl text-gray-800">
                                                 {curVal.icon}
@@ -456,7 +456,7 @@ const Navbar = () => {
                 <ul className="flex items-center 2xl:space-x-20 xl:space-x-12 space-x-9">
                     {SecondLink.map((curVal) => (
                         <li className="text-zinc-600 font-semibold hover:text-cyan-700" key={curVal.id}>
-                            <Link href={curVal.link}>
+                            <Link href={curVal.link} legacyBehavior>
                                 {curVal.name}
                             </Link>
                         </li>
@@ -479,7 +479,7 @@ const Navbar = () => {
                             <ul className={`${moreDp} absolute font-semibold text-md bg-[#F3FFFC] shadow-lg border rounded-sm text-zinc-700 min-w-[17rem] right-[-1rem] top-7 z-10`}>
                                 {curVal.subLink.map((curSubVal) => (
                                     <li key={curSubVal.id} className="px-5 py-3 hover:bg-[#e1f7fa] cursor-pointer hover:text-cyan-700">
-                                        <Link href={curSubVal.link}>
+                                        <Link href={curSubVal.link} legacyBehavior>
                                             {curSubVal.name}
                                         </Link>
                                     </li>
@@ -554,7 +554,7 @@ const Navbar = () => {
                         <ul className={`absolute ${searchState} top-10 border sm:left-4 left-3 md:w-[97%] w-[94%] shadow-lg border-gray-300 bg-[#F3FFFC] rounded-b-lg py-1 z-20`}>
                             {SearchLink.map((curVal) => (
                                 <li className="py-2 xl:px-3 px-2 cursor-pointer hover:bg-[#eaf6f8]" key={curVal.id}>
-                                    <Link href="/">
+                                    <Link href="/" legacyBehavior>
                                         <div className="flex items-center space-x-2">
                                             <span className="xl:text-2xl text-xl text-gray-800">
                                                 {curVal.icon}
@@ -612,7 +612,7 @@ const Navbar = () => {
                                                 
                                                 <span className="text-sm font-md text-zinc-500">
                                                     {curVal.subhead.des}
-                                                    <Link href={curVal.subhead.subheadlink.link}>
+                                                    <Link href={curVal.subhead.subheadlink.link} legacyBehavior>
                                                         <span className="font-semibold ml-1 cursor-pointer text-cyan-700 hover:underline">
                                                             {curVal.subhead.subheadlink.name}
                                                         </span>
@@ -624,7 +624,7 @@ const Navbar = () => {
                                                         if (curVal.id === 1) {
                                                             return (
                                                                 <li className="text-zinc-700 text-md py-1" key={curSubVal.id}>
-                                                                    <Link href={curSubVal.link}>
+                                                                    <Link href={curSubVal.link} legacyBehavior>
                                                                         {curSubVal.linktext}
                                                                     </Link>
                                                                 </li> 
@@ -634,7 +634,7 @@ const Navbar = () => {
                                                         if (curVal.id === 2) {
                                                             return (
                                                             <li key={curSubVal.id}>
-                                                                <Link href={curSubVal.link}>
+                                                                <Link href={curSubVal.link} legacyBehavior>
                                                                     <div className="flex space-x-4 items-center border rounded-md cursor-pointer hover:shadow-sm hover:bg-[#e1f7fa]">
                                                                         <Image 
                                                                             src={curSubVal.img} 
@@ -655,7 +655,7 @@ const Navbar = () => {
                                                         if (curVal.id === 3) {
                                                             return (
                                                                 <li className="text-zinc-700 text-md py-1" key={curSubVal.id}>
-                                                                    <Link href={curSubVal.link}>
+                                                                    <Link href={curSubVal.link} legacyBehavior>
                                                                         {curSubVal.linktext}
                                                                     </Link>
                                                                 </li>
@@ -683,7 +683,7 @@ const Navbar = () => {
                             {mobileSubListII && <ul className="flex flex-col space-y-6 ml-2 my-5">
                                 {SubLinks2.map((curVal) => (
                                     <li key={curVal.id}>
-                                        <Link href={curVal.link}>
+                                        <Link href={curVal.link} legacyBehavior>
                                             <span className="flex flex-col cursor-pointer">
                                                 <span className="text-zinc-700 font-semibold">
                                                     {curVal.name}
@@ -712,7 +712,7 @@ const Navbar = () => {
                                 <ul className="flex flex-col space-y-4 mt-5">
                                     {SubLinks3.map((curVal) => (
                                         <li key={curVal.id} className="cursor-pointer">
-                                            <Link href={curVal.link}>
+                                            <Link href={curVal.link} legacyBehavior>
                                                 <span className="flex flex-col space-y-1">
                                                     <span className="text-zinc-600">
                                                         {curVal.name}
@@ -726,7 +726,7 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <Link href={"/enterprise"}>
+                            <Link href={"/enterprise"} legacyBehavior>
                                 <a className="text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700"> 
                                     Enterprise 
                                 </a>

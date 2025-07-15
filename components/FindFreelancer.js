@@ -18,7 +18,7 @@ const FindFreelancer = (props) => {
                             className="font-semibold text-zinc-500 cursor-pointer hover:text-sky-700 hover:underline py-2"
                             key={curVal.id}
                         >
-                            <Link href={curVal.link}>
+                            <Link href={curVal.link} legacyBehavior>
                                 {curVal.text}
                             </Link>
                         </li>

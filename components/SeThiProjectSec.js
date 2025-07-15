@@ -39,7 +39,7 @@ const SeThiProjectSec = (props) => {
             </button>
                 <div className="flex 2xl:space-x-9 lg:space-x-7 space-x-5 overflow-x-scroll scroll scroll-smooth scrollbar-hide lg:mt-5 mt-4 xl:mx-4 md:mx-3 mx-2" ref={slider}>
                         {props.projectList.map((curVal) => (
-                            <Link href={curVal.link} key={curVal.id}>
+                            <Link href={curVal.link} key={curVal.id} legacyBehavior>
                                 <div className="bg-transparent border bg-[#CCFBF1] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4] min-w-[150px]" ref={scrollDiv}>
                                     <div>
                                         <Image

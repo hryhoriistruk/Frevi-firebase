@@ -38,7 +38,7 @@ const ClintCat = () => {
     return (
         <>
             {Data.map((curVal) => (
-                <Link href={curVal.link} key={curVal.id}>
+                <Link href={curVal.link} key={curVal.id} legacyBehavior>
                     <div 
                         className="flex flex-col justify-between xl:space-y-7 space-y-5 bg-gradient-to-tr from-[#CCFBF1] to-[#CFFAFE] xl:px-7 px-5 py-5 rounded-md cursor-pointer transition duration-300 hover:from-cyan-200 hover:to-[#e1f7fa] hover:scale-105 hover:shadow-lg hover:shadow-cyan-200/50" 
                     >

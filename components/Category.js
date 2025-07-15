@@ -73,7 +73,7 @@ const Category = () => {
     return (
         <>
             {Data.map((curVal) => (
-                <Link href={curVal.link} key={curVal.id}>
+                <Link href={curVal.link} key={curVal.id} legacyBehavior>
                     <motion.div
                         className="bg-gradient-to-tr from-[#CCFBF1] to-[#CFFAFE] xl:px-7 px-5 xl:py-7 py-3 xl:space-y-7 space-y-4 rounded-xl cursor-pointer transition hover:from-cyan-200 hover:to-[#CCFBF1] hover:scale-105" 
                         initial={{opacity:0}}

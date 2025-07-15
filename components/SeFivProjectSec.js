@@ -31,7 +31,7 @@ const SeFivProjectSec = (props) => {
             </button>
                 <div className="overflow-x-scroll scroll scroll-smooth sm:scrollbar-hide lg:mt-5 mt-4 xl:mx-4 md:mx-3 sm:mx-2 mx-0 flex space-x-5" ref={slider}>
                         {props.projectList.map((curVal) => (
-                            <Link href={curVal.link} key={curVal.id}>
+                            <Link href={curVal.link} key={curVal.id} legacyBehavior>
                                 <div className="bg-transparent border bg-[#CCFBF1] rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4] lg:min-w-[350px] sm:min-w-[300px] min-w-[200px] grid grid-cols-3" ref={scrollDiv}>
                                     <Image
                                         src={curVal.image.src}

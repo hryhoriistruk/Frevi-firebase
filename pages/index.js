@@ -57,7 +57,7 @@ export default function Home() {
 
             {/* ========= Left ======== */}
             <div className="relative">
-              <Link href="/jobs/todays-jobs">
+              <Link href="/jobs/todays-jobs" legacyBehavior>
                 <div className="absolute lg:flex hidden flex-col items-center z-[9] bg-[#F3FFFC] shadow-2xl py-2 px-3 rounded-xl cursor-pointer left-[-3rem] top-0 transition hover:scale-105">
                     <span className="text-[11px] font-semibold text-zinc-700 mb-1">
                       Today's Job
@@ -126,7 +126,7 @@ export default function Home() {
 
             <span className="text-zinc-600 font-semibold lg:text-lg text-md">
               Looking for work?
-              <Link href="/jobs/all-jobs">
+              <Link href="/jobs/all-jobs" legacyBehavior>
                 <a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
                   Browse Job
                 </a>

@@ -575,19 +575,19 @@ const Services = () => {
                             <div className="sm:flex hidden items-center space-x-3 mt-3">
                                 <span className="text-zinc-800 font-semibold"> Populer: </span>
 
-                               <Link href="#">
+                               <Link href="#" legacyBehavior>
                                     <a className="populer-search">
                                         <FaSearch className="mr-2 text-[10px]"/>
                                         Logo Design
                                     </a>
                                </Link>
-                                <Link href="#">
+                                <Link href="#" legacyBehavior>
                                     <a className="populer-search">
                                         <FaSearch className="mr-2 text-[10px]"/>
                                         Articles & Blog Post
                                     </a>
                                 </Link>
-                                <Link href="#">
+                                <Link href="#" legacyBehavior>
                                     <a className="populer-search">
                                         <FaSearch className="mr-2 text-[10px]"/>
                                         Wordpress
@@ -774,7 +774,7 @@ const Services = () => {
 
                         <div className="flex space-x-7 mt-7 overflow-x-scroll scroll scroll-smooth scrollbar-hide mx-3" ref={slider}>
                             {Category.map((curVal) => (
-                                <Link href={curVal.link} key={curVal.id}>
+                                <Link href={curVal.link} key={curVal.id} legacyBehavior>
                                     <div className="bg-[#CCFBF1] rounded-xl lg:min-w-[300px] min-w-[250px] h-auto cursor-pointer duration-200 ease-in hover:bg-[#bfeee4]" ref={scrollDiv}>
                                         <Image
                                             src={curVal.img}
@@ -848,7 +848,7 @@ const Services = () => {
                         <h2 className="xl:text-4xl sm:text-3xl text-2xl font-semibold text-zinc-800">
                             Scale your business with social media solutions 
                         </h2>
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <a className="text-lg font-semibold text-blue-500 cursor-pointer transition hover:underline mt-5">
                                 Show all
                                 <HiArrowSmRight className="inline ml-1"/>
@@ -861,7 +861,7 @@ const Services = () => {
                         transition={{duration:1}}
                     >
                         {/* =================== First Link ================= */}
-                       <Link href="#">
+                       <Link href="#" legacyBehavior>
                             <div className="bg-[#CCFBF1] lg:w-[300px] md:w-[290px] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4]">
                                 <Image
                                     src="/images/scale-socialmedia.png"
@@ -880,7 +880,7 @@ const Services = () => {
                        </Link>
 
                         {/* =================== Second Link ================= */}
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="bg-[#CCFBF1] lg:w-[300px] md:w-[290px] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4]">
                                 <Image
                                     src="/images/scale-ads.png"
@@ -899,7 +899,7 @@ const Services = () => {
                         </Link>
 
                         {/* ================ Third Link ================= */}
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="bg-[#CCFBF1] lg:w-[300px] md:w-[290px] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4]">
                                 <Image
                                     src="/images/scale-videoediting.png"
@@ -925,7 +925,7 @@ const Services = () => {
                         <h2 className="xl:text-4xl sm:text-3xl text-2xl font-semibold text-zinc-800">
                             Website solutions that bring in more customers 
                         </h2>
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <a className="text-lg font-semibold text-blue-500 cursor-pointer transition hover:underline mt-5">
                                 Show all
                                 <HiArrowSmRight className="inline ml-1"/>
@@ -937,7 +937,7 @@ const Services = () => {
                         whileInView={{opacity:1}}
                         transition={{duration:1}}
                     >
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="bg-[#CCFBF1] lg:w-[300px] md:w-[290px] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4]">
                                 <Image
                                     src="/images/cus-website.png"
@@ -955,7 +955,7 @@ const Services = () => {
                             </div>
                         </Link>
 
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="bg-[#CCFBF1] lg:w-[300px] md:w-[290px] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4]">
                                 <Image
                                     src="/images/cus-cms.png"
@@ -973,7 +973,7 @@ const Services = () => {
                             </div>
                         </Link>
 
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <div className="bg-[#CCFBF1] lg:w-[300px] md:w-[290px] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4]">
                                 <Image
                                     src="/images/cus-ecomarce.png"
@@ -991,7 +991,7 @@ const Services = () => {
                             </div>
                         </Link>
 
-                       <Link href="#">
+                       <Link href="#" legacyBehavior>
                             <div className="bg-[#CCFBF1] lg:w-[300px] md:w-[290px] w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4] xl:block md:hidden block">
                                 <Image
                                     src="/images/cus-webcontent.png"
@@ -1017,7 +1017,7 @@ const Services = () => {
                         <h2 className="xl:text-4xl sm:text-3xl text-2xl font-semibold text-zinc-800"> 
                             Get inspired with projects like these 
                         </h2>
-                        <Link href="#">
+                        <Link href="#" legacyBehavior>
                             <a className="text-lg font-semibold text-blue-500 cursor-pointer transition hover:underline mt-5">
                                 Show all
                                 <HiArrowSmRight className="inline ml-1"/>
@@ -1026,7 +1026,7 @@ const Services = () => {
                     </div>
                     <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:gap-x-14 xl:gap-x-10 lg:gap-x-8 md:gap-x-10 gap-x-0 xl:gap-y-10 md:gap-y-8 sm:gap-y-5 gap-y-4 lg:mt-8 mt-5">
                         {ProjectList.map((curVal) => (
-                           <Link href={curVal.link} key={curVal.id}>
+                           <Link href={curVal.link} key={curVal.id} legacyBehavior>
                                 <motion.div className="bg-transparent border border-zinc-300 w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#ebfffb]"
                                     initial={{y:30, opacity:0}}
                                     whileInView={{y:0, opacity:1}}
@@ -1120,7 +1120,7 @@ const Services = () => {
                     <ul className="my-8 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-7 gap-y-3 sm:px-0 px-1">
                         {LastCategory[0].listI.map((curVal) => (
                             <li className={`text-zinc-500 cursor-pointer hover:underline ${(catListI == true) ? "block" : "hidden"}`} key={curVal.id}>
-                                <Link href={curVal.link}>
+                                <Link href={curVal.link} legacyBehavior>
                                     {curVal.name}
                                 </Link>
                             </li>
@@ -1128,7 +1128,7 @@ const Services = () => {
 
                         {LastCategory[1].listII.map((curVal) => (
                             <li className={`text-zinc-500 cursor-pointer hover:underline ${(catListII == false) ? "hidden" : "block"}`} key={curVal.id}>
-                                <Link href={curVal.link}>
+                                <Link href={curVal.link} legacyBehavior>
                                     {curVal.name}
                                 </Link>
                             </li>
@@ -1136,7 +1136,7 @@ const Services = () => {
 
                         {LastCategory[2].listIII.map((curVal) => (
                             <li className={`text-zinc-500 cursor-pointer hover:underline ${(catListIII == false) ? "hidden" : "block"}`} key={curVal.id}>
-                                <Link href={curVal.link}>
+                                <Link href={curVal.link} legacyBehavior>
                                     {curVal.name}
                                 </Link>
                             </li>
@@ -1144,7 +1144,7 @@ const Services = () => {
 
                         {LastCategory[3].listIv.map((curVal) => (
                             <li className={`text-zinc-500 cursor-pointer hover:underline ${(catListIv == false) ? "hidden" : "block"}`} key={curVal.id}>
-                                <Link href={curVal.link}>
+                                <Link href={curVal.link} legacyBehavior>
                                     {curVal.name}
                                 </Link>
                             </li>
@@ -1152,7 +1152,7 @@ const Services = () => {
 
                         {LastCategory[4].listV.map((curVal) => (
                             <li className={`text-zinc-500 cursor-pointer hover:underline ${(catListV == false) ? "hidden" : "block"}`} key={curVal.id}>
-                                <Link href={curVal.link}>
+                                <Link href={curVal.link} legacyBehavior>
                                     {curVal.name}
                                 </Link>
                             </li>
@@ -1160,7 +1160,7 @@ const Services = () => {
 
                         {LastCategory[5].listVI.map((curVal) => (
                             <li className={`text-zinc-500 cursor-pointer hover:underline ${(catListVI == false) ? "hidden" : "block"}`} key={curVal.id}>
-                                <Link href={curVal.link}>
+                                <Link href={curVal.link} legacyBehavior>
                                     {curVal.name}
                                 </Link>
                             </li>

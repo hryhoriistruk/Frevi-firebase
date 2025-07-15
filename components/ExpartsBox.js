@@ -7,7 +7,7 @@ const ExpartBox = ({data}) => {
     return (
         <div className="md:grid lg:grid-cols-4 md:grid-cols-3 2xl:gap-x-20 xl:gap-x-10 md:gap-x-5 gap-y-5 relative flex md:items-stretch items-center md:space-x-0 space-x-3 mt-7 lg:overflow-x-hidden overflow-x-scroll scroll md:whitespace-normal whitespace-nowrap scroll-smooth">
             {data.map((curVal) => (
-                <Link href={curVal.link} key={curVal.id}>
+                <Link href={curVal.link} key={curVal.id} legacyBehavior>
                     <motion.div 
                         className="xl:px-5 px-4 py-2 relative bg-[#DAF3ED] rounded-lg cursor-pointer flex flex-col justify-between" 
                         initial={{opacity:0}}

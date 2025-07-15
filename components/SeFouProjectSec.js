@@ -33,7 +33,7 @@ const SeFouProjectSec = (props) => {
             </button>
             <div className="flex 2xl:space-x-10 lg:space-x-7 space-x-5 overflow-x-scroll scroll scroll-smooth scrollbar-hide lg:mt-5 mt-4 2xl:mx-4 md:mx-3 mx-2" ref={slider}>
                     {props.projectList.map((curVal) => (
-                        <Link href={curVal.link} key={curVal.id}>
+                        <Link href={curVal.link} key={curVal.id} legacyBehavior>
                             <div className="bg-transparent border border-zinc-300 w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#ebfffb] xl:min-w-[340px] lg:min-w-[300px] min-w-[250px]" ref={scrollDiv}>
                                 <div>
                                     <Image

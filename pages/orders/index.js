@@ -1,17 +1,31 @@
-import { getOrders } from '@/lib/orderService';
+'use client';
 
-export default function OrdersPage({ orders }) {
+import { useEffect, useState } from 'react';
+import { getOrders, deleteOrder } from '@/lib/orderService';
+
+export default function OrdersPage() {
+    const [orders, setOrders] = useState([]);
+
+    useEffect(() => {
+        getOrders().then((res) => setOrders(res.data));
+    }, []);
+
+    const handleDelete = async (id) => {
+        await deleteOrder(id);
+        setOrders(orders.filter((order) => order.id !== id));
+    };
+
     return (
         <div>
             <h1>Orders</h1>
-            {orders.map((order) => (
-                <div key={order.id}>{order.name}</div>
-            ))}
+            <ul>
+                {orders.map((order) => (
+                    <li key={order.id}>
+                        {order.name}
+                        <button onClick={() => handleDelete(order.id)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
-}
-
-export async function getStaticProps() {
-    const orders = await getOrders();
-    return { props: { orders } };
 }

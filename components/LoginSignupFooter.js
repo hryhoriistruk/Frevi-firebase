@@ -6,7 +6,7 @@ const LoginSignupFooter = () => {
             <div className="container mx-auto py-10 md:px-5 sm:px-7 px-3">
                 <p className="text-center font-semibold text-zinc-800 text-sm">
                     &copy; 2015 - 2022 Frevi® Global Inc.
-                    <Link href="#"> 
+                    <Link href="#" legacyBehavior> 
                         <a className="font-bold text-zinc-700 hover:underline"> Privacy Policy </a>
                     </Link>
                 </p>

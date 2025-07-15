@@ -414,7 +414,7 @@ const Staffing = () => {
 
                     <div className="grid md:grid-cols-3 xl:gap-x-20 lg:gap-x-10 md:space-x-5 md:gap-y-0 sm:gap-y-4 gap-y-3">
                         {PreScreen.map((curVal) => (
-                            <Link href={curVal.link} key={curVal.id}>
+                            <Link href={curVal.link} key={curVal.id} legacyBehavior>
                                 <motion.div className="bg-[#dafaf3] flex md:flex-col flex-row items-center sm:px-3 px-2 xl:py-7 lg:py-6 md:py-4 py-1 lg:space-y-3 md:space-y-1 md:space-x-0 sm:space-x-3 space-x-2 rounded-xl cursor-pointer duration-300 ease-in hover:bg-[#c4e4dc]"
                                     initial={{opacity:0}}
                                     whileInView={{opacity:1}}
@@ -511,7 +511,7 @@ const Staffing = () => {
                                         className="font-semibold lg:text-lg text-md text-zinc-500 hover:text-cyan-700 hidde"
                                         key={curVal.id}
                                     >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>
@@ -523,7 +523,7 @@ const Staffing = () => {
                                         className="font-semibold lg:text-lg text-md text-zinc-500 hover:text-cyan-700"
                                         key={curVal.id}
                                     >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>
@@ -536,7 +536,7 @@ const Staffing = () => {
                                         className="font-semibold lg:text-lg text-md text-zinc-500 hover:text-cyan-700"
                                         key={curVal.id}
                                     >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>
@@ -548,7 +548,7 @@ const Staffing = () => {
                                         className="font-semibold lg:text-lg text-md text-zinc-500 hover:text-cyan-700"
                                         key={curVal.id}
                                     >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>

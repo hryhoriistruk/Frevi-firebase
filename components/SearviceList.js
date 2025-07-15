@@ -10,7 +10,7 @@ const ServiceList = (props) => {
             <ul className="my-8 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-7 gap-y-3 sm:px-0 px-1">
                 {props.serviceLink.map((curVal) => (
                     <li className={`text-zinc-500 font-semibold text-[15px] cursor-pointer hover:underline`} key={curVal.id}>
-                        <Link href={curVal.link}>
+                        <Link href={curVal.link} legacyBehavior>
                             {curVal.name}
                         </Link>
                     </li>

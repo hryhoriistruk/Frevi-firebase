@@ -183,7 +183,7 @@ const Skills = () => {
                             className="font-semibold xl:text-2xl lg:text-xl text-md text-zinc-500 hover:text-cyan-700 hidde"
                             key={curVal.id}
                         >
-                        <Link href={curVal.link}>
+                        <Link href={curVal.link} legacyBehavior>
                             {curVal.name}
                         </Link>
                     </li>
@@ -195,7 +195,7 @@ const Skills = () => {
                             className="font-semibold xl:text-2xl lg:text-xl text-md text-zinc-500 hover:text-cyan-700"
                             key={curVal.id}
                         >
-                        <Link href={curVal.link}>
+                        <Link href={curVal.link} legacyBehavior>
                             {curVal.name}
                         </Link>
                     </li>
@@ -208,7 +208,7 @@ const Skills = () => {
                             className="font-semibold xl:text-2xl lg:text-xl text-md text-zinc-500 hover:text-cyan-700"
                             key={curVal.id}
                         >
-                        <Link href={curVal.link}>
+                        <Link href={curVal.link} legacyBehavior>
                             {curVal.name}
                         </Link>
                     </li>
@@ -220,7 +220,7 @@ const Skills = () => {
                             className="font-semibold xl:text-2xl lg:text-xl text-md text-zinc-500 hover:text-cyan-700"
                             key={curVal.id}
                         >
-                        <Link href={curVal.link}>
+                        <Link href={curVal.link} legacyBehavior>
                             {curVal.name}
                         </Link>
                     </li>
@@ -233,7 +233,7 @@ const Skills = () => {
                             className="font-semibold xl:text-2xl lg:text-xl text-md text-zinc-500 hover:text-cyan-700"
                             key={curVal.id}
                         >
-                        <Link href={curVal.link}>
+                        <Link href={curVal.link} legacyBehavior>
                             {curVal.name}
                         </Link>
                     </li>
@@ -245,7 +245,7 @@ const Skills = () => {
                             className="font-semibold xl:text-2xl lg:text-xl text-md text-zinc-500 hover:text-cyan-700"
                             key={curVal.id}
                         >
-                        <Link href={curVal.link}>
+                        <Link href={curVal.link} legacyBehavior>
                             {curVal.name}
                         </Link>
                     </li>

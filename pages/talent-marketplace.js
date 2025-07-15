@@ -50,7 +50,7 @@ const TalentMarketplace = () => {
                             </p>
                             <div className="flex flex-col space-y-3 xl:mt-10 mt-7">
                                 <div className="flex sm:flex-row flex-col sm:space-x-3 sm:space-y-0 space-y-3">
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <a
                                             className="flex items-center font-semibold bg-teal-100 rounded-full px-3 py-1 text-zinc-900 cursor-pointer transition hover:underline"
                                         >
@@ -58,7 +58,7 @@ const TalentMarketplace = () => {
                                             <FiArrowRight className="ml-3"/>
                                         </a>
                                     </Link>
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <a
                                             className="flex items-center font-semibold bg-teal-100 rounded-full px-3 py-1 text-zinc-900 cursor-pointer transition hover:underline"
                                         >
@@ -69,7 +69,7 @@ const TalentMarketplace = () => {
                                 </div>
 
                                 <div className="flex sm:flex-row flex-col sm:space-x-3 sm:space-y-0 space-y-3">
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <a
                                             className="flex items-center font-semibold bg-teal-100 rounded-full px-3 py-1 text-zinc-900 cursor-pointer transition hover:underline"
                                         >
@@ -77,7 +77,7 @@ const TalentMarketplace = () => {
                                             <FiArrowRight className="ml-3"/>
                                         </a>
                                     </Link>
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <a
                                             className="flex items-center font-semibold bg-teal-100 rounded-full px-3 py-1 text-zinc-900 cursor-pointer transition hover:underline"
                                         >
@@ -88,7 +88,7 @@ const TalentMarketplace = () => {
                                 </div>
 
                                 <div className="flex sm:flex-row flex-col sm:space-x-3 sm:space-y-0 space-y-3">
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <a
                                             className="flex items-center font-semibold bg-teal-100 rounded-full px-3 py-1 text-zinc-900 cursor-pointer transition hover:underline"
                                         >
@@ -96,7 +96,7 @@ const TalentMarketplace = () => {
                                             <FiArrowRight className="ml-3"/>
                                         </a>
                                     </Link>
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <a
                                             className="flex items-center font-semibold bg-teal-100 rounded-full px-3 py-1 text-zinc-900 cursor-pointer transition hover:underline"
                                         >
@@ -202,7 +202,7 @@ const TalentMarketplace = () => {
                             transition={{duration:1}}
                         >
                             {/* ================== First Card ==================== */}
-                            <Link href="#">
+                            <Link href="#" legacyBehavior>
                                 <div className="bg-teal-100 lg:px-5 md:px-3 sm:px-5 px-3 py-3 rounded-xl cursor-pointer flex flex-col justify-between transition duration-300 hover:bg-[#b0ebdbfa] space-y-3">
                                     <h5 className="text-zinc-700 2xl:text-2xl sm:text-xl text-[17px] font-semibold">
                                         How Flexible Talent Helps a Fast - Placed Company Improve Productivity
@@ -217,7 +217,7 @@ const TalentMarketplace = () => {
                             </Link>
 
                             {/* ================== Second Card ==================== */}
-                            <Link href="#">
+                            <Link href="#" legacyBehavior>
                                 <div className="bg-teal-100 lg:px-5 md:px-3 sm:px-5 px-3 py-3 rounded-xl cursor-pointer flex flex-col justify-between  transition duration-300 hover:bg-[#b0ebdbfa] space-y-3">
                                     <h5 className="text-zinc-700 2xl:text-2xl sm:text-xl text-[17px] font-semibold">
                                         Flexera Engineers a Way to Deliver Work 2x Faster and Keeps Security at the Forefront
@@ -232,7 +232,7 @@ const TalentMarketplace = () => {
                             </Link>
 
                             {/* ================== Third Card ==================== */}
-                            <Link href="#">
+                            <Link href="#" legacyBehavior>
                                 <div className="bg-teal-100 lg:px-5 md:px-3 sm:px-5 px-3 py-3 rounded-xl cursor-pointer flex flex-col justify-between  transition duration-300 hover:bg-[#b0ebdbfa] space-y-3">
                                     <h5 className="text-zinc-700 2xl:text-2xl sm:text-xl text-[17px] font-semibold">
                                         Singularity University Shows What Working Faster (and Doing it Right) Looks Like

@@ -36,7 +36,7 @@ const Contact = () => {
 
                                 <div className="grid md:grid-cols-2 md:gap-6 gap-y-5 mt-5">
                                     {/* ================= First card ================ */}
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <div className="flex space-x-2 bg-[#E6FAF6] py-3.5 px-3 justify-between rounded-xl cursor-pointer transition hover:bg-[#e0f5f0]">
                                             <div className="flex flex-col justify-between space-y-3">
                                                 <h2 className="text-zinc-800 font-semibold text-[21px]">
@@ -57,7 +57,7 @@ const Contact = () => {
                                     </Link>
 
                                     {/* ================= Second card ================ */}
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <div className="flex space-x-2 bg-[#E6FAF6] py-3.5 px-3 justify-between rounded-xl cursor-pointer transition hover:bg-[#e0f5f0]">
                                             <div className="flex flex-col justify-between space-y-3">
                                                 <h2 className="text-zinc-800 font-semibold text-[21px]">
@@ -77,14 +77,14 @@ const Contact = () => {
                                     </Link>
 
                                     {/* ================= Third card ================ */}
-                                    <Link href="#">
+                                    <Link href="#" legacyBehavior>
                                         <div className="flex space-x-2 bg-[#E6FAF6] py-3.5 px-3 justify-between rounded-xl cursor-pointer transition hover:bg-[#e0f5f0]">
                                             <div className="flex flex-col justify-between space-y-3">
                                                 <h2 className="text-zinc-800 font-semibold text-[21px]">
                                                     Press Inquiries
                                                 </h2>
 
-                                                <Link href="#">
+                                                <Link href="#" legacyBehavior>
                                                     <a className="text-blue-800 font-semibold underline flex items-center transition hover:text-blue-900">
                                                         press@frevi.com
                                                         <FiArrowRight className="mt-1 ml-1"/>

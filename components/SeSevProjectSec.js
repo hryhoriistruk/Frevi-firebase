@@ -18,7 +18,7 @@ const SeSevProjectSec = (props) => {
             <div className="relative flex flex-col">
                 <div className="lg:mt-5 mt-4 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 2xl:gap-x-10 md:gap-x-7 sm:gap-x-4 gap-x-0 2xl:gap-y-10 md:gap-y-7 gap-y-4 sm:w-auto w-full">
                     {props.projectList.map((curVal) => (
-                       <Link href={curVal.link} key={curVal.id}>
+                       <Link href={curVal.link} key={curVal.id} legacyBehavior>
                             <div className="bg-transparent border border-zinc-300 w-full rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#ebfffb] h-auto">
                                 <div>
                                     <Image

@@ -43,7 +43,7 @@ const ServiceSearch = (props) => {
                     <p className="text-zinc-500 sm:text-xl text-lg">
                         {props.des}
                     </p>
-                    <Link href={props.link}>
+                    <Link href={props.link} legacyBehavior>
                         <a className="flex items-center sm:text-xl text-lg font-semibold text-sky-700 transition cursor-pointer hover:underline"> {props.linkText} <FaCaretRight className="mt-1"/> </a>
                     </Link>
                 </div>

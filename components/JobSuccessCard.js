@@ -9,7 +9,7 @@ const JobSuccessCard = () => {
     const [scale, useScale] = useState(true);
 
     return (
-        <Link href="#">
+        <Link href="#" legacyBehavior>
             <motion.div className="absolute right-[-1rem] top-[-1rem] lg:flex hidden flex-col space-y-2 z-[9] bg-[#F3FFFC] shadow-2xl py-2 px-3 rounded-lg ease-in duration-200 hover:scale-[102%] cursor-pointer" onMouseOver={() => useScale(false)} onMouseOut={() => useScale(true)}
                 initial={{ opacity: 0, x:-100, scale:0.5}}
                 animate={{opacity: 1, x:0, scale: 1}}

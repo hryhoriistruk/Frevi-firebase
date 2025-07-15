@@ -11,7 +11,7 @@ const SeEigProjectSec = (props) => {
             <div className="relative flex items-center">
                 <div className="flex lg:flex-row flex-col 2xl:space-x-9 lg:space-x-7 w-full lg:mt-5 lg:space-y-0 space-y-4 mt-4">
                         {props.projectList.map((curVal) => (
-                            <Link href={curVal.link} key={curVal.id}>
+                            <Link href={curVal.link} key={curVal.id} legacyBehavior>
                                 <div className="bg-transparent border bg-[#CCFBF1] rounded-xl cursor-pointer duration-200 ease-in hover:bg-[#bfeee4] lg:max-w-[330px] w-full">
                                     <div className="sm:px-4 px-3 py-4 flex flex-col gap-y-3">
                                         <h5 className="text-zinc-500"> {curVal.name} </h5>

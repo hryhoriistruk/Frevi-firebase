@@ -76,7 +76,7 @@ const Footer = () => {
                                     className="text-zinc-700 font-semibold cursor-pointer text-[15px] hover:underline" 
                                     key={curVal.id}
                                 >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>
@@ -101,7 +101,7 @@ const Footer = () => {
                                     className="text-zinc-700 font-semibold cursor-pointer text-[15px] hover:underline"
                                     key={curVal.id}
                                 >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>
@@ -126,7 +126,7 @@ const Footer = () => {
                                     className="text-zinc-700 font-semibold cursor-pointer text-[15px] hover:underline"
                                     key={curVal.id}
                                 >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>
@@ -151,7 +151,7 @@ const Footer = () => {
                                     className="text-zinc-700 font-semibold cursor-pointer text-[15px] hover:underline"
                                     key={curVal.id}
                                 >
-                                    <Link href={curVal.link}>
+                                    <Link href={curVal.link} legacyBehavior>
                                         {curVal.name}
                                     </Link>
                                 </li>
@@ -207,22 +207,22 @@ const Footer = () => {
                     </div>
                     <ul className="flex md:flex-row flex-col md:items-center xl:space-x-20 md:space-x-7 md:space-y-0 space-y-3">
                         <li className="text-[15px] text-zinc-800 font-semibold hover:underline">
-                            <Link href="/">
+                            <Link href="/" legacyBehavior>
                                 Terms of Service
                             </Link>
                         </li>
                         <li className="text-[15px] text-zinc-800 font-semibold hover:underline">
-                            <Link href="/">
+                            <Link href="/" legacyBehavior>
                                 Privecy Policy
                             </Link>
                         </li>
                         <li className="text-[15px] text-zinc-800 font-semibold hover:underline">
-                            <Link href="/">
+                            <Link href="/" legacyBehavior>
                                 Cokkie Settings
                             </Link>
                         </li>
                         <li className="text-[15px] text-zinc-800 font-semibold hover:underline">
-                            <Link href="/">
+                            <Link href="/" legacyBehavior>
                                 Accessibility
                             </Link>
                         </li>
