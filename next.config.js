@@ -16,5 +16,7 @@ const nextConfig = {
         return config;
     },
 }
-
+module.exports = {
+    distDir: '.next',
+};
 module.exports = nextConfig
