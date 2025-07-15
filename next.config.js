@@ -5,16 +5,16 @@ const nextConfig = {
     trailingSlash: true,
     images: {
         unoptimized: true
-    },
-
-    // Configure path aliases for @ imports
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-        config.resolve.alias = {
-            ...config.resolve.alias,
-            '@': __dirname,
-        };
-        return config;
-    },
+    }
 }
 
 module.exports = nextConfig
+
+const path = require('path');
+
+module.exports = {
+  webpack: (config) => {
+    config.resolve.alias['@'] = path.resolve(__dirname);
+    return config;
+  }
+};

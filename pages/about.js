@@ -124,7 +124,7 @@ const About = () => {
 
                                     <div>
                                         <h4 className="text-zinc-600 font-semibold text-lg">
-                                            Hryhorii-Volodymyr Struk
+                                            Michel Peterson
                                         </h4>
                                         <p className="text-zinc-600 font-semibold text-lg">
                                             President and CEO

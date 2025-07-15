@@ -1,9 +1,12 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.frevi.app',
-  appName: 'frevi',
-  webDir: 'public'
+  appName: 'Frevi App',
+  webDir: 'out',
+  server: {
+    androidScheme: 'https'
+  }
 };
 
 export default config;
