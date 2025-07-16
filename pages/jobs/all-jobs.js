@@ -241,11 +241,9 @@ const AllJobs = () => {
                                     </form>
 
                                     <div className="mt-2">
-                                        <Link href="#">
-                                            <a className="font-semibold text-zinc-800 hover:underline hover:text-[#525554fd] cursor-pointer">
+                                        <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-[#525554fd] cursor-pointer">
                                                 Advanced search
-                                            </a>
-                                        </Link>
+                                            </a></Link>
                                     </div>
                                 </div>
 
@@ -270,11 +268,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (1) =================== */}  
                             <div className="py-7 sm:px-7 px-1.5  border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Images for interior design brand
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Fixed Price</strong>
@@ -303,11 +299,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (2) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Find leads of small businesses using Shopify located in the Ontario area
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -342,11 +336,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (3) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                   <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                   <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Need a Unity level designer to work over existing world & create new spaces
-                                        </a>
-                                   </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -378,11 +370,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (4) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Download Instagram post
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -417,11 +407,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (5) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Creative Entry-Level Copy Proofreading
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -456,11 +444,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (6) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Embedded Electronics System Design, Programming, PCB Design
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -495,11 +481,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (7) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Do not apply 220828171661709017352 (JAP) - submitted by Upwork QA EHM
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -534,11 +518,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (8) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Find leads of small businesses using Shopify located in the Ontario area
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -573,11 +555,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (9) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Find leads of small businesses using Shopify located in the Ontario area
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Hourly: $30.00-$8.00</strong>
@@ -612,11 +592,9 @@ const AllJobs = () => {
                             {/* ================ Jobs Post (10) =================== */}
                             <div className="py-7 sm:px-7 px-1.5 space-y-5">
                                 <div className="flex flex-col space-y-3">
-                                    <Link href="#">
-                                        <a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
+                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
                                             Project manager in a growing digital marketing agency
-                                        </a>
-                                    </Link>
+                                        </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
                                         <strong>Fixed Price</strong>

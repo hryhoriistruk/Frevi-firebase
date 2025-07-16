@@ -1,15 +1,22 @@
 import { useState } from 'react';
+import { getmessages, sendmessage } from '../api/messageService';
 
+function MessagesPage() {
+    const [messages, setMessages] = useState([]);
+
+    useEffect(() => {
+        getMessages().then(response => setMessages(response.data));
+    }, []);
 export default function MessagesPage() {
     const [messages, setMessages] = useState([
-        { id: 1, text: "Привіт!", sender: "user" },
-        { id: 2, text: "Як справи?", sender: "other" },
+        {id: 1, text: "Привіт!", sender: "user"},
+        {id: 2, text: "Як справи?", sender: "other"},
     ]);
     const [newMessage, setNewMessage] = useState("");
 
     const handleSend = () => {
         if (!newMessage.trim()) return;
-        setMessages([...messages, { id: Date.now(), text: newMessage, sender: "user" }]);
+        setMessages([...messages, {id: Date.now(), text: newMessage, sender: "user"}]);
         setNewMessage("");
     };
 
@@ -31,4 +38,5 @@ export default function MessagesPage() {
             <button onClick={handleSend}>Надіслати</button>
         </div>
     );
+}
 }

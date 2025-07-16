@@ -126,11 +126,9 @@ export default function Home() {
 
             <span className="text-zinc-600 font-semibold lg:text-lg text-md">
               Looking for work?
-              <Link href="/jobs/all-jobs">
-                <a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
+              <Link href="/jobs/all-jobs" legacyBehavior legacyBehavior><a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
                   Browse Job
-                </a>
-              </Link>
+                </a></Link>
             </span>
 
             <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 2xl:gap-x-20 gap-x-10 xl:gap-y-7 sm:gap-y-4 gap-y-3 lg:mt-10 mt-7 md:px-0 sm:px-7">
