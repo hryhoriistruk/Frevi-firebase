@@ -19,5 +19,10 @@ const nextConfig = {
 }
 module.exports = {
     distDir: '.next',
+    output: 'standalone',
+    webpack: (config) => {
+        config.optimization.splitChunks = false;
+        return config;
+    }
 };
 module.exports = nextConfig
