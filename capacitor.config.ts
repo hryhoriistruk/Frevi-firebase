@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.frevi.app',
+  appId: 'com.example.app',
   appName: 'frevi',
   webDir: 'public'
 };
