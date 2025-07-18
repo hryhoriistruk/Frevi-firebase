@@ -54,7 +54,7 @@ const HowToHire = () => {
                                 </motion.button>
                                 <span className="font-semibold bg-transparent text-zinc-800">
                                     Looking to get hired? 
-                                    <Link href="/how-to-hire" legacyBehavior legacyBehavior><a className="text-sky-700 hover:text-sky-800 underline ml-1"> 
+                                    <Link href="/how-to-hire" legacyBehavior><a className="text-sky-700 hover:text-sky-800 underline ml-1">
                                             Sign Up here 
                                         </a></Link>
                                 </span>

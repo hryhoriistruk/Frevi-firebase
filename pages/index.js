@@ -126,7 +126,7 @@ export default function Home() {
 
             <span className="text-zinc-600 font-semibold lg:text-lg text-md">
               Looking for work?
-              <Link href="/jobs/all-jobs" legacyBehavior legacyBehavior><a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
+              <Link href="/jobs/all-jobs" legacyBehavior><a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
                   Browse Job
                 </a></Link>
             </span>

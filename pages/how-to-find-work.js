@@ -465,7 +465,7 @@ const HowToFindWork = () => {
                                 </ul>
 
                                <div className="mt-3">
-                                    <Link href="#" legacyBehavior legacyBehavior><a className="font-semibold underline text-blue-700"> 
+                                    <Link href="#"legacyBehavior><a className="font-semibold underline text-blue-700">
                                             Learn more about service fees. 
                                         </a></Link>
                                </div>

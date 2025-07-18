@@ -1,18 +1,20 @@
-import { useState } from 'react';
-import { getmessages, sendmessage } from '../api/messageService';
+import { useState, useEffect } from 'react';
 
-function MessagesPage() {
-    const [messages, setMessages] = useState([]);
+function getMessages() {
+    // This should be your actual API call implementation
+    return Promise.resolve({ data: [] });
+}
 
-    useEffect(() => {
-        getMessages().then(response => setMessages(response.data));
-    }, []);
 export default function MessagesPage() {
     const [messages, setMessages] = useState([
         {id: 1, text: "Привіт!", sender: "user"},
         {id: 2, text: "Як справи?", sender: "other"},
     ]);
     const [newMessage, setNewMessage] = useState("");
+
+    useEffect(() => {
+        getMessages().then(response => setMessages(response.data));
+    }, []);
 
     const handleSend = () => {
         if (!newMessage.trim()) return;
@@ -38,5 +40,4 @@ export default function MessagesPage() {
             <button onClick={handleSend}>Надіслати</button>
         </div>
     );
-}
 }

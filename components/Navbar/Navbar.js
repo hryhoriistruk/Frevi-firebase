@@ -726,7 +726,7 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <Link href={"/enterprise"} legacyBehavior legacyBehavior><a className="text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700"> 
+                            <Link href={"/enterprise"} legacyBehavior><a className="text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700">
                                     Enterprise 
                                 </a></Link>
                         </li>

@@ -293,16 +293,16 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Development & It 
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Admin & Custom Support 
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#"  legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Design & Creative 
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories
                                     </a></Link>
                             </div>
@@ -327,13 +327,13 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Sales & Marketing
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Design & Creative
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories 
                                     </a></Link>
                             </div>
@@ -358,10 +358,10 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Sales & Marketing
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories
                                     </a></Link>
                             </div>
@@ -386,10 +386,10 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Development & It
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories
                                     </a></Link>
                             </div>
@@ -414,10 +414,10 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Admin & Custom Support
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories
                                     </a></Link>
                             </div>
@@ -442,10 +442,10 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Sales & Marketing
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories
                                     </a></Link>
                             </div>
@@ -470,10 +470,10 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Admin & Custom Support
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories
                                     </a></Link>
                             </div>
@@ -498,10 +498,10 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex flex-wrap space-x-2">
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Admin & Custom Support
                                     </a></Link>
-                                <Link href="#" legacyBehavior legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1"> 
+                                <Link href="#" legacyBehavior><a className="px-2 py-1 bg-zinc-200 transition hover:bg-zinc-300 rounded-full text-[15px] font-semibold text-zinc-500 cursor-pointer my-1">
                                         Success Stories
                                     </a></Link>
                             </div>

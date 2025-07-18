@@ -105,7 +105,7 @@ const SignUp = () => {
                             <div className="mt-7">
                                 <p className="text-zinc-800 text-center">
                                     Already have an account? 
-                                    <Link href="/account-security/login" legacyBehavior legacyBehavior><a className="font-semibold text-blue-700 hover:underline"> Log In </a></Link>
+                                    <Link href="/account-security/login" legacyBehavior><a className="font-semibold text-blue-700 hover:underline"> Log In </a></Link>
                                 </p>
                             </div>
                         </div>
@@ -220,7 +220,7 @@ const SignUp = () => {
                             <div className="mt-7">
                                 <p className="text-zinc-800 text-center">
                                     Already have an account? 
-                                    <Link href="/account-security/login" legacyBehavior legacyBehavior><a className="font-semibold text-blue-700 hover:underline"> Log In </a></Link>
+                                    <Link href="/account-security/login" legacyBehavior><a className="font-semibold text-blue-700 hover:underline"> Log In </a></Link>
                                 </p>
                             </div>
                         </div>
@@ -335,7 +335,7 @@ const SignUp = () => {
                             <div className="mt-7">
                                 <p className="text-zinc-800 text-center">
                                     Already have an account? 
-                                    <Link href="/account-security/login" legacyBehavior legacyBehavior><a className="font-semibold text-blue-700 hover:underline"> Log In </a></Link>
+                                    <Link href="/account-security/login"legacyBehavior><a className="font-semibold text-blue-700 hover:underline"> Log In </a></Link>
                                 </p>
                             </div>
                         </div>
