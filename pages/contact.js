@@ -122,7 +122,7 @@ const Contact = () => {
                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    Suite 430
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
                                                     Kosice
