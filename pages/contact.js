@@ -115,23 +115,23 @@ const Contact = () => {
 
                                         <div className="py-4 sm:px-5 px-4">
                                             <h4 className="text-zinc-800 font-semibold text-[21px]">
-                                                Global HQ
+                                               Kosice
                                             </h4>
                                             <div className="mt-2">
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    475 Brannan St.
+                                                   Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
                                                     Suite 430
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    San Francisco
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    CA 94107
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    Phone: (650) 316-7500
+                                                    Kosice
                                                 </p>
                                             </div>
                                         </div>
@@ -148,20 +148,20 @@ const Contact = () => {
 
                                         <div className="py-4 sm:px-5 px-4">
                                             <h4 className="text-zinc-800 font-semibold text-[21px]">
-                                                Chicago Office
+                                                Kosice Office
                                             </h4>
                                             <div className="mt-2">
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    525 W. Van Buren
+                                                   Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    Suite 1100
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    Chicago
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    IL 60607
+                                                    Kosice
                                                 </p>
                                             </div>
                                         </div>
@@ -178,23 +178,23 @@ const Contact = () => {
 
                                         <div className="py-4 sm:px-5 px-4">
                                             <h4 className="text-zinc-800 font-semibold text-[21px]">
-                                                Mailing Address
+                                               Kosice
                                             </h4>
                                             <div className="mt-2">
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    655 Montgomery St.
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    Suite 490
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    Dept. 17022
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    San Francisco
+                                                    Kosice
                                                 </p>
                                                 <p className="text-zinc-500 font-semibold text-[17px]">
-                                                    CA 94111-2676
+                                                    Kosice
                                                 </p>
                                             </div>
                                         </div>
