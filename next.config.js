@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export', // Uncomment if you need static export
-    distDir: '.next',
+    output: 'export',
+    // distDir: 'public',
     trailingSlash: true,
+
     images: {
         unoptimized: true
     },
