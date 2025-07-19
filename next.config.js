@@ -1,27 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export', // Uncomment if you need static export
-    distDir: '.next',
+    output: 'export',
+    distDir: 'out',
     trailingSlash: true,
     images: {
         unoptimized: true
     },
-    //output: 'standalone',
     reactStrictMode: true,
     env: {
         GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
         GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
         MONGODB_URI: process.env.MONGODB_URI
     },
-    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-        // Configure path aliases for @ imports
+    webpack: (config, { isServer }) => {
+        // Додаємо аліаси для імпортів
         config.resolve.alias = {
             ...config.resolve.alias,
             '@': __dirname,
         };
 
-        // Optimization configuration
-        config.optimization.splitChunks = false;
+        // Оптимізація тільки для клієнтської збірки
+        if (!isServer) {
+            config.optimization.splitChunks = {
+                chunks: 'all',
+                maxSize: 244 * 1024, // 244KB
+            };
+        }
 
         return config;
     }
