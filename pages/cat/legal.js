@@ -259,13 +259,13 @@ const Legal = () => {
                 firstDesText="Engineering and architecture refers to the use of science and math to design, plan, and create practical solutions to real-world problems. In business, engineering and architecture refers to the use of technical expertise to create products and services."
 
                 secondHeadText="What is the first step to hiring legal talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with engineering and architecture, but what specific things are you trying to do? Upwork matches you with proven remote talent who can help you with all your needs, including."
+                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with engineering and architecture, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your needs, including."
 
                 thirdHeadText="What are the various ways I can connect with legal talent through Frevi?"
-                thirdDesText=" Upwork gives you the flexibility you need to find the right talent for your projects.
-                Talent Marketplace: Find and source independent professionals for your projects directly from Upwork’s talent marketplace.Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Upwork. From building information modeling services to trade show booth engineering services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                thirdDesText=" Frevi gives you the flexibility you need to find the right talent for your projects.
+                Talent Marketplace: Find and source independent professionals for your projects directly from Frevi’s talent marketplace.Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From building information modeling services to trade show booth engineering services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
 
-                fourHeadText="Why should I use Upwork to find talent for legal services?"
+                fourHeadText="Why should I use Frevi to find talent for legal services?"
                 fourDesText="When it comes to engineering and architecture, you may need a multidisciplinary team to handle the various components of your project."
 
                 lastLeftText="Still have questions?"

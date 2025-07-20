@@ -125,7 +125,7 @@ const SubLinks3 = [
     { 
         id: 3,
         name: "Reviews",
-        des: "See what it's like to collaborate on upwork",
+        des: "See what it's like to collaborate on Frevi",
         link: "/reviews"
     },
     { 

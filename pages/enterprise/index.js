@@ -416,7 +416,7 @@ const Enterprise = () => {
                                         Payroll and classification
                                     </h4>
                                     <p className="text-white 2xl:text-lg font-semibold">
-                                        Classify and pay your distributed team with Upwork Payroll so you can focus on growing your business. Learn more
+                                        Classify and pay your distributed team with Frevi Payroll so you can focus on growing your business. Learn more
                                     </p>
                                 </div>
 
@@ -519,7 +519,7 @@ const Enterprise = () => {
                                     Account Manager
                                 </h5>
                                 <p className="text-zinc-600 font-semibold text-[17px]">
-                                    Maintains your account and works with your team to maximize the return on your Upwork investment.
+                                    Maintains your account and works with your team to maximize the return on your Frevi investment.
                                 </p>
                             </div>
 
@@ -539,7 +539,7 @@ const Enterprise = () => {
                                     Program Success Managers
                                 </h5>
                                 <p className="text-zinc-600 font-semibold text-[17px]">
-                                    Keeps your team up to date on how to use Upwork and any changes to your account.
+                                    Keeps your team up to date on how to use Frevi and any changes to your account.
                                 </p>
                             </div>
 

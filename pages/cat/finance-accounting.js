@@ -269,12 +269,12 @@ const FinanceAccounting = () => {
                 firstDesText="Finance is the process of managing money and other financial resources for a business. Accounting is the process of recording, classifying, and summarizing financial transactions."
 
                 secondHeadText="What is the first step to hiring finance and accounting talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with finance and accounting, but what specific things are you trying to do? Upwork matches you with proven remote talent who can help you with all your finance and accounting needs, including"
+                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with finance and accounting, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your finance and accounting needs, including"
 
                 thirdHeadText="What are the various ways I can connect with finance and accounting talent through Frevi?"
-                thirdDesText=" Upwork gives you the flexibility you need to find the right talent for your finance and accounting projects. To trade show booth engineering services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                thirdDesText=" Frevi gives you the flexibility you need to find the right talent for your finance and accounting projects. To trade show booth engineering services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
 
-                fourHeadText="Why should I use Upwork to find talent for finance and accounting services?"
+                fourHeadText="Why should I use Frevi to find talent for finance and accounting services?"
                 fourDesText="When it comes to finance and accounting, you may need a multidisciplinary team of talent to handle the various components of your project. Examples of professionals you might need for finance and accounting projects include"
 
                 lastLeftText="Still have questions?"

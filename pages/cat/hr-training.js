@@ -251,7 +251,7 @@ const HrTraning = () => {
                 
                 secondImage="/images/team-pl.png"
                 secondHead="Lone UCLA Professor Builds Online Learning Platform In Just 3 Months"
-                secondDes="UCLA needed a team of program consultants and web developers to build a bespoke e-learning platform. So they came to us. Independent professionals on Upwork helped put together the plan, then execute it, with some seriously niche roles playing a big part.”"
+                secondDes="UCLA needed a team of program consultants and web developers to build a bespoke e-learning platform. So they came to us. Independent professionals on Frevi helped put together the plan, then execute it, with some seriously niche roles playing a big part.”"
                 secondRightText="1 week to source & contract talent"
                 secondLeftBtn={{text: "Read Case Study", link: "#"}}
             />
@@ -262,13 +262,13 @@ const HrTraning = () => {
                 firstDesText="Writing is the process of creating written content for a variety of purposes. It can be used to communicate information, tell a story, or persuade an audience. Translation is the process of converting written content from one language to another, allowing businesses to communicate with their customers in their native language. ."
 
                 secondHeadText="What is the first step to hiring HR talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with sales and marketing, but what specific things are you trying to do? Upwork matches you with proven remote talent who can help you with all your sales and marketing needs, including"
+                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with sales and marketing, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your sales and marketing needs, including"
 
                 thirdHeadText="What are the various ways I can connect with HR talent through Frevi?"
-                thirdDesText=" If you need help finding talent for your marketing project, Upwork gives you the flexibility you need to succeed.Talent Marketplace: Find and source independent professionals for your sales or marketing project directly from Upwork’s talent marketplace.
-                Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Upwork. From market research and strategy to SEO and SEM services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                thirdDesText=" If you need help finding talent for your marketing project, Frevi gives you the flexibility you need to succeed.Talent Marketplace: Find and source independent professionals for your sales or marketing project directly from Frevi’s talent marketplace.
+                Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From market research and strategy to SEO and SEM services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
 
-                fourHeadText="Why should I use Upwork to find talent for HR services?"
+                fourHeadText="Why should I use Frevi to find talent for HR services?"
                 fourDesText="When it comes to sales and marketing, you may need a multidisciplinary team of talent to handle the various components of your project. Examples of professionals you might need for a sales and marketing projects include"
 
                 lastLeftText="Still have questions?"

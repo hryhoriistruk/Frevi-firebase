@@ -1,22 +1,22 @@
-
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from "@lib/firebase";
+import { adminDb } from '@lib/firebase-admin';
 
 export async function getStaticPaths() {
-    // Если вы знаете ID пользователей заранее, добавьте их здесь
-    // Или оставьте пустым для динамической генерации
     return {
         paths: [],
-        fallback: 'blocking' // Важно для динамических путей
+        fallback: 'blocking'
     };
 }
 
 export async function getStaticProps({ params }) {
     try {
-        const userRef = doc(db, 'users', params.id);
-        const userSnap = await getDoc(userRef);
+        if (!params?.id) {
+            return { notFound: true };
+        }
 
-        if (!userSnap.exists()) {
+        const userRef = adminDb.collection('users').doc(params.id);
+        const userSnap = await userRef.get();
+
+        if (!userSnap.exists) {
             return { notFound: true };
         }
 
@@ -24,18 +24,24 @@ export async function getStaticProps({ params }) {
             props: {
                 user: userSnap.data()
             },
-            revalidate: 60 // ISR: страница будет перегенерироваться каждые 60 секунд
+            revalidate: 60
         };
     } catch (error) {
+        console.error('Error fetching user:', error);
         return { notFound: true };
     }
 }
 
 export default function UserProfile({ user }) {
+    if (!user) {
+        return <div>Пользователь не найден</div>;
+    }
+
     return (
-        <div>
+        <div className="user-profile">
             <h1>{user.name}</h1>
             <p>Email: {user.email}</p>
+            {user.avatar && <img src={user.avatar} alt="Аватар" />}
         </div>
     );
 }

@@ -57,7 +57,7 @@ const About = () => {
 
                             <div className="space-y-4 mt-5">
                                 <p className="text-zinc-600 font-semibold text-[17px]">
-                                    Upwork began over two decades ago by pioneering a better way of working, helping businesses find more flexibility and connecting talent with more opportunities.
+                                    Frevi began over two decades ago by pioneering a better way of working, helping businesses find more flexibility and connecting talent with more opportunities.
                                 </p>
 
                                 <h4 className="text-[#0C4A6E] font-semibold text-[21px]">
@@ -65,7 +65,7 @@ const About = () => {
                                 </h4>
 
                                 <p className="text-zinc-600 font-semibold text-[17px]">
-                                    Like for so many, Upwork has had a big impact on my life. I first came to this company on the product team and over the years have understood what makes this platform really work: the relationships.
+                                    Like for so many, Frevi has had a big impact on my life. I first came to this company on the product team and over the years have understood what makes this platform really work: the relationships.
                                 </p>
 
                                 <p className="text-zinc-800 font-semibold text-lg">
@@ -73,15 +73,15 @@ const About = () => {
                                 </p>
 
                                 <p className="text-zinc-600 font-semibold text-[17px]">
-                                    I have personally seen the passion and commitment that every user puts into their work here. Whether it’s a quick powerpoint presentation or a multi-year development project - both talent on Upwork and our clients care about doing really good work because they love what they do. 
+                                    I have personally seen the passion and commitment that every user puts into their work here. Whether it’s a quick powerpoint presentation or a multi-year development project - both talent on Frevi and our clients care about doing really good work because they love what they do.
                                 </p>
 
                                 <p className="text-zinc-600 font-semibold text-[17px]">
-                                    In fact, we designed it that way. Our work marketplace aligns the goals of our clients with the goals of talent on Upwork so that outcomes are better and everyone grows in the same direction. You’ll find tools to develop your skills, evolve your business, and gain the control and freedom you need for success. 
+                                    In fact, we designed it that way. Our work marketplace aligns the goals of our clients with the goals of talent on Frevi, so that outcomes are better and everyone grows in the same direction. You’ll find tools to develop your skills, evolve your business, and gain the control and freedom you need for success.
                                 </p>
 
                                 <p className="text-zinc-800 font-semibold text-lg">
-                                    Upwork is your workforce
+                                    Frevi is your workforce
                                 </p>
 
                                 <p className="text-zinc-600 font-semibold text-[17px]">
@@ -105,7 +105,7 @@ const About = () => {
                                 </p>
 
                                 <p className="text-zinc-600 font-semibold text-[17px]">
-                                    I can say with confidence that the Upwork team - the team that serves you the talent and you the client - is still driven by our mission to create economic opportunity for our people around the world. 
+                                    I can say with confidence that the Frevi team - the team that serves you the talent and you the client - is still driven by our mission to create economic opportunity for our people around the world.
                                 </p>
 
                                 <p className="text-zinc-600 font-semibold text-[17px]">

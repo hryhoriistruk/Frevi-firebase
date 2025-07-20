@@ -18,7 +18,7 @@ const HowToFindWork = () => {
         <div className="min-h-screen flex flex-col">
 
             {/* ============== Head Tag =============== */}
-            <HeadTag title="How Does Upwork Work for Freelancers | Frevi"/>
+            <HeadTag title="How Does Frevi Work for Freelancers | Frevi"/>
 
             {/* ================== Header =================== */}
             <header className="header-bg">
@@ -423,7 +423,7 @@ const HowToFindWork = () => {
                                     All in one place
                                 </h4>
                                 <p className="text-zinc-500 xl:text-[17px] font-semibold">
-                                    Invoice clients and track your earnings on Upwork for a simple and streamlined process.
+                                    Invoice clients and track your earnings on Frevi for a simple and streamlined process.
                                 </p>
                             </motion.div>
 
@@ -495,34 +495,34 @@ const HowToFindWork = () => {
                         <div className="lg:px-7 sm:px-5 px-0 sm:py-5 py-3">
                             <div className="border-b border-zinc-300 xl:py-7 sm:py-5 py-3 space-y-2">
                                 <h4 className="xl:text-3xl sm:text-2xl text-xl font-semibold text-zinc-800">
-                                    Is Upwork free to join as a freelancer?
+                                    Is Frevi free to join as a freelancer?
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
-                                    Yes, it’s free to join Upwork, complete your profile, search for work and create your own projects. Our service fee is based on your earnings with each client and the sliding scale rewards long-term relationships.
+                                    Yes, it’s free to join Frevi, complete your profile, search for work and create your own projects. Our service fee is based on your earnings with each client and the sliding scale rewards long-term relationships.
                                 </p>
                             </div>
 
                             <div className="border-b border-zinc-300 xl:py-7 sm:py-5 py-3 space-y-2">
                                 <h4 className="xl:text-3xl sm:text-2xl text-xl font-semibold text-zinc-800">
-                                    Can I grow my career on Upwork?
+                                    Can I grow my career on Frevi?
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl text-lg text-md">
-                                    Yes, some of our most successful professionals have brought their strong background and employment track record to Upwork. We know you may be new to freelancing but highly experienced in your field. Our complete guide shares our step-by-step tips for building your freelance career.
+                                    Yes, some of our most successful professionals have brought their strong background and employment track record to Frevi. We know you may be new to freelancing but highly experienced in your field. Our complete guide shares our step-by-step tips for building your freelance career.
                                 </p>
                             </div>
 
                             <div className="xl:py-7 sm:py-5 py-3 space-y-2">
                                 <h4 className="xl:text-3xl sm:text-2xl text-xl font-semibold text-zinc-800">
-                                    What can I gain from freelancing with Upwork?
+                                    What can I gain from freelancing with Frevi?
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
-                                    Many more people like you are choosing to leave their day jobs and grow as independent professionals. Why? Because of the freedom and flexibility that comes with being your own boss. And for the chance to work with great clients and well-known brands. Many choose Upwork because we help them do it well. How to Succeed as a Freelancer gives you a taste of the support we offer to boost your success.
+                                    Many more people like you are choosing to leave their day jobs and grow as independent professionals. Why? Because of the freedom and flexibility that comes with being your own boss. And for the chance to work with great clients and well-known brands. Many choose Frevi because we help them do it well. How to Succeed as a Freelancer gives you a taste of the support we offer to boost your success.
                                 </p>
                             </div>
 
                             <div className="xl:py-7 sm:py-5 py-3 space-y-2">
                                 <h4 className="xl:text-3xl sm:text-2xl text-xl font-semibold text-zinc-800">
-                                    Is Upwork good for building a business? 
+                                    Is Frevi good for building a business?
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
                                     Yes, and creating an agency can be a great way to grow. Using our agency structure, freelancers can collaborate as a single organization, delivering more to their clients. Moving from solo freelancer to agency owner is a big transition, but it might be the right one for you.
@@ -531,7 +531,7 @@ const HowToFindWork = () => {
 
                             <div className="xl:py-7 sm:py-5 py-3 space-y-2">
                                 <h4 className="xl:text-3xl sm:text-2xl text-xl font-semibold text-zinc-800">
-                                    What projects can I find on Upwork?
+                                    What projects can I find on Frevi?
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
                                     Clients are looking for help across almost every industry, job, and skill set. Find the work you’re looking for, from specific projects to ongoing, long-term work, on fixed-price and hourly contracts. 
@@ -543,7 +543,7 @@ const HowToFindWork = () => {
                                     What are Connects? 
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
-                                    Connects are Upwork’s virtual currency. Freelancers and agencies use them to show their genuine interest as they submit proposals. Different jobs require different amounts of Connects, some none at all. Freelancer accounts receive free Connects every month. You can buy bundles of them. And freelancers and agencies earn Connects by winning client interviews, getting great reviews, and demonstrating their skills.
+                                    Connects are Frevi’s virtual currency. Freelancers and agencies use them to show their genuine interest as they submit proposals. Different jobs require different amounts of Connects, some none at all. Freelancer accounts receive free Connects every month. You can buy bundles of them. And freelancers and agencies earn Connects by winning client interviews, getting great reviews, and demonstrating their skills.
                                 </p>
                             </div>
                         </div>

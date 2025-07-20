@@ -316,7 +316,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Upwork and Email"
+                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -424,7 +424,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Upwork and Email"
+                                        Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -461,7 +461,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                       The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Upwork and Email"
+                                       The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -482,7 +482,7 @@ const AllJobs = () => {
                             <div className="py-7 sm:px-7 px-1.5 border-b border-gray-300 space-y-5">
                                 <div className="flex flex-col space-y-3">
                                     <Link href="#" legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-blue-900 cursor-pointer">
-                                            Do not apply 220828171661709017352 (JAP) - submitted by Upwork QA EHM
+                                            Do not apply 220828171661709017352 (JAP) - submitted by Frevi QA EHM
                                         </a></Link>
 
                                     <small className="text-zinc-500 space-x-1 text-sm">
@@ -498,7 +498,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Upwork and Email"
+                                        Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -535,7 +535,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Upwork and Email"
+                                        Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -609,7 +609,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Upwork and Email"
+                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">

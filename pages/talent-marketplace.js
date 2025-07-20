@@ -193,7 +193,7 @@ const TalentMarketplace = () => {
                             You're in good company
                         </h2>
                         <p className="text-zinc-600 sm:text-lg text-md sm:mt-3 mt-1">
-                            Millions of companies, big and small, use Upwork to get great work done. Join them today.
+                            Millions of companies, big and small, use Frevi to get great work done. Join them today.
                         </p>
 
                         <motion.div className="grid md:grid-cols-3 lg:gap-x-7 md:gap-y-0 gap-y-3 gap-x-5 sm:mt-7 mt-5"

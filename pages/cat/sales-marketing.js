@@ -249,7 +249,7 @@ const SalesMarketing = () => {
                 first_F_LeftRating="5/5"
                 first_F_RightText="Budget:"
                 first_F_RightValue="$1,580"
-                firstDes="If you have an opportunity to hire Felice, dont delay! He has great ideas, but is open to feedback and changes. He was always well prepared, kept me informed, met his timelines, and delivered what he said and more. My best experience on Upwork. In fact, I've started up another project with him and am still working with him."
+                firstDes="If you have an opportunity to hire Felice, dont delay! He has great ideas, but is open to feedback and changes. He was always well prepared, kept me informed, met his timelines, and delivered what he said and more. My best experience on Frevi. In fact, I've started up another project with him and am still working with him."
                 first_S_LeftText="Skills:"
                 first_S_F_RightValue="Brand Indentity"
                 first_S_S_RightValue="Logo"
@@ -269,13 +269,13 @@ const SalesMarketing = () => {
                 firstDesText="Sales refers to all activities directly involved in the exchange of goods and services for revenue. It deals primarily with salespeople and the infrastructure that allows them to build relationships with customers. Marketing is the process of identifying, anticipating, and even shaping customers’ needs and desires. Marketing includes all aspects of advertising, promoting, and communicating information about products and services to consumers or other businesses in a persuasive manner. Together sales and marketing are like two sides of the same coin—marketing drives the interest needed to attract leads to your business, and sales is responsible for turning those leads directly into revenue. You need both for a successful business."
 
                 secondHeadText="What is the first step to hiring sales and marketing talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with sales and marketing, but what specific things are you trying to do? Upwork matches you with proven remote talent who can help you with all your sales and marketing needs, including"
+                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with sales and marketing, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your sales and marketing needs, including"
 
                 thirdHeadText="What are the various ways I can connect with sales and marketing talent through Frevi?"
-                thirdDesText=" If you need help finding talent for your marketing project, Upwork gives you the flexibility you need to succeed.Talent Marketplace: Find and source independent professionals for your sales or marketing project directly from Upwork’s talent marketplace.
-                Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Upwork. From market research and strategy to SEO and SEM services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                thirdDesText=" If you need help finding talent for your marketing project, Frevi gives you the flexibility you need to succeed.Talent Marketplace: Find and source independent professionals for your sales or marketing project directly from Frevi’s talent marketplace.
+                Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From market research and strategy to SEO and SEM services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
 
-                fourHeadText="Why should I use Upwork to find talent for sales and marketing services?"
+                fourHeadText="Why should I use Frevi to find talent for sales and marketing services?"
                 fourDesText="When it comes to sales and marketing, you may need a multidisciplinary team of talent to handle the various components of your project. Examples of professionals you might need for a sales and marketing projects include"
 
                 lastLeftText="Still have questions?"
