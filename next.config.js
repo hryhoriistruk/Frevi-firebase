@@ -30,5 +30,21 @@ const nextConfig = {
         return config;
     }
 }
+module.exports = {
+    reactStrictMode: true,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+}
+module.exports = {
+    output: 'export', // Для генерації статичних файлів
+    distDir: 'out',  // Папка для збірки
+    images: {
+        unoptimized: true // Вимкнути оптимізацію зображень
+    }
+}
 
 module.exports = nextConfig

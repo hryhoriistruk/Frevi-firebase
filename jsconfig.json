@@ -6,7 +6,8 @@
       "@/components/*": ["./components/*"],
       "@/lib/*": ["./lib/*"],
       "@/pages/*": ["./pages/*"],
-      "@/styles/*": ["./styles/*"]
+      "@/styles/*": ["./styles/*"],
+      "@lib/*": ["lib/*"]
     }
   },
   "exclude": ["node_modules", ".next", "out"]
