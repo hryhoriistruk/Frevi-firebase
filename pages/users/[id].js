@@ -1,4 +1,5 @@
-import { adminDb } from '@lib/firebase-admin';
+// Видаляємо імпорт Firebase
+// import { adminDb } from '@lib/firebase-admin'; // <-- Цей рядок більше не потрібен
 
 export async function getStaticPaths() {
     return {
@@ -7,23 +8,31 @@ export async function getStaticPaths() {
     };
 }
 
+// Замінюємо Firebase на фейкові дані або REST API
 export async function getStaticProps({ params }) {
     try {
         if (!params?.id) {
             return { notFound: true };
         }
 
-        const userRef = adminDb.collection('users').doc(params.id);
-        const userSnap = await userRef.get();
+        // Варіант 1: Фейкові дані (для тестування)
+        const mockUsers = {
+            '1': { name: 'Іван Петренко', email: 'ivan@example.com', avatar: '/avatars/1.jpg' },
+            '2': { name: 'Марія Іванова', email: 'maria@example.com', avatar: '/avatars/2.jpg' }
+        };
 
-        if (!userSnap.exists) {
+        // Варіант 2: Використання REST API (розкоментуйте, якщо є API)
+        // const res = await fetch(`https://ваш-api.example.com/users/${params.id}`);
+        // const user = await res.json();
+
+        const user = mockUsers[params.id];
+
+        if (!user) {
             return { notFound: true };
         }
 
         return {
-            props: {
-                user: userSnap.data()
-            },
+            props: { user },
             revalidate: 60
         };
     } catch (error) {
@@ -32,9 +41,10 @@ export async function getStaticProps({ params }) {
     }
 }
 
+// Компонент залишаємо без змін
 export default function UserProfile({ user }) {
     if (!user) {
-        return <div>Пользователь не найден</div>;
+        return <div>Користувача не знайдено</div>;
     }
 
     return (

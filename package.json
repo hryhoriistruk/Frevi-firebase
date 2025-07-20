@@ -8,9 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "start-static": "serve out",
-    "deploy": "next build && firebase deploy --only hosting",
-    "prebuild": "node -e \"require('./scripts/checkEnv.js')\""
+    "start-static": "serve out"
   },
   "dependencies": {
     "@capacitor/android": "^7.4.2",
@@ -19,8 +17,6 @@
     "@firebase/firestore": "^4.9.0",
     "@next-auth/mongodb-adapter": "^1.1.3",
     "axios": "^1.10.0",
-    "firebase": "^12.0.0",
-    "firebase-admin": "^13.4.0",
     "framer-motion": "^7.10.3",
     "mongoose": "^8.16.4",
     "next": "^15.4.1",
