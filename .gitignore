@@ -38,3 +38,4 @@ next-env.d.ts
 dist/
 dist/
 .env.local # Додає в ігнор
+.env.local
