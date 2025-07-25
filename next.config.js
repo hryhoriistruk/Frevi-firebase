@@ -26,6 +26,11 @@ const nextConfig = {
                 maxSize: 244 * 1024, // 244KB
             };
         }
+        config.resolve.fallback = {
+            fs: false,
+            net: false,
+            tls: false
+        };
 
         return config;
     }
