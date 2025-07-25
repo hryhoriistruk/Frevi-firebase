@@ -402,7 +402,7 @@ export default function Home() {
                     produce content at a higher caliber.”
                 </span>
                 <span className="text-gray-300 mt-2">
-                    Josh Machiz, Chief Digital Officer
+                    Hryhorii-Volodymyr Struk, CEO
                 </span>
 
                 <div className="xl:mt-14 mt-7">
@@ -413,7 +413,7 @@ export default function Home() {
                     <div className="flex sm:flex-row flex-col border-t border-white xl:space-x-20 sm:space-x-10 mt-2">
                     <div className="mt-3">
                         <h5 className="text-white font-semibold text-xl">
-                            Emmy winning
+                            Dracon winning
                         </h5>
                         <span className="text-white text-sm">
                             Facebook watch program

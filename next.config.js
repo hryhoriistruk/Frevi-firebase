@@ -45,7 +45,7 @@ module.exports = {
     },
 }
 module.exports = {
-    output: 'export', // Для генерації статичних файлів
+    // output: 'export', // Для генерації статичних файлів
     distDir: 'out',  // Папка для збірки
     images: {
         unoptimized: true // Вимкнути оптимізацію зображень

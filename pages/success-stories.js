@@ -146,7 +146,7 @@ const SuccessStories = () => {
 
             rightSmText: "Results",
 
-            rightFirRes: "Emmy Winning",
+            rightFirRes: "Dracon Winning",
             rightFirResDes: "Facebook Watch Program",
 
             rightSecRes: "Millions",

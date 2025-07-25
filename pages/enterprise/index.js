@@ -120,7 +120,7 @@ const Enterprise = () => {
                                     produce content at a higher caliber.”
                                 </span>
                                 <span className="text-gray-300 mt-2">
-                                    Josh Machiz, Chief Digital Officer
+                                    Hryhorii-Volodymyr Struk, CEO
                                 </span>
 
                                 <div className="xl:mt-14 mt-7">
@@ -131,7 +131,7 @@ const Enterprise = () => {
                                     <div className="flex flex-col border-t border-white mt-2">
                                         <div className="mt-3">
                                             <h5 className="text-white font-semibold text-xl">
-                                                Emmy winning
+                                                Dracon winning
                                             </h5>
                                             <span className="text-white text-sm">
                                                 Facebook watch program
@@ -167,7 +167,7 @@ const Enterprise = () => {
                                     “Frevi Handle blended workforce logistics in one place balance our life making easy and thank you brenda.”
                                 </span>
                                 <span className="text-gray-300 mt-2">
-                                    Josh Machiz, Chief Digital Officer
+                                    Hryhorii-Volodymyr Struk, CEO
                                 </span>
 
                                 <div className="xl:mt-14 mt-7">
@@ -178,7 +178,7 @@ const Enterprise = () => {
                                     <div className="flex flex-col border-t border-white mt-2">
                                         <div className="mt-3">
                                             <h5 className="text-white font-semibold text-xl">
-                                                Millan Edwared
+                                                Hryhorii-Volodymyr Struk, CEO
                                             </h5>
                                             <span className="text-white text-sm">
                                                 Microsoft watch program
@@ -234,7 +234,7 @@ const Enterprise = () => {
                                     produce content at a higher caliber.”
                                 </span>
                                 <span className="text-gray-300 mt-2">
-                                    Jekkey, Chief Digital Officer
+                                    Hryhorii-Volodymyr Struk, CEO
                                 </span>
 
                                 <div className="xl:mt-14 mt-7">
@@ -245,7 +245,7 @@ const Enterprise = () => {
                                     <div className="flex flex-col border-t border-white mt-2">
                                         <div className="mt-3">
                                             <h5 className="text-white font-semibold text-xl">
-                                                Lenlina Zenselvia
+                                                Hryhorii-Volodymyr Struk, CEO
                                             </h5>
                                             <span className="text-white text-sm">
                                                 Oracle watch program
@@ -588,7 +588,7 @@ const Enterprise = () => {
                                 produce content at a higher caliber.”
                             </span>
                             <span className="text-gray-300 mt-2">
-                                Josh Machiz, Chief Digital Officer
+                                Hryhorii-Volodymyr Struk, CEO
                             </span>
 
                             <div className="xl:mt-14 mt-7">
@@ -599,7 +599,7 @@ const Enterprise = () => {
                                 <div className="flex sm:flex-row flex-col border-t border-white xl:space-x-20 sm:space-x-10 mt-2">
                                 <div className="mt-3">
                                     <h5 className="text-white font-semibold text-xl">
-                                        Emmy winning
+                                        Dracon winning
                                     </h5>
                                     <span className="text-white text-sm">
                                         Facebook watch program
