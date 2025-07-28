@@ -1,7 +1,6 @@
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import CredentialsProvider from 'next-auth/providers/credentials';
-import axios from 'axios';
 
 export default NextAuth({
     providers: [
@@ -17,17 +16,25 @@ export default NextAuth({
             },
             async authorize(credentials) {
                 try {
-                    const response = await axios.post(`${process.env.BACKEND_URL}/auth/login`, {
-                        email: credentials.email,
-                        password: credentials.password
+                    const response = await fetch(`${process.env.BACKEND_URL}/auth/login`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            email: credentials.email,
+                            password: credentials.password
+                        })
                     });
 
-                    if (response.data.user) {
+                    const data = await response.json();
+
+                    if (data.user) {
                         return {
-                            id: response.data.user.id,
-                            email: response.data.user.email,
-                            name: response.data.user.name,
-                            token: response.data.token
+                            id: data.user.id,
+                            email: data.user.email,
+                            name: data.user.name,
+                            token: data.token
                         };
                     }
                     return null;
@@ -57,3 +64,12 @@ export default NextAuth({
     },
     secret: process.env.NEXTAUTH_SECRET
 });
+
+export const config = {
+    api: {
+        runtime: 'nodejs',
+        bodyParser: {
+            sizeLimit: '10mb'
+        }
+    }
+};

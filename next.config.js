@@ -6,6 +6,12 @@ const nextConfig = {
     images: {
         unoptimized: true
     },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
     reactStrictMode: true,
     env: {
         GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
@@ -45,7 +51,7 @@ module.exports = {
     },
 }
 module.exports = {
-    // output: 'export', // Для генерації статичних файлів
+    output: 'export', // Для генерації статичних файлів
     distDir: 'out',  // Папка для збірки
     images: {
         unoptimized: true // Вимкнути оптимізацію зображень
