@@ -9,7 +9,8 @@
     "lint": "next lint",
     "export": "next build && next export",
     "start-static": "serve out",
-    "deploy": "next build && firebase deploy --only hosting",
+    "deploy": "rm -rf out/ && npm run build && firebase deploy",
+    "deploy:clean": "firebase hosting:releases:list && npm run deploy",
     "prebuild": "node -e \"require('./scripts/checkEnv.js')\""
   },
   "dependencies": {
