@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: 'export',
+    output: 'export',
     distDir: 'out',
     trailingSlash: true,
     serverExternalPackages: ['openai'],
@@ -52,7 +52,7 @@ module.exports = {
     },
 }
 module.exports = {
-    // output: 'export', // Для генерації статичних файлів
+    output: 'export', // Для генерації статичних файлів
     distDir: 'out',  // Папка для збірки
     images: {
         unoptimized: true // Вимкнути оптимізацію зображень
