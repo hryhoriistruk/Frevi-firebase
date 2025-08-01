@@ -2,8 +2,10 @@ import '../styles/globals.css';
 import { useRouter } from "next/router";
 import { useState, useEffect } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-import { SessionProvider } from 'next-auth/react';
-import { AuthProvider } from '../context/AuthContext'; // Import your Firebase Auth provider
+import { AuthProvider } from '../lib/context/AuthContext';
+import { SocketProvider } from '../lib/context/SocketContext';
+import Layout from '../components/layout/Layout';
+import Head from 'next/head';
 
 function RouteLoading() {
     const router = useRouter();
@@ -42,11 +44,23 @@ function RouteLoading() {
 
 export default function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     return (
-        <SessionProvider session={session}>
-            <AuthProvider> {/* Wrap with Firebase Auth Provider */}
-                <RouteLoading />
-                <Component {...pageProps} />
+        <>
+            <Head>
+                {/* Додайте тут посилання на ваші CSS файли з Firebase backup */}
+                <link rel="stylesheet" href="/css/globals.css" />
+                <link rel="stylesheet" href="/css/global.csss" />
+                <link rel="stylesheet" href="/css/auth.module.css" />
+                {/* Додайте інші CSS файли за потреби */}
+            </Head>
+
+            <AuthProvider>
+                <SocketProvider>
+                    <Layout>
+                        <RouteLoading />
+                        <Component {...pageProps} />
+                    </Layout>
+                </SocketProvider>
             </AuthProvider>
-        </SessionProvider>
+        </>
     );
 }

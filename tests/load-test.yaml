@@ -1,0 +1,10 @@
+# tests/load-test.yaml
+config:
+  target: "http://api-gateway"
+  phases:
+    - duration: 60
+      arrivalRate: 50
+scenarios:
+  - flow:
+      - get:
+          url: "/users"

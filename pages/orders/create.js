@@ -1,27 +1,38 @@
-import { useState } from 'react'
-import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '../../lib/context/AuthContext'; // Use our custom auth context
 
 export default function CreateOrder() {
-    const { data: session, status } = useSession()
-    const router = useRouter()
+    const { user, loading } = useAuth(); // Replace useSession with our auth context
+    const router = useRouter();
+    const [isClient, setIsClient] = useState(false);
     const [orderData, setOrderData] = useState({
         title: '',
         description: '',
         price: 0
-    })
+    });
 
-    if (status === 'loading') {
-        return <div>Loading...</div>
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    // Handle loading and authentication
+    useEffect(() => {
+        if (isClient && !loading && !user) {
+            router.push('/auth/login');
+        }
+    }, [isClient, loading, user, router]);
+
+    if (!isClient || loading) {
+        return <div className="order-form">Loading...</div>;
     }
 
-    if (!session) {
-        router.push('/auth/signin')
-        return null
+    if (!user) {
+        return <div className="order-form">Redirecting to login...</div>;
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         const response = await fetch('/api/orders', {
             method: 'POST',
             headers: {
@@ -29,12 +40,12 @@ export default function CreateOrder() {
             },
             body: JSON.stringify({
                 ...orderData,
-                userId: session.user.id
+                userId: user.id // Use user.id from our context
             }),
-        })
+        });
 
         if (response.ok) {
-            router.push('/orders')
+            router.push('/orders');
         }
     }
 
@@ -65,7 +76,7 @@ export default function CreateOrder() {
                     <input
                         type="number"
                         value={orderData.price}
-                        onChange={(e) => setOrderData({...orderData, price: e.target.value})}
+                        onChange={(e) => setOrderData({...orderData, price: Number(e.target.value)})}
                         min="0"
                         required
                     />

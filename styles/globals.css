@@ -10,7 +10,7 @@
 
 @layer components {
     .header-bg {
-        background:  radial-gradient(58.85% 58.85% at 50% 15.63%, #CFFAFE 0%, rgba(254, 242, 242, 0.995677) 43.23%, rgba(243, 255, 252, 0.99) 100%); 
+        background:  radial-gradient(58.85% 58.85% at 50% 15.63%, #CFFAFE 0%, rgba(254, 242, 242, 0.995677) 43.23%, rgba(243, 255, 252, 0.99) 100%);
     }
 
     .populer-search {
@@ -18,7 +18,7 @@
     }
 
     .scroll-btn {
-       @apply absolute lg:text-2xl md:text-xl text-lg py-5 px-5 rounded-full bg-gradient-to-b from-[#99F6E4] to-[#A5F3FC] shadow-xl text-zinc-800 transition hover:from-[#88e0cf] hover:to-[#97dce4] z-10;
+        @apply absolute lg:text-2xl md:text-xl text-lg py-5 px-5 rounded-full bg-gradient-to-b from-[#99F6E4] to-[#A5F3FC] shadow-xl text-zinc-800 transition hover:from-[#88e0cf] hover:to-[#97dce4] z-10;
     }
 
     .skill-box {
