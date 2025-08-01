@@ -19,19 +19,20 @@ const nextConfig = {
         MONGODB_URI: process.env.MONGODB_URI
     },
     webpack: (config, { isServer }) => {
-        // Додаємо аліаси для імпортів
+        // Добавляем алиасы для импортов
         config.resolve.alias = {
             ...config.resolve.alias,
             '@': __dirname,
         };
 
-        // Оптимізація тільки для клієнтської збірки
+        // Оптимизация только для клиентской сборки
         if (!isServer) {
             config.optimization.splitChunks = {
                 chunks: 'all',
                 maxSize: 244 * 1024, // 244KB
             };
         }
+
         config.resolve.fallback = {
             fs: false,
             net: false,
@@ -41,21 +42,5 @@ const nextConfig = {
         return config;
     }
 }
-module.exports = {
-    reactStrictMode: true,
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
-    typescript: {
-        ignoreBuildErrors: true,
-    },
-}
-module.exports = {
-    output: 'export', // Для генерації статичних файлів
-    distDir: 'out',  // Папка для збірки
-    images: {
-        unoptimized: true // Вимкнути оптимізацію зображень
-    }
-}
 
-module.exports = nextConfig
+module.exports = nextConfig;
