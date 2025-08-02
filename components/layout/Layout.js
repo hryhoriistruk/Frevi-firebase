@@ -1,21 +1,23 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    webpack: (config, { isServer }) => {
-        // Allow imports from parent directories
-        config.resolve.alias = {
-            ...config.resolve.alias,
-            '@shared': path.resolve(__dirname, '../Frevi-firebase899889'),
-        };
+export default function Layout({ children }) {
+    return (
+        <div className="min-h-screen bg-gray-50">
+            {/* Header */}
+            <header className="bg-white shadow-sm border-b">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-center h-16">
+                        <div className="flex items-center">
+                            <h1 className="text-xl font-semibold text-gray-900">
+                                Frevi
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        return config;
-    },
-    // If you're using experimental features
-    experimental: {
-        externalDir: true,
-    },
-};
-
-const path = require('path');
-
-module.exports = nextConfig;
+            {/* Main content */}
+            <main className="flex-1">
+                {children}
+            </main>
+        </div>
+    );
+}

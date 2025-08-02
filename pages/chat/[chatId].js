@@ -1,62 +1,65 @@
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import Layout from '../../components/layout/Layout';
-import ChatWindow from '../../../Frevi-firebaseo/components/Chat/ChatWindow';
-import { fetchWrapper } from '../../lib/utils/fetchWrapper';
 
-// Додаємо getServerSideProps для отримання даних на сервері
-export async function getServerSideProps(context) {
-    const { chatId } = context.params;
+// Временно закомментируем Layout для диагностики
+// import Layout from '../../components/layout/Layout';
 
-    try {
-        const data = await fetchWrapper(`/chats/${chatId}`);
-        return {
-            props: {
-                initialChat: data
-            }
-        };
-    } catch (error) {
-        console.error('Failed to fetch chat', error);
-        return {
-            props: {
-                initialChat: null
-            }
-        };
-    }
-}
+// Client-side only chat component
+const ChatWindow = dynamic(
+    () => import('../../components/Chat/ChatWindow'),
+    { ssr: false }
+);
 
-export default function ChatDetailPage({ initialChat }) {
+// Временный простой Layout для тестирования
+const SimpleLayout = ({ children }) => (
+    <div className="min-h-screen bg-gray-100">
+        <div className="container mx-auto px-4 py-8">
+            {children}
+        </div>
+    </div>
+);
+
+export default function ChatPage() {
     const router = useRouter();
     const { chatId } = router.query;
-    const [chat, setChat] = useState(initialChat);
+    const [isMounted, setIsMounted] = useState(false);
 
-    // Додаткове оновлення даних на клієнті, якщо потрібно
     useEffect(() => {
-        const fetchChat = async () => {
-            if (chatId) {
-                try {
-                    const data = await fetchWrapper(`/chats/${chatId}`);
-                    setChat(data);
-                } catch (error) {
-                    console.error('Failed to fetch chat', error);
-                }
-            }
-        };
+        setIsMounted(true);
+        if (!chatId) {
+            router.replace('/');
+        }
+    }, [chatId, router]);
 
-        fetchChat();
-    }, [chatId]);
+    if (!isMounted) {
+        return (
+            <SimpleLayout>
+                <div className="flex items-center justify-center h-[calc(100vh-6rem)]">
+                    <p>Loading chat...</p>
+                </div>
+            </SimpleLayout>
+        );
+    }
 
     return (
-        <Layout>
+        <SimpleLayout>
             <div className="h-[calc(100vh-6rem)]">
-                {chat ? (
-                    <ChatWindow chat={chat} />
+                {chatId ? (
+                    <ChatWindow chatId={chatId} />
                 ) : (
                     <div className="flex items-center justify-center h-full">
-                        <p>Loading chat or chat not found...</p>
+                        <p>Chat not found</p>
                     </div>
                 )}
             </div>
-        </Layout>
+        </SimpleLayout>
     );
+}
+
+// Полностью отключаем SSR для этой страницы
+export async function getServerSideProps() {
+    return {
+        props: {}
+    };
 }

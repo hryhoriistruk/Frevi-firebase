@@ -1,28 +1,37 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-
-  // Увімкнути статичний експорт
   output: 'export',
-
-  // Налаштування для збірки
-  distDir: 'out', // Папка для експортованих файлів
-
-  // Оптимізація зображень (вимкнути для статичного експорту)
+  distDir: 'out',
   images: {
     unoptimized: true,
   },
-
-  // Налаштування для ігнорування помилок під час збірки
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
+  trailingSlash: true,
+  // Skip all dynamic routes during export
+  exportPathMap: async function () {
+    const paths = {
+      '/': { page: '/' },
+      // Add all your static routes here
+    };
 
-  // Додаткові налаштування для Firebase
-  trailingSlash: true, // Додає слеш в кінці URL
-}
+    // Explicitly exclude dynamic routes
+    const excludedRoutes = [
+      '/chat/[chatId]',
+      '/chat/[...fallback]'
+    ];
 
-module.exports = nextConfig
+    excludedRoutes.forEach(route => {
+      delete paths[route];
+    });
+
+    return paths;
+  },
+};
+
+module.exports = nextConfig;
