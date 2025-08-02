@@ -1,6 +1,7 @@
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from "@lib/firebase";
 
+// Використовуємо getStaticProps для ISR (Incremental Static Regeneration)
 export async function getStaticProps(context) {
     const { id } = context.params;
 
@@ -23,6 +24,7 @@ export async function getStaticProps(context) {
     }
 }
 
+// Додаємо getStaticPaths для статичної генерації
 export async function getStaticPaths() {
     // Якщо знаєте ID заздалегідь, додайте їх тут
     return {
