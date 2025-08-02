@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Layout from '../../components/layout/Layout';
-import ChatWindow from '../../../Frevi-firebaseo/components/Chat/ChatWindow';
+import ChatWindow from '../../components/Chat/ChatWindow';
 import { fetchWrapper } from '../../lib/utils/fetchWrapper';
 
 // Додаємо getServerSideProps для отримання даних на сервері
