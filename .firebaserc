@@ -1,8 +1,0 @@
-{
-  "projects": {
-    "default": "frevi-50f39",
-    "production": "frevi-new"
-  },
-  "targets": {},
-  "etags": {}
-}
