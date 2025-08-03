@@ -184,7 +184,6 @@ const HowToFindWork = () => {
                 </section>
 
                 {/* ==================== second section ================== */}
-                <TrustedCom/>
 
                 {/* ==================== Thired section ================== */}
                 <section className="container mx-auto xl:mt-14 lg:mt-10 md:mt-7 mt-5 py-3 md:px-5 sm:px-7 px-3">

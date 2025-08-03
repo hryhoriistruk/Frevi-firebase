@@ -995,7 +995,6 @@ const Hire = () => {
 
                 {/* =========== Third Section ============== */}
                <section className="xl:mt-10 2xl:px-36 xl:px-28 lg:px-0">
-                 <TrustedCom/>
                </section>
 
                {/* ========== Fourth Section ========== */}
