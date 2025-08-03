@@ -1,7 +1,6 @@
 import HeadTag from "../../components/HeadTag";
 import Navbar from "../../components/Navbar/Navbar";
 import BannerContainer from "../../components/BannerContainer";
-import TrustedCom from "../../components/TrustedCom";
 import TrustedExp from "../../components/TrustedExp";
 import PreWork from "../../components/PreWork";
 import Flexible from "../../components/Flexible";
@@ -212,9 +211,6 @@ const SalesMarketing = () => {
 
         {/* ================= Main ==================== */}
         <main>
-        
-            {/* ================= Trusted Company Section ================ */}
-           <TrustedCom/>
 
             {/* ================= Developer section ================ */}
            <TrustedExp

@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar/Navbar";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
-import TrustedCom from "../components/TrustedCom";
 import Link from "next/link";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";

@@ -1,7 +1,6 @@
 import HeadTag from "../../components/HeadTag";
 import Navbar from "../../components/Navbar/Navbar";
 import Image from "next/image";
-import TrustedCom from "../../components/TrustedCom";
 import { FaMicrosoft, FaUber, FaBrain, FaAtlassian } from "react-icons/fa";
 import { GrOracle } from "react-icons/gr";
 import { FiDatabase } from "react-icons/fi";
@@ -17,6 +16,10 @@ import { ImGoogle } from "react-icons/im";
 import Footer from "../../components/Footer";
 import { motion } from "framer-motion";
 
+
+function Frevi() {
+    return null;
+}
 
 const Enterprise = () => {
     return (
@@ -575,10 +578,10 @@ const Enterprise = () => {
                         >
                             <div className="flex items-center space-x-3">
                                 <span className="text-white font-semibold sm:text-5xl text-4xl">
-                                    <FaMicrosoft/>
+                                    <Frevi/>
                                 </span>
                                 <h3 className="sm:text-4xl text-3xl font-semibold text-white">
-                                    Microsoft
+                                    Frevi
                                 </h3>
                             </div>
                         

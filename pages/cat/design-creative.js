@@ -1,10 +1,7 @@
 import HeadTag from "../../components/HeadTag";
 import Navbar from "../../components/Navbar/Navbar";
 import BannerContainer from "../../components/BannerContainer";
-import TrustedCom from "../../components/TrustedCom";
 import TrustedExp from "../../components/TrustedExp";
-import PreWork from "../../components/PreWork";
-import Flexible from "../../components/Flexible";
 import QuestionAsk from "../../components/QuestionAsk";
 import FindFreelancer from "../../components/FindFreelancer";
 import Footer from "../../components/Footer";
@@ -215,9 +212,6 @@ const DesignCreative = () => {
 
         {/* ================= Main ==================== */}
         <main>
-        
-            {/* ================= Trusted Company Section ================ */}
-           <TrustedCom/>
 
             {/* ================= Developer section ================ */}
            <TrustedExp
@@ -231,40 +225,7 @@ const DesignCreative = () => {
                 cardData={CardData}
             />
 
-            {/* ============== Prossesing work Section ================== */}
-            <PreWork
-                headText="Design and creative projects for your most pressing work"
-                headDes="Perfect and polish your video footage with post-production editing services."
-                list={WorkList}
-                imageI="/images/logo-des.png"
-                imageII="/images/pho-ed.png"
-                imageIII="/images/m-w-d.png"
-                imageIv="/images/pre-des.png"
-                imageV="/images/arch-des.png"
-                imageVi="/images/video-ed.png"
-                btn={{text: "Browse Project"}}
-            />
 
-            {/* ========================== Flexible Section =========================== */}
-            <Flexible
-                firstHead="The brand book your creatives need"
-                firstSubHead="A graphic designer quickly created a robust brand guide for visual identity"
-                first_F_LeftRating="5/5"
-                first_F_RightText="Budget:"
-                first_F_RightValue="$4,637"
-                firstDes="Working with Kostadin is incredible and I value him as an important member of my digital team."
-                first_S_LeftText="Skills:"
-                first_S_F_RightValue="Graphic Design"
-                first_S_S_RightValue="Print Layout"
-                first_S_T_RightValue="Brand"
-                firstImage="/images/pho-ed.png"
-                
-                secondImage="/images/ga-talent.png"
-                secondHead="How remote talent gave GoDaddy the freedom and control to nail its new initiative"
-                secondDes="To encourage clients to move to a new website solution, GoDaddy wanted to offer new web designs at competitive rates. They turned to remote talent to support the initiative: 70+ independent web designers and three program consultants to streamline communication and reduce admin overhead. The program launched 3x faster than would have been possible through traditional means.”"
-                secondRightText="72-hour average turnaround on websites"
-                secondLeftBtn={{text: "Read Case Study", link: "#"}}
-            />
 
             {/* ========================== Freequenly Ask Question Section ========================== */}
             <QuestionAsk

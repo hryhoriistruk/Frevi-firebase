@@ -5,7 +5,6 @@ import { BiErrorCircle } from "react-icons/bi";
 import { FaStar, FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import { useState, useRef } from "react";
-import TrustedCom from "../../components/TrustedCom";
 import Footer from "../../components/Footer";
 import { useRouter } from "next/router";
 import Link from "next/link";

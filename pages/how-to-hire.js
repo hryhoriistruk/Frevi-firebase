@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaStar } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
-import TrustedCom from "../components/TrustedCom";
 import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";

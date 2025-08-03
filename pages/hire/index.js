@@ -3,7 +3,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import { FaSearch, FaStar, FaRocket, FaBullhorn, FaChevronDown, FaLongArrowAltRight } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
-import TrustedCom from "../../components/TrustedCom";
 import Footer from "../../components/Footer";
 
 const Hire = () => {

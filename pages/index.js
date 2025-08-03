@@ -80,43 +80,7 @@ export default function Home() {
       {/* ================= Main ==================== */}
       <main>
 
-        {/* ================= Trusted Company Section ================ */}
-        <section className="container mx-auto mt-3 py-3 md:px-5 sm:px-7 px-3 space-y-3">
-            <h3 className="text-zinc-500 font-semibold lg:text-2xl text-xl">
-                Trusted by
-            </h3>
-            <motion.div className="flex md:flex-row flex-col md:space-x-7 md:space-y-0 space-y-2 md:items-center"
-               initial={{x:20, opacity:0}}
-               whileInView={{x:0, opacity:1}}
-               transition={{duration:1}}
-            >
-              <div className="flex 2xl:space-x-10 xl:space-x-7 sm:space-x-6 space-x-3">
-                <span>
-                  <Image src="/images/paypal.png" height={30} width={90} alt="paypal-img"/>
-                </span>
-                <span>
-                  <Image src="/images/adobe.png" height={30} width={90} alt="adobe-img"/>
-                </span>
-                <span>
-                  <Image src="/images/oracle.png" height={30} width={90} alt="oracle-img"/>
-                </span>
-                <span>
-                  <Image src="/images/google.png" height={30} width={90} alt="google-img"/>
-                </span>
-              </div>
-              <div className="flex 2xl:space-x-10 xl:space-x-7 sm:space-x-6 space-x-4">
-                <span>
-                  <Image src="/images/microsoft.png" height={30} width={110} alt="microsoft-img"/>
-                </span>
-                <span>
-                  <Image src="/images/airnob.png" height={30} width={90} alt="airbnb-img"/>
-                </span>
-                <span>
-                  <Image src="/images/netflix.png" height={30} width={90} alt="netflix-img"/>
-                </span>
-              </div>
-            </motion.div>
-        </section>
+
 
         {/* ======================== Talent Category ========================= */}
         <section className="container mx-auto mt-3 md:mt-7 py-3 md:px-5 sm:px-7 px-3">
@@ -373,98 +337,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* =========================== Trusted Section ========================== */}
-        <section className="container mx-auto mt-3 py-3 md:px-5 sm:px-7 px-3 space-y-3">
-          <div className="md:mt-10 mt-5">
-            <h2 className="xl:text-5xl lg:text-4xl text-3xl font-bold text-[#374151] leading-tight">
-                Trusted by leading <br className="md:block hidden"/>
-                brands and startups
-            </h2>
-            
-            <div className="grid md:grid-cols-2 grid-cols-1 md:gap-y-0 gap-y-5 xl:gap-x-14 gap-x-7 mt-7">
-              <motion.div className="flex flex-col bg-[#115E59] py-5 px-7 rounded-xl"
-                initial={{y:-30, opacity:0}}
-                whileInView={{y:0, opacity:1}}
-                transition={{duration:1}}
-              >
-                <div className="flex items-center space-x-3">
-                    <span className="text-white font-semibold sm:text-5xl text-4xl">
-                      <FaUber/>
-                    </span>
-                    <h3 className="sm:text-4xl text-3xl font-semibold text-white">
-                        Ubber
-                    </h3>
-                </div>
-              
-                <span className="text-white font-semibold xl:text-2xl text-xl mt-5">
-                    “Frevi enables us to differentiate
-                    ourselves from our competitors and 
-                    produce content at a higher caliber.”
-                </span>
-                <span className="text-gray-300 mt-2">
-                    Hryhorii-Volodymyr Struk, CEO
-                </span>
 
-                <div className="xl:mt-14 mt-7">
-                    <span className="text-white font-semibold">
-                        Results
-                    </span>
-
-                    <div className="flex sm:flex-row flex-col border-t border-white xl:space-x-20 sm:space-x-10 mt-2">
-                    <div className="mt-3">
-                        <h5 className="text-white font-semibold text-xl">
-                            Dracon winning
-                        </h5>
-                        <span className="text-white text-sm">
-                            Facebook watch program
-                        </span>
-                    </div>
-                    <div className="mt-3">
-                        <h5 className="text-white font-semibold text-xl">
-                            Millions
-                        </h5>
-                        <span className="text-white text-sm">
-                            of impressions generated 
-                            per client per IPO
-                        </span>
-                    </div>
-                    </div>
-                </div>
-              </motion.div>
-
-              <motion.div className="grid grid-cols-2"
-                initial={{y:30, opacity:0}}
-                whileInView={{y:0, opacity:1}}
-                transition={{duration:1}}
-              >
-                <div className="bg-[url('/images/cling.png')] bg-cover bg-right rounded-l-xl">
-                </div>
-
-                <div className="flex flex-col items-center space-y-5 py-3 px-5 bg-gray-800 rounded-r-xl">
-                  <h2 className="text-white font-semibold text-2xl xl:mt-5 mt-3">
-                    And many more..
-                  </h2>
-
-                  <span className="text-white xl:text-4xl text-3xl">
-                    <SiAdobe/>
-                  </span>
-                  <span className="text-white xl:text-4xl text-3xl">
-                    <SiUdacity/>
-                  </span>
-                  <span className="text-white xl:text-4xl text-3xl">
-                    <FaAtlassian/>
-                  </span>
-                  <span className="text-white xl:text-4xl text-3xl">
-                    <ImGoogle/>
-                  </span>
-                  <span className="text-white xl:text-4xl text-3xl">
-                    <BsWordpress/>
-                  </span>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
 
         <section className="container mx-auto lg:my-7 my-3 py-3 md:px-5 sm:px-7 px-3 space-y-3">
           <Skills/>

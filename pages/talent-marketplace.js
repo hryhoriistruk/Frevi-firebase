@@ -6,7 +6,6 @@ import { FaStar } from "react-icons/fa";
 import { IoLogoUsd } from "react-icons/io";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import TrustedCom from "../components/TrustedCom";
 import Link from "next/link";
 import { useRouter  } from "next/router";
 import { motion } from "framer-motion";
@@ -182,9 +181,6 @@ const TalentMarketplace = () => {
                         </motion.div>
                     </div>
                 </section>
-
-                {/* ================= Trusted Company Section ================ */}
-                <TrustedCom/>
 
                 {/* ========================== Good Company Section ===================== */}
                 <section className="container mx-auto lg:mt-5 mt-3 py-3 md:px-5 sm:px-7 px-3 space-y-3">
