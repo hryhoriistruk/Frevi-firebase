@@ -1,11 +1,10 @@
-import React from 'react';
-import HeadTag from '../components/HeadTag';
-import Navbar from '../components/Navbar/Navbar';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import JobFeed from '../components/JobFeed'; // Новий компонент стрічки вакансій
-import CompanySlider from '../components/CompanySlider'; // Новий компонент слайдера компаній
+import { motion } from 'framer-motion';
+import HeadTag from '../../components/HeadTag';
+import Navbar from '../../components/Navbar/Navbar';
+import JobFeed from '../../components/JobFeed';
+import CompanySlider from '../../components/CompanySlider';
 
 export default function Home() {
     const router = useRouter();

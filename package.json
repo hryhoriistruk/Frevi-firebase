@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export": "next build && next export",
     "start-static": "serve out",
-    "deploy": "rm -rf out/ && npm run build && firebase deploy",
+    "deploy": "rm -rf out/ && npm run build && npm run export && firebase deploy",
     "deploy:clean": "firebase hosting:releases:list && npm run deploy",
     "prebuild": "node -e \"require('./scripts/checkEnv.js')\""
   },
@@ -50,7 +50,7 @@
     "@emotion/react": "^11.14.0",
     "autoprefixer": "^10.4.8",
     "babel-loader": "^9.1.3",
-    "dotenv": "^17.2.0",
+    "dotenv": "^17.2.1",
     "eslint": "^8.23.0",
     "eslint-config-next": "12.2.5",
     "postcss": "^8.4.16",
