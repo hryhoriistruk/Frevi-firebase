@@ -12,5 +12,19 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "database": {
+    "rules": {
+      "posts": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      },
+      "messages": {
+        "$chatId": {
+          ".read": "auth != null && (auth.uid == $chatId.split('_')[0] || auth.uid == $chatId.split('_')[1])",
+          ".write": "auth != null && (auth.uid == newData.child('senderId').val())"
+        }
+      }
+    }
   }
 }

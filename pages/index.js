@@ -32,6 +32,56 @@ export default function Home() {
         {/* ============== Navbar ============ */}
         <Navbar/>
 
+        {/* ============= Development and IT Section =============== */}
+        <motion.section
+            className="container mx-auto py-8 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+        >
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-[#0C4A6E] mb-2">Development and IT</h3>
+            <h1 className="text-4xl font-bold text-[#0C4A6E] mb-4">How Work Should Work</h1>
+            <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
+              Forget the old rules. You can have the best people. Right now. Right here.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <button className="bg-[#0C4A6E] text-white px-6 py-3 rounded-full font-medium hover:bg-[#0a3a56] transition">
+              Browse talent by category
+            </button>
+            <button className="border border-[#0C4A6E] text-[#0C4A6E] px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+              Looking for work? Browse Jobs
+            </button>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <Link href="/why-frevi" className="text-[#0C4A6E] hover:underline">Why Frevi</Link>
+            <Link href="/enterprise" className="text-[#0C4A6E] hover:underline">Enterprise</Link>
+            <Link href="/search" className="text-[#0C4A6E] hover:underline">Search</Link>
+            <Link href="/login" className="text-[#0C4A6E] hover:underline">Login</Link>
+            <Link href="/signup" className="text-[#0C4A6E] hover:underline">SignUp</Link>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            {['Sales & Marketing', 'Writing & Translation', 'Admin & Custom Support', 'More'].map((category) => (
+                <div key={category} className="bg-white px-6 py-3 rounded-full shadow-sm hover:shadow-md transition">
+                  {category}
+                </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center gap-8 mt-8">
+            <div className="flex items-center gap-2">
+              <span className="text-[#0C4A6E] font-medium">Today's Jobs</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-[#0C4A6E] font-medium">Today Job Success</span>
+            </div>
+          </div>
+        </motion.section>
+
         {/* ============= Head Container =============== */}
         <div className="container mx-auto py-3 md:px-5 sm:px-7 px-3">
           {/* ============ First part [banner section] ============  */}
