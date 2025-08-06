@@ -1,5 +1,4 @@
-// context/AuthContext.js
-import { createContext, useState, useEffect, useMemo } from 'react';
+import { createContext, useState, useEffect, useMemo, useContext } from 'react';
 import { useRouter } from 'next/router';
 import { AuthService } from '@/services/auth';
 
@@ -84,3 +83,6 @@ export const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 };
+
+// Add this export
+export const useAuth = () => useContext(AuthContext);

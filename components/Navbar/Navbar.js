@@ -1,21 +1,23 @@
-import Image from "next/image";
+ import Image from "next/image";
 import Link from "next/link";
 import { SubLinks1, SubLinks2, SubLinks3 } from "./LinkData";
 import SearchLink from "./SearchLink";
 import SecondLink, { MoreLink } from "./SecondLink";
-import { 
-    FaCaretDown, 
-    FaSearch, 
-    FaChevronDown, 
-    FaBars, 
+import {
+    FaCaretDown,
+    FaSearch,
+    FaChevronDown,
+    FaBars,
     FaLongArrowAltRight,
-    FaAngleDown, 
-    FaAngleRight 
+    FaAngleDown,
+    FaAngleRight
 } from "react-icons/fa";
 import { HiX } from "react-icons/hi";
 import { GoChevronRight } from "react-icons/go";
 import { useState } from "react";
 import { useRouter } from "next/router";
+// Add this import at the top
+import ChatButton from '../Chat/ChatButton';
 
 const Navbar = () => {
 
@@ -39,7 +41,7 @@ const Navbar = () => {
     // ====================== SubLinks1 - Content 2 Right Bar state ============================
     const [subContntII, useSubContentII] = useState(false);
     // ====================== SubLinks1 - Content 3 Right Bar state ============================
-    const [subContntIII, useSubContentIII] = useState(false);    
+    const [subContntIII, useSubContentIII] = useState(false);
 
     // ====================== Mobile State ====================================
     // =========== Mobile list show hide state ================
@@ -55,7 +57,7 @@ const Navbar = () => {
     const ShowSearchState = () => {
         (searchState == "hidden") ? useSearchState("block") : useSearchState("hidden");
     }
-    
+
     // ============= Search Form =====================
     const search = (e) => {
         e.preventDefault();
@@ -116,7 +118,7 @@ const Navbar = () => {
     }
 
     // ====================== Mobile Handle a SubLinks Click ===========================
-   // ========================= List onclick handle (Dropdown list show [SubLinks1]) ===========================
+    // ========================= List onclick handle (Dropdown list show [SubLinks1]) ===========================
     const FirstLinkHandleMb = () => {
         if (mobileSubListI === false) {
             setMobileSubListI(true);
@@ -149,31 +151,31 @@ const Navbar = () => {
         }
     }
 
-    // ======================== Mobile Sub show Hide condition [onClick={handleMobileSUb}] ====================    
+    // ======================== Mobile Sub show Hide condition [onClick={handleMobileSUb}] ====================
     const handleMobileSub = (id) => {
-       if (id == 1) {
+        if (id == 1) {
             if (se == null || se == 2 || se == 3) {
                 setSe(1);
             } else {
                 setSe(null);
             }
-       }
+        }
 
-       if (id == 2) {
+        if (id == 2) {
             if (se == null || se == 1 || se == 3) {
                 setSe(2);
             } else {
                 setSe(null);
             }
-       }
+        }
 
-       if (id == 3) {
+        if (id == 3) {
             if (se == null || se == 1 || se == 2) {
                 setSe(3);
             } else {
                 setSe(null);
             }
-       }
+        }
     }
 
     return (
@@ -184,7 +186,7 @@ const Navbar = () => {
                 <div className="flex items-center">
                     <div>
                         <Image
-                            src="/images/logo.png"                        
+                            src="/images/logo.png"
                             width={60}
                             height={50}
                             alt="logo"
@@ -194,7 +196,7 @@ const Navbar = () => {
                     </div>
                     <ul className="flex 2xl:space-x-12 xl:space-x-9 space-x-6 2xl:ml-14 xl:ml-11 ml-6">
                         <li>
-                            <a className={`cursor-pointer flex items-center text-[1.03rem] font-semibold hover:text-cyan-700 ${subLinksI === true ? "text-cyan-700" : "text-zinc-700"}`} onClick={FirstLinkHandle}> 
+                            <a className={`cursor-pointer flex items-center text-[1.03rem] font-semibold hover:text-cyan-700 ${subLinksI === true ? "text-cyan-700" : "text-zinc-700"}`} onClick={FirstLinkHandle}>
                                 Find Talent
                                 <FaCaretDown className={`mt-1 xl:ml-1 ml-[1px] transition ${(subLinksI === true) ? "rotate-180" : "rotate-0"}`}/>
                             </a>
@@ -204,14 +206,14 @@ const Navbar = () => {
                                 <div className="container flex xl:space-x-10 space-x-8 mx-auto py-5 px-3">
                                     <ul className="flex flex-col xl:space-y-2 space-y-1">
                                         {SubLinks1.map((curVal) => (
-                                            <li 
+                                            <li
                                                 className={`flex items-center justify-between space-x-7 cursor-pointer rounded-sm hover:bg-gradient-to-tr hover:from-[#eeecec] hover:to-[#c3f0f5] px-4 py-4 ${(subContntI === true && curVal.id === 1) ? "bg-gradient-to-tr from-[#eeecec] to-[#c3f0f5]" : null} ${(subContntII === true && curVal.id === 2) ? "bg-gradient-to-tr from-[#eeecec] to-[#c3f0f5]" : null} ${(subContntIII === true && curVal.id === 3) ? "bg-gradient-to-tr from-[#eeecec] to-[#c3f0f5]" : null}`}
                                                 onClick={(id) => SubLinksBtn(curVal.id)}
                                                 key={curVal.id}
                                             >
                                                 <div>
-                                                    <strong className="font-semibold text-zinc-700"> 
-                                                        {curVal.head} 
+                                                    <strong className="font-semibold text-zinc-700">
+                                                        {curVal.head}
                                                     </strong>
                                                     <span className="block font-semibold text-sm text-zinc-500">
                                                         {curVal.headers}
@@ -225,7 +227,7 @@ const Navbar = () => {
                                     </ul>
 
                                     {/* =================== Sublink content 1 ============== */}
-                                   {subContntI &&  <div className="border-l border-gray-300 flex xl:flex-row flex-col 2xl:space-x-64 xl:space-x-44">
+                                    {subContntI &&  <div className="border-l border-gray-300 flex xl:flex-row flex-col 2xl:space-x-64 xl:space-x-44">
                                         <div className="xl:ml-14 ml-10">
                                             <strong>
                                                 <span className="text-lg font-semibold text-zinc-700">
@@ -238,20 +240,20 @@ const Navbar = () => {
                                             <Link href={SubLinks1[0].subhead.subheadlink.link}>
                                                 <span className="text-sm font-semibold cursor-pointer text-cyan-700 hover:underline">
                                                     {SubLinks1[0].subhead.subheadlink.name}
-                                                    <FaLongArrowAltRight className="inline ml-2 text-lg"/> 
+                                                    <FaLongArrowAltRight className="inline ml-2 text-lg"/>
                                                 </span>
                                             </Link>
                                         </div>
-                                        
+
                                         <div className="xl:ml-0 ml-8 xl:mt-0 mt-7">
                                             <ul className="grid grid-cols-2 gap-x-10 xl:gap-x-0 xl:grid-cols-1">
-                                               {SubLinks1[0].sublink.map((curVal) => (
+                                                {SubLinks1[0].sublink.map((curVal) => (
                                                     <li key={curVal.id} className="px-3 py-2 hover:bg-[#e1f7fa] hover:text-cyan-800 rounded-sm text-zinc-700">
                                                         <Link href={curVal.link}>
                                                             {curVal.linktext}
                                                         </Link>
-                                                    </li> 
-                                               ))}
+                                                    </li>
+                                                ))}
                                             </ul>
                                         </div>
                                     </div>}
@@ -270,13 +272,13 @@ const Navbar = () => {
                                             <Link href={SubLinks1[1].subhead.subheadlink.link}>
                                                 <span className="text-sm font-semibold cursor-pointer text-cyan-700 hover:underline">
                                                     {SubLinks1[1].subhead.subheadlink.name}
-                                                    <FaLongArrowAltRight className="inline ml-2 text-lg"/> 
+                                                    <FaLongArrowAltRight className="inline ml-2 text-lg"/>
                                                 </span>
                                             </Link>
                                         </div>
-                                        
+
                                         <div className="xl:ml-0 ml-8 xl:mt-0 mt-7">
-                                           <ul className="grid 2xl:grid-cols-3 grid-cols-2 gap-x-10">
+                                            <ul className="grid 2xl:grid-cols-3 grid-cols-2 gap-x-10">
                                                 {SubLinks1[1].sublink.map((curVal) => (
                                                     <li key={curVal.id} className="bg-transparent xl:my-4 my-2 border border-gray-200 rounded-md cursor-pointer transition transition-duration hover:bg-[#e1f7fa]">
                                                         <Link href={curVal.link}>
@@ -287,7 +289,7 @@ const Navbar = () => {
                                                         </Link>
                                                     </li>
                                                 ))}
-                                           </ul>
+                                            </ul>
                                         </div>
                                     </div>}
 
@@ -305,31 +307,31 @@ const Navbar = () => {
                                             <Link href={SubLinks1[2].subhead.subheadlink.link}>
                                                 <span className="text-sm font-semibold cursor-pointer text-cyan-700 hover:underline">
                                                     {SubLinks1[2].subhead.subheadlink.name}
-                                                    <FaLongArrowAltRight className="inline ml-2 text-lg"/> 
+                                                    <FaLongArrowAltRight className="inline ml-2 text-lg"/>
                                                 </span>
                                             </Link>
                                         </div>
-                                        
+
                                         <div className="xl:ml-0 ml-8 xl:mt-0 mt-7">
                                             <ul className="grid grid-cols-1 gap-x-10 xl:gap-x-0">
-                                               {SubLinks1[2].sublink.map((curVal) => (
+                                                {SubLinks1[2].sublink.map((curVal) => (
                                                     <li key={curVal.id} className="px-3 py-2 hover:bg-[#e1f7fa] hover:text-cyan-800 rounded-sm text-zinc-700">
                                                         <Link href={curVal.link}>
                                                             {curVal.linktext}
                                                         </Link>
-                                                    </li> 
-                                               ))}
+                                                    </li>
+                                                ))}
                                             </ul>
                                         </div>
                                     </div>}
-                                    
+
                                 </div>
                             </div>}
                         </li>
 
                         <li>
-                            <a className={`cursor-pointer flex items-center text-[1.03rem] font-semibold hover:text-cyan-700 ${subLinksII === true ? "text-cyan-700" : "text-zinc-700"}`} onClick={SecondLinkHandle}> 
-                                Find Jobs 
+                            <a className={`cursor-pointer flex items-center text-[1.03rem] font-semibold hover:text-cyan-700 ${subLinksII === true ? "text-cyan-700" : "text-zinc-700"}`} onClick={SecondLinkHandle}>
+                                Find Jobs
                                 <FaCaretDown className={`mt-1 xl:ml-1 ml-[1px] transition ${(subLinksII === true) ? "rotate-180" : "rotate-0"}`}/>
                             </a>
 
@@ -355,13 +357,13 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <a className={`cursor-pointer flex items-center text-[1.03rem] font-semibold hover:text-cyan-700 ${subLinksIII === true ? "text-cyan-700" : "text-zinc-700"}`} onClick={ThirdLinkHandle}> 
+                            <a className={`cursor-pointer flex items-center text-[1.03rem] font-semibold hover:text-cyan-700 ${subLinksIII === true ? "text-cyan-700" : "text-zinc-700"}`} onClick={ThirdLinkHandle}>
                                 Why Frevi
                                 <FaCaretDown className={`mt-1 xl:ml-1 ml-[1px] transition ${(subLinksIII === true) ? "rotate-180" : "rotate-0"}`}/>
                             </a>
 
-                              {/* ============================ Drop Down List ============================== */}
-                              {subLinksIII && <div className="absolute bg- w-full left-0 right-0 top-20 bg-[#F3FFFC] shadow-md z-20">
+                            {/* ============================ Drop Down List ============================== */}
+                            {subLinksIII && <div className="absolute bg- w-full left-0 right-0 top-20 bg-[#F3FFFC] shadow-md z-20">
                                 <div className="container mx-auto py-5 px-3">
                                     <ul className="inline-grid grid-cols-2 gap-x-20 mb-5">
                                         {SubLinks3.map((curVal) => (
@@ -384,8 +386,8 @@ const Navbar = () => {
                         </li>
 
                         <li className="text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700">
-                            <Link href="/enterprise"> 
-                                Enterprise 
+                            <Link href="/enterprise">
+                                Enterprise
                             </Link>
                         </li>
                     </ul>
@@ -393,16 +395,16 @@ const Navbar = () => {
 
                 {/* ==================== Right =========================== */}
                 <div className="flex items-center">
-                    <form 
-                        className="flex flex-grow border border-gray-300 rounded-full max-w-3xl items-center xl:px-6 px-4 py-2 hover:bg-[#F3FFFC] relative" 
+                    <form
+                        className="flex flex-grow border border-gray-300 rounded-full max-w-3xl items-center xl:px-6 px-4 py-2 hover:bg-[#F3FFFC] relative"
                         onSubmit={search}
                     >
-                        <FaChevronDown 
+                        <FaChevronDown
                             className={`${(searchState === "block") ? "rotate-180" : "rotate-0"} transition h-3 text-zinc-700 cursor-pointer hover:text-zinc-500`}
                             onClick={ShowSearchState}
                         />
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             className="flex-grow xl:w-full w-40 focus:outline-none bg-transparent mx-2 text-zinc-700"
                             placeholder="search"
                             value={inputText}
@@ -412,12 +414,12 @@ const Navbar = () => {
 
                         {(inputText === "") ? <FaSearch className="xl:h-5 h-3 text-zinc-700 cursor-pointer hover:text-zinc-500"/> : null}
 
-                        {(inputText === "") ? null : <HiX 
+                        {(inputText === "") ? null : <HiX
                             className="xl:h-5 h-4 text-zinc-700 cursor-pointer hover:text-zinc-500"
                             onClick={() => setInputText("")}
                         />}
 
-                        
+
                         <ul className={`absolute ${searchState} top-10 border left-3 w-[91.5%] shadow-lg border-gray-300 bg-[#F3FFFC] rounded-b-lg py-1 z-20`}>
                             {SearchLink.map((curVal) => (
                                 <li className="py-2 xl:px-3 px-2 cursor-pointer hover:bg-[#eaf6f8]" key={curVal.id}>
@@ -428,10 +430,10 @@ const Navbar = () => {
                                             </span>
                                             <div>
                                                 <span className="block text-md text-gray-800">
-                                                    {curVal.title} 
+                                                    {curVal.title}
                                                 </span>
-                                                <span className="block xl:text-sm text-[13px] text-zinc-500"> 
-                                                    {curVal.dec} 
+                                                <span className="block xl:text-sm text-[13px] text-zinc-500">
+                                                    {curVal.dec}
                                                 </span>
                                             </div>
                                         </div>
@@ -441,12 +443,17 @@ const Navbar = () => {
                         </ul>
                     </form>
 
-                    <button className="xl:mx-7 mx-3 text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700" onClick={() => router.push("/account-security/login")}> 
-                        LogIn 
+                    {/* Add ChatButton here */}
+                    <div className="xl:mx-5 mx-3">
+                        <ChatButton />
+                    </div>
+
+                    <button className="xl:mx-7 mx-3 text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700" onClick={() => router.push("/account-security/login")}>
+                        LogIn
                     </button>
 
-                    <button className="font-semibold bg-gradient-to-tr from-sky-200 to-cyan-200 py-2 px-3 rounded-xl text-gray-800 hover:from-cyan-300 hover:to-sky-200" onClick={() => router.push("/account-security/signup")}> 
-                        SignUp 
+                    <button className="font-semibold bg-gradient-to-tr from-sky-200 to-cyan-200 py-2 px-3 rounded-xl text-gray-800 hover:from-cyan-300 hover:to-sky-200" onClick={() => router.push("/account-security/signup")}>
+                        SignUp
                     </button>
                 </div>
             </div>
@@ -465,13 +472,13 @@ const Navbar = () => {
                     {/* ================ Dropdown More ================= */}
                     {MoreLink.map((curVal) => (
                         <li key={curVal.id} className="relative">
-                            <button 
+                            <button
                                 className={`font-semibold flex items-center hover:text-cyan-700 ${(moreDp === "hidden") ? "text-zinc-600" : "text-cyan-700"}`}
                                 onClick={() => (moreDp === "hidden") ? useMoreDp("") : useMoreDp("hidden")}
                             >
                                 {curVal.name}
-                                <span className={`ml-1 transition ${(moreDp === "") ? "rotate-180" : "rotate-0"}`}> 
-                                    {curVal.icon} 
+                                <span className={`ml-1 transition ${(moreDp === "") ? "rotate-180" : "rotate-0"}`}>
+                                    {curVal.icon}
                                 </span>
                             </button>
 
@@ -497,8 +504,8 @@ const Navbar = () => {
 
                         {/* ========= Right ========= */}
                         <div className="flex items-center">
-                            <span 
-                                className="text-zinc-600 hover:text-zinc-500 text-2xl text-semibold mr-3 cursor-pointer" 
+                            <span
+                                className="text-zinc-600 hover:text-zinc-500 text-2xl text-semibold mr-3 cursor-pointer"
                                 onClick={() => (mobilelist === false) ? setMobileList(true) : setMobileList(false)}
                             >
                                 {mobilelist || <FaBars/>}
@@ -506,7 +513,7 @@ const Navbar = () => {
                             </span>
 
                             <Image
-                                src="/images/logo.png"                        
+                                src="/images/logo.png"
                                 width={55}
                                 height={45}
                                 alt="logo"
@@ -516,26 +523,26 @@ const Navbar = () => {
                         </div>
 
                         {/* ========= Left ========= */}
-                        <button className="font-semibold py-1 px-3 rounded-xl text-gray-800 hover:text-cyan-800" onClick={() => router.push("/account-security/signup")}> 
-                            SignUp 
+                        <button className="font-semibold py-1 px-3 rounded-xl text-gray-800 hover:text-cyan-800" onClick={() => router.push("/account-security/signup")}>
+                            SignUp
                         </button>
                     </div>
                 </div>
 
-                
+
                 {/* ============================= Dropdown Nav ============================ */}
                 <div className={`w-full absolute flex flex-col space-y-7 shadow-md z-20 lg:hidden sm:px-5 px-2 pt-2 pb-10 bg-[#F3FFFC] transition duration-100 linear  ${(mobilelist === true) ? "translate-x-[0%]" : "translate-x-[-100%]"}`}>
                     {/* ========== Form ========= */}
-                    <form 
-                        className="flex flex-grow  border border-gray-300 rounded-full w-full items-center xl:px-6 px-4 py-2 hover:bg-[#F3FFFC] relative" 
+                    <form
+                        className="flex flex-grow  border border-gray-300 rounded-full w-full items-center xl:px-6 px-4 py-2 hover:bg-[#F3FFFC] relative"
                         onSubmit={search}
                     >
-                        <FaChevronDown 
+                        <FaChevronDown
                             className={`${(searchState === "block") ? "rotate-180" : "rotate-0"} transition h-3 text-zinc-700 cursor-pointer hover:text-zinc-500`}
                             onClick={ShowSearchState}
                         />
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             className="flex-grow xl:w-full w-40 focus:outline-none bg-transparent mx-2 text-zinc-700"
                             placeholder="search"
                             value={inputText}
@@ -545,12 +552,12 @@ const Navbar = () => {
 
                         {(inputText === "") ? <FaSearch className="xl:h-5 h-3 text-zinc-700 cursor-pointer hover:text-zinc-500"/> : null}
 
-                        {(inputText === "") ? null : <HiX 
+                        {(inputText === "") ? null : <HiX
                             className="xl:h-5 h-4 text-zinc-700 cursor-pointer hover:text-zinc-500"
                             onClick={() => setInputText("")}
                         />}
 
-                        
+
                         <ul className={`absolute ${searchState} top-10 border sm:left-4 left-3 md:w-[97%] w-[94%] shadow-lg border-gray-300 bg-[#F3FFFC] rounded-b-lg py-1 z-20`}>
                             {SearchLink.map((curVal) => (
                                 <li className="py-2 xl:px-3 px-2 cursor-pointer hover:bg-[#eaf6f8]" key={curVal.id}>
@@ -561,10 +568,10 @@ const Navbar = () => {
                                             </span>
                                             <div>
                                                 <span className="block text-md text-gray-800">
-                                                    {curVal.title} 
+                                                    {curVal.title}
                                                 </span>
-                                                <span className="block xl:text-sm text-[13px] text-zinc-500"> 
-                                                    {curVal.dec} 
+                                                <span className="block xl:text-sm text-[13px] text-zinc-500">
+                                                    {curVal.dec}
                                                 </span>
                                             </div>
                                         </div>
@@ -575,8 +582,8 @@ const Navbar = () => {
                     </form>
 
                     <ul className="flex flex-col space-y-7 sm:mx-0 mx-1 z-10">
-                        <li> 
-                            <a 
+                        <li>
+                            <a
                                 className={`flex items-center justify-between font-semibold text-[1.03rem] hover:text-cyan-700 cursor-pointer ${(mobileSubListI === true ? "text-cyan-700" : "text-zinc-700")}`}
                                 onClick={FirstLinkHandleMb}
                             >
@@ -589,27 +596,27 @@ const Navbar = () => {
                                 <ul className="flex flex-col space-y-5 ml-2 my-5">
                                     {SubLinks1.map((curVal) => (
                                         <li key={curVal.id}>
-                                            <a 
+                                            <a
                                                 className={`flex justify-between cursor-pointer`}
                                                 onClick={() => handleMobileSub(curVal.id)}
                                             >
                                                 <span className={`flex flex-col space-y-1`}>
                                                     <span className="text-zinc-700 font-semibold">
-                                                        {curVal.head} 
+                                                        {curVal.head}
                                                     </span>
-                                                    <span className="text-zinc-500 text-sm font-semibold"> 
+                                                    <span className="text-zinc-500 text-sm font-semibold">
                                                         {curVal.headers}
                                                     </span>
                                                 </span>
 
                                                 <FaAngleRight className={`text-zinc-700 text-semibold transition ${se == curVal.id ? "rotate-90" : "rotate-0"}`}/>
                                             </a>
-                                            
+
                                             <div className={`my-3 mx-1 flex-col ${(curVal.id == `${se}`) ? "flex" : "hidden"}`}>
                                                 <span className="font-semibold text-zinc-600 mb-1 ">
-                                                    {curVal.subhead.name} 
+                                                    {curVal.subhead.name}
                                                 </span>
-                                                
+
                                                 <span className="text-sm font-md text-zinc-500">
                                                     {curVal.subhead.des}
                                                     <Link href={curVal.subhead.subheadlink.link}>
@@ -627,28 +634,28 @@ const Navbar = () => {
                                                                     <Link href={curSubVal.link}>
                                                                         {curSubVal.linktext}
                                                                     </Link>
-                                                                </li> 
+                                                                </li>
                                                             )
                                                         }
 
                                                         if (curVal.id === 2) {
                                                             return (
-                                                            <li key={curSubVal.id}>
-                                                                <Link href={curSubVal.link}>
-                                                                    <div className="flex space-x-4 items-center border rounded-md cursor-pointer hover:shadow-sm hover:bg-[#e1f7fa]">
-                                                                        <Image 
-                                                                            src={curSubVal.img} 
-                                                                            height={65}
-                                                                            width={100}
-                                                                            alt="catagory-img"
-                                                                        />
+                                                                <li key={curSubVal.id}>
+                                                                    <Link href={curSubVal.link}>
+                                                                        <div className="flex space-x-4 items-center border rounded-md cursor-pointer hover:shadow-sm hover:bg-[#e1f7fa]">
+                                                                            <Image
+                                                                                src={curSubVal.img}
+                                                                                height={65}
+                                                                                width={100}
+                                                                                alt="catagory-img"
+                                                                            />
 
-                                                                        <span className="text-zinc-700">
+                                                                            <span className="text-zinc-700">
                                                                             {curSubVal.linktext}
                                                                         </span>
-                                                                    </div>
-                                                                </Link>
-                                                            </li>
+                                                                        </div>
+                                                                    </Link>
+                                                                </li>
                                                             )
                                                         }
 
@@ -669,13 +676,13 @@ const Navbar = () => {
                                 </ul>
                             </div>}
                         </li>
-                        
-                        <li> 
-                            <a 
+
+                        <li>
+                            <a
                                 className={`flex items-center justify-between font-semibold text-[1.03rem] hover:text-cyan-700 cursor-pointer ${(mobileSubListII === true ? "text-cyan-700" : "text-zinc-700")}`}
                                 onClick={SecondLinkHandleMb}
                             >
-                                Find Jobs 
+                                Find Jobs
                                 <FaAngleDown className={`transition ${(mobileSubListII === true) ? "rotate-180" : "rotate-0"}`}/>
                             </a>
 
@@ -698,17 +705,17 @@ const Navbar = () => {
                             </ul>}
                         </li>
 
-                        <li> 
-                            <a 
+                        <li>
+                            <a
                                 className={`flex items-center justify-between font-semibold text-[1.03rem] hover:text-cyan-700 cursor-pointer ${(mobileSubListIII === true ? "text-cyan-700" : "text-zinc-700")}`}
-                                onClick={ThirdLinkHandleMb}                   
+                                onClick={ThirdLinkHandleMb}
                             >
                                 Why Frevi
                                 <FaAngleDown className={`transition ${(mobileSubListIII === true) ? "rotate-180" : "rotate-0"}`}/>
-                            </a> 
+                            </a>
 
                             {/* =================== Dropdown List =================== */}
-                           {mobileSubListIII && <div className="space-y-3 ml-2">
+                            {mobileSubListIII && <div className="space-y-3 ml-2">
                                 <ul className="flex flex-col space-y-4 mt-5">
                                     {SubLinks3.map((curVal) => (
                                         <li key={curVal.id} className="cursor-pointer">
@@ -727,8 +734,8 @@ const Navbar = () => {
 
                         <li>
                             <Link href={"/enterprise"} legacyBehavior><a className="text-zinc-700 text-[1.03rem] font-semibold hover:text-cyan-700">
-                                    Enterprise 
-                                </a></Link>
+                                Enterprise
+                            </a></Link>
                         </li>
                     </ul>
 

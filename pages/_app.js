@@ -3,7 +3,8 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { SessionProvider } from 'next-auth/react';
-import { AuthProvider } from '../context/AuthContext'; // Import your Firebase Auth provider
+import { AuthProvider } from '../context/AuthContext';
+import { ChatProvider } from '../context/ChatContext';
 
 function RouteLoading() {
     const router = useRouter();
@@ -43,9 +44,11 @@ function RouteLoading() {
 export default function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     return (
         <SessionProvider session={session}>
-            <AuthProvider> {/* Wrap with Firebase Auth Provider */}
-                <RouteLoading />
-                <Component {...pageProps} />
+            <AuthProvider>
+                <ChatProvider>
+                    <RouteLoading />
+                    <Component {...pageProps} />
+                </ChatProvider>
             </AuthProvider>
         </SessionProvider>
     );

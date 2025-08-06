@@ -1,0 +1,23 @@
+.chatContainer {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    height: 500px;
+}
+
+.messageList {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db #f3f4f6;
+}
+
+.messageList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messageList::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+.messageList::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 20px;
+}
