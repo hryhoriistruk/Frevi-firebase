@@ -1,10 +1,8 @@
-import '../styles/globals.css';
-import { useRouter } from "next/router";
-import { useState, useEffect } from 'react';
-import { ThreeDots } from 'react-loader-spinner';
+import '@/styles/globals.css';
 import { SessionProvider } from 'next-auth/react';
-import { AuthProvider } from '../context/AuthContext';
-import { ChatProvider } from '../context/ChatContext';
+import { AuthProvider } from '@/context/AuthContext';
+import { ChatProvider } from '@/context/ChatContext';
+import { FriendsProvider } from '@/context/FriendsContext';
 
 function RouteLoading() {
     const router = useRouter();
@@ -46,8 +44,9 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
         <SessionProvider session={session}>
             <AuthProvider>
                 <ChatProvider>
-                    <RouteLoading />
-                    <Component {...pageProps} />
+                    <FriendsProvider>
+                        <Component {...pageProps} />
+                    </FriendsProvider>
                 </ChatProvider>
             </AuthProvider>
         </SessionProvider>

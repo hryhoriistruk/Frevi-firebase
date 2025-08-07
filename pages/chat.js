@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { useAuth } from '../context/AuthContext';
-import { useChat } from '../context/ChatContext';
+import { useAuth } from '@/context/AuthContext';
+import { useChat } from '@/context/ChatContext';
 import { db } from '../firebase/firebase';
 import { collection, query, where, onSnapshot, addDoc, serverTimestamp, orderBy } from 'firebase/firestore';
 import Layout from '../components/layout/Layout';

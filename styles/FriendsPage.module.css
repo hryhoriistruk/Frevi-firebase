@@ -1,0 +1,76 @@
+.friendsPage {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.friendSearch {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.searchInput {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.searchResults {
+    margin-top: 15px;
+}
+
+.userCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.userAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.friendRequests {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.requestCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.requestActions {
+    display: flex;
+    gap: 10px;
+}
+
+.actionButton {
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    background: #0070f3;
+    color: white;
+    border-radius: 4px;
+}
+
+.actionButton:hover {
+    background: #0061d5;
+}

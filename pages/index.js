@@ -47,7 +47,6 @@ export default function Home() {
                   Right now. Right here.
                 </motion.h6>
 
-                {/* Додано кнопки LinkedIn-стилю */}
                 <motion.div className="flex flex-col sm:flex-row gap-4 pt-4"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -64,6 +63,12 @@ export default function Home() {
                       className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition"
                   >
                     Post a Job
+                  </button>
+                  <button
+                      onClick={() => router.push("/friends")}
+                      className="bg-[#0C4A6E] text-white px-6 py-3 rounded-full font-bold hover:bg-[#083344] transition"
+                  >
+                    My Friends
                   </button>
                 </motion.div>
               </div>
@@ -89,7 +94,6 @@ export default function Home() {
         </header>
 
         <main>
-          {/* Додано секцію з вакансіями */}
           <section className="container mx-auto mt-16 py-3 md:px-5 sm:px-7 px-3">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-[#0C4A6E] text-2xl font-bold">Recommended Jobs For You</h2>
@@ -103,13 +107,11 @@ export default function Home() {
             <JobFeed limit={4}/>
           </section>
 
-          {/* Додано слайдер компаній */}
           <section className="container mx-auto mt-16 py-3 md:px-5 sm:px-7 px-3">
             <h2 className="text-[#0C4A6E] text-2xl font-bold mb-6">Top Companies Hiring Now</h2>
             <CompanySlider/>
           </section>
 
-          {/* Ваша оригінальна секція категорій */}
           <section className="container mx-auto mt-3 md:mt-7 py-3 md:px-5 sm:px-7 px-3">
             <h2 className="text-[#0C4A6E] lg:text-4xl text-3xl font-bold mb-3">
               Browse talent by category
@@ -125,7 +127,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Ваша оригінальна секція Find Talent */}
           <section className="container mx-auto lg:mt-5 mt-3 py-3 md:px-5 sm:px-7 px-0 space-y-3">
             <div className="bg-[url('/images/grilswork.png')] bg-top w-full sm:rounded-xl rounded-none xl:px-14 px-5 py-8">
               <motion.h2 className="text-white font-semibold lg:text-3xl text-xl"
@@ -165,7 +166,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Ваша оригінальна бізнес секція */}
           <section className="container mx-auto lg:mt-5 mt-1 py-3 md:px-5 sm:px-7">
             <div className="grid lg:grid-cols-3 grid-cols-1">
               <div className="md:bg-[#E4FDF7] bg-none col-span-2 lg:rounded-l-xl lg:rounded-tr-none rounded-t-xl sm:px-7 px-5 pt-10 pb-14 relative">
@@ -298,7 +298,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Ваша оригінальна секція можливостей */}
           <section className="container mx-auto md:mt-5 mt-3 py-3 md:px-5 sm:px-7 px-0 space-y-3">
             <div className="grid 2xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
               <Image
@@ -360,7 +359,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Ваша оригінальна секція навичок */}
           <section className="container mx-auto lg:my-7 my-3 py-3 md:px-5 sm:px-7 px-3 space-y-3">
             <Skills/>
           </section>
