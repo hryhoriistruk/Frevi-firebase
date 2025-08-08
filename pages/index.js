@@ -70,6 +70,12 @@ export default function Home() {
                   >
                     My Friends
                   </button>
+                  <button
+                      onClick={() => router.push("/feed")}
+                      className="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition"
+                  >
+                    Community Posts
+                  </button>
                 </motion.div>
               </div>
 

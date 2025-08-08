@@ -1,8 +1,12 @@
 import '@/styles/globals.css';
+import '@/components/posts/styles.css';  // Add your posts styles here
 import { SessionProvider } from 'next-auth/react';
 import { AuthProvider } from '@/context/AuthContext';
 import { ChatProvider } from '@/context/ChatContext';
 import { FriendsProvider } from '@/context/FriendsContext';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { ThreeDots } from 'react-loader-spinner';
 
 function RouteLoading() {
     const router = useRouter();
@@ -45,6 +49,7 @@ export default function MyApp({ Component, pageProps: { session, ...pageProps } 
             <AuthProvider>
                 <ChatProvider>
                     <FriendsProvider>
+                        <RouteLoading />
                         <Component {...pageProps} />
                     </FriendsProvider>
                 </ChatProvider>
