@@ -21,6 +21,115 @@ import CompanySlider from '../components/CompanySlider';
 export default function Home() {
   const router = useRouter();
 
+  // Navigation links data with consistent button styling
+  const navButtons = [
+    // Main actions (original buttons)
+    {
+      path: "/jobs",
+      name: "Find Jobs",
+      className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/jobs/post-job",
+      name: "Post a Job",
+      className: "border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition"
+    },
+    {
+      path: "/friends",
+      name: "My Friends",
+      className: "bg-[#0C4A6E] hover:bg-[#083344] text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/feed",
+      name: "Community Posts",
+      className: "bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+
+    // Admin pages
+    {
+      path: "/admin",
+      name: "Admin Page",
+      className: "bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/admin/dashboard",
+      name: "Admin Dashboard",
+      className: "bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+
+    // Messaging
+    {
+      path: "/messages/page",
+      name: "Messages Page",
+      className: "bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/messenger",
+      name: "Messenger",
+      className: "bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/messages",
+      name: "Messages",
+      className: "bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+
+    // User pages
+    {
+      path: "/users/[id]",
+      as: "/users/1",
+      name: "User Profile",
+      className: "bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/users/edit",
+      name: "Edit User",
+      className: "bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/users",
+      name: "Users List",
+      className: "bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+
+    // Other pages
+    {
+      path: "/orders/page",
+      name: "Orders Page",
+      className: "bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/services/assistance",
+      name: "Assistance Service",
+      className: "bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/assistance",
+      name: "Assistance",
+      className: "bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/dashboard",
+      name: "Dashboard",
+      className: "bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/notifications",
+      name: "Notifications",
+      className: "bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/orders",
+      name: "Orders",
+      className: "bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+    {
+      path: "/payment",
+      name: "Payment",
+      className: "bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-bold transition"
+    }
+  ];
+
   return (
       <div className="min-h-screen flex flex-col">
         <HeadTag title="Frevi - Professional Network"/>
@@ -47,44 +156,32 @@ export default function Home() {
                   Right now. Right here.
                 </motion.h6>
 
-                <motion.div className="flex flex-col sm:flex-row gap-4 pt-4"
+                <motion.div className="flex flex-wrap gap-4 pt-4"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.4 }}
                 >
-                  <button
-                      onClick={() => router.push("/jobs")}
-                      className="bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition"
-                  >
-                    Find Jobs
-                  </button>
-                  <button
-                      onClick={() => router.push("/jobs/post-job")}
-                      className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition"
-                  >
-                    Post a Job
-                  </button>
-                  <button
-                      onClick={() => router.push("/friends")}
-                      className="bg-[#0C4A6E] text-white px-6 py-3 rounded-full font-bold hover:bg-[#083344] transition"
-                  >
-                    My Friends
-                  </button>
-                  <button
-                      onClick={() => router.push("/feed")}
-                      className="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition"
-                  >
-                    Community Posts
-                  </button>
+                  {navButtons.map((button, index) => (
+                      <Link
+                          key={index}
+                          href={button.path}
+                          as={button.as || button.path}
+                          passHref
+                      >
+                        <button className={button.className}>
+                          {button.name}
+                        </button>
+                      </Link>
+                  ))}
                 </motion.div>
               </div>
 
               <div className="relative">
                 <Link href="/jobs/todays-jobs">
                   <div className="absolute lg:flex hidden flex-col items-center z-[9] bg-[#F3FFFC] shadow-2xl py-2 px-3 rounded-xl cursor-pointer left-[-3rem] top-0 transition hover:scale-105">
-                    <span className="text-[11px] font-semibold text-zinc-700 mb-1">
-                      Today's Job
-                    </span>
+                  <span className="text-[11px] font-semibold text-zinc-700 mb-1">
+                    Today's Job
+                  </span>
                     <Image src="/images/bag.png" height={30} width={40} alt="bag-image"/>
                   </div>
                 </Link>
@@ -123,18 +220,18 @@ export default function Home() {
               Browse talent by category
             </h2>
             <span className="text-zinc-600 font-semibold lg:text-lg text-md">
-              Looking for work?
-              <Link href="/jobs/all-jobs" legacyBehavior><a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
-                  Browse Job
-                </a></Link>
-            </span>
+            Looking for work?
+            <Link href="/jobs/all-jobs" legacyBehavior><a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
+                Browse Job
+              </a></Link>
+          </span>
             <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 2xl:gap-x-20 gap-x-10 xl:gap-y-7 sm:gap-y-4 gap-y-3 lg:mt-10 mt-7 md:px-0 sm:px-7">
               <Category/>
             </div>
           </section>
 
           <section className="container mx-auto lg:mt-5 mt-3 py-3 md:px-5 sm:px-7 px-0 space-y-3">
-            <div className="bg-[url('/images/grilswork.png')] bg-top w-full sm:rounded-xl rounded-none xl:px-14 px-5 py-8">
+            <div className="bg-[url('/images/girlswork.png')] bg-top w-full sm:rounded-xl rounded-none xl:px-14 px-5 py-8">
               <motion.h2 className="text-white font-semibold lg:text-3xl text-xl"
                          initial={{y:"100%", opacity:0}}
                          whileInView={{y:0, opacity:1}}
@@ -189,17 +286,17 @@ export default function Home() {
                             whileInView={{y:0, opacity:1}}
                             transition={{duration:1}}
                 >
-                <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
-                  <FaStar/>
-                </span>
+              <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
+                <FaStar/>
+              </span>
                   <div className="flex flex-col space-y-2">
                     <h3 className="text-zinc-700 font-semibold xl:text-3xl text-2xl">
                       Proof of quality
                     </h3>
                     <span className="text-zinc-500 font-semibold xl:text-md">
-                    Check any pro's work samples, client reviews, <br className="md:block hidden"/>
-                    and identity verification.
-                  </span>
+                  Check any pro's work samples, client reviews, <br className="md:block hidden"/>
+                  and identity verification.
+                </span>
                   </div>
                 </motion.div>
 
@@ -208,17 +305,17 @@ export default function Home() {
                             whileInView={{y:0, opacity:1}}
                             transition={{duration:1}}
                 >
-                <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
-                  <IoLogoUsd/>
-                </span>
+              <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
+                <IoLogoUsd/>
+              </span>
                   <div className="flex flex-col space-y-2">
                     <h3 className="text-zinc-700 font-semibold xl:text-3xl text-2xl">
                       No cost until you hire
                     </h3>
                     <span className="text-zinc-500 font-semibold text-md">
-                    Interview potential fits for your job, negotiate <br className="md:block hidden"/>
-                    rates, and only pay for work you approve.
-                  </span>
+                  Interview potential fits for your job, negotiate <br className="md:block hidden"/>
+                  rates, and only pay for work you approve.
+                </span>
                   </div>
                 </motion.div>
 
@@ -227,24 +324,24 @@ export default function Home() {
                             whileInView={{y:0, opacity:1}}
                             transition={{duration:1}}
                 >
-                <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
-                  <ImCheckmark/>
-                </span>
+              <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
+                <ImCheckmark/>
+              </span>
                   <div className="flex flex-col space-y-2">
                     <h3 className="text-zinc-700 font-semibold xl:text-3xl text-2xl">
                       Safe and secure
                     </h3>
                     <span className="text-zinc-500 font-semibold text-md">
-                    Focus on your work knowing we help protect <br className="md:block hidden"/>
-                    your data and privacy. We're here with 24/7 <br className="md:block hidden"/>
-                    support if you need it.
-                  </span>
+                  Focus on your work knowing we help protect <br className="md:block hidden"/>
+                  your data and privacy. We're here with 24/7 <br className="md:block hidden"/>
+                  support if you need it.
+                </span>
                   </div>
                 </motion.div>
 
                 <div className="absolute lg:right-[-1rem] right-0 bottom-3 md:block hidden">
                   <Image
-                      src="/images/man-preg.png"
+                      src="/images/man-prog.png"
                       width={250}
                       height={400}
                       alt="man-image"
@@ -268,17 +365,17 @@ export default function Home() {
                             whileInView={{y:0, opacity:1}}
                             transition={{duration:1}}
                 >
-                <span className="2xl:text-4xl xl:text-3xl text-2xl text-zinc-700 mt-1">
-                  <FaStar/>
-                </span>
+              <span className="2xl:text-4xl xl:text-3xl text-2xl text-zinc-700 mt-1">
+                <FaStar/>
+              </span>
 
                   <div className="flex flex-col md:space-y-3 space-y-2">
                     <h3 className="font-semibold 2xl:text-4xl xl:text-3xl text-2xl text-zinc-700">
                       4.9/5
                     </h3>
                     <span className="2xl:text-xl lg:text-md text-zinc-500">
-                    Clients rate professionals on Frevi
-                  </span>
+                  Clients rate professionals on Frevi
+                </span>
                   </div>
                 </motion.div>
 
@@ -287,17 +384,17 @@ export default function Home() {
                             whileInView={{y:0, opacity:1}}
                             transition={{duration:1}}
                 >
-                <span className="2xl:text-4xl xl:text-3xl text-2xl text-zinc-700 mt-1">
-                  <BsFillTrophyFill/>
-                </span>
+              <span className="2xl:text-4xl xl:text-3xl text-2xl text-zinc-700 mt-1">
+                <BsFillTrophyFill/>
+              </span>
 
                   <div className="flex flex-col md:space-y-3 space-y-2">
                     <h3 className="font-semibold 2xl:text-4xl xl:text-3xl text-2xl text-zinc-700">
                       Award winner
                     </h3>
                     <span className="2xl:text-xl lg:text-md text-zinc-500">
-                    G2's 2021 Best Software Awards
-                  </span>
+                  G2's 2021 Best Software Awards
+                </span>
                   </div>
                 </motion.div>
               </div>
@@ -343,15 +440,15 @@ export default function Home() {
                             whileInView={{y:0, opacity:1}}
                             transition={{duration:1}}
                 >
-                <span className="2xl:text-xl xl:text-lg text-md text-zinc-700 font-semibold">
-                  Find opportunities for every stage of your freelance career
-                </span>
+              <span className="2xl:text-xl xl:text-lg text-md text-zinc-700 font-semibold">
+                Find opportunities for every stage of your freelance career
+              </span>
                   <span className="2xl:text-xl xl:text-lg text-md text-zinc-700 font-semibold">
-                  Control when, where, and how you work
-                </span>
+                Control when, where, and how you work
+              </span>
                   <span className="2xl:text-xl xl:text-lg text-md text-zinc-700 font-semibold">
-                  Explore different ways to earn
-                </span>
+                Explore different ways to earn
+              </span>
                 </motion.div>
 
                 <motion.button className="bg-zinc-700 py-2 px-5 text-white transition hover:bg-zinc-600 font-semibold rounded-full xl:mt-16 lg:mt-7 mt-3" onClick={() => router.push("#")}

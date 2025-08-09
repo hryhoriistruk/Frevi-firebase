@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "frevi-12345",
-    "production": "frevi-12345"
+    "default": "frevi-marketplace1"
   },
   "targets": {},
   "etags": {}

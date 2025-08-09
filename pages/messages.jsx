@@ -35,9 +35,9 @@ export default function MessagesPage() {
             <input
                 value={newMessage}
                 onChange={(e) => setNewMessage(e.target.value)}
-                placeholder="Написати повідомлення..."
+                placeholder="Write a message..."
             />
-            <button onClick={handleSend}>Надіслати</button>
+            <button onClick={handleSend}>Send</button>
         </div>
     );
 }
