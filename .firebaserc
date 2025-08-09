@@ -1,7 +1,5 @@
 {
   "projects": {
-    "default": "frevi-marketplace1"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "frevi-work-marketplace"
+  }
 }

@@ -1,0 +1,8 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyD8lqE4dGk5DoFdwRIniguI3oEbmRFLaow",
+  authDomain: "frevi-work-marketplace.firebaseapp.com",
+  projectId: "frevi-work-marketplace",
+  storageBucket: "frevi-work-marketplace.firebasestorage.app",
+  messagingSenderId: "480849375869",
+  appId: "1:480849375869:web:7e1aee5e3069555d1d3714",
+  measurementId: "G-7WL7M34K4Q"

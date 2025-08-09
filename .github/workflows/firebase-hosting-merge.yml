@@ -5,7 +5,7 @@ name: Deploy to Firebase Hosting on merge
 on:
   push:
     branches:
-      - dynamic_work_with_total_all_microservices+auth_service_ver2.0
+      - Frevi_LinkedIn_type_with_Posts_that_working+Friends(with_don't_remade_photos)_with_buttons_to_all_services
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FREVI_50F39 }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FREVI_WORK_MARKETPLACE }}
           channelId: live
-          projectId: frevi-50f39
+          projectId: frevi-work-marketplace

@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FREVI_50F39 }}
-          projectId: frevi-50f39
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FREVI_WORK_MARKETPLACE }}
+          projectId: frevi-work-marketplace
