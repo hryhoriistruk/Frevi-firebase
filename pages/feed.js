@@ -1,10 +1,26 @@
-import React from 'react';
+'use client';
+import dynamic from 'next/dynamic';
 import { useRouter } from "next/router";
 import HeadTag from '../components/HeadTag';
 import Navbar from '../components/Navbar/Navbar';
-import PostCreator from '../components/PostCreator';
-import PostsList from '../components/PostsList';
 import Footer from '../components/Footer';
+
+// Dynamically import Firebase-dependent components
+const PostCreator = dynamic(
+    () => import('../components/PostCreator'),
+    {
+        ssr: false,
+        loading: () => <div className="py-4 text-center">Loading post creator...</div>
+    }
+);
+
+const PostsList = dynamic(
+    () => import('../components/PostsList'),
+    {
+        ssr: false,
+        loading: () => <div className="py-8 text-center">Loading posts...</div>
+    }
+);
 
 export default function FeedPage() {
     const router = useRouter();

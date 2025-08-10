@@ -1,19 +1,15 @@
+'use client'
+
 import { useState, useEffect } from 'react';
+import { initializeApp, getApps } from 'firebase/app';
 import { getFirestore, collection, query, where, getDocs, addDoc, doc, updateDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { useAuth } from '@/context/AuthContext';
 import HeadTag from '../../components/HeadTag';
-// Try importing from firebase-config instead
-import { app } from '@lib/firebase/firebase-config';
-
 
 import Navbar from '../../components/Navbar/Navbar';
 import { FaStar, FaPlus, FaComment, FaShoppingCart } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-
-// Initialize Firebase services
-const db = getFirestore(app);
-const storage = getStorage(app);
 
 export default function ServicesMarketplace() {
     const { currentUser } = useAuth();
@@ -30,9 +26,63 @@ export default function ServicesMarketplace() {
     const [activeTab, setActiveTab] = useState('all');
     const [comments, setComments] = useState({});
     const [newComment, setNewComment] = useState('');
+    const [mounted, setMounted] = useState(false);
+
+    // Firebase services state
+    const [app, setApp] = useState(null);
+    const [db, setDb] = useState(null);
+    const [storage, setStorage] = useState(null);
+
+    useEffect(() => {
+        // Only initialize Firebase on client side with proper checks
+        if (typeof window !== 'undefined') {
+            try {
+                // Firebase config
+                const firebaseConfig = {
+                    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+                    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+                    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+                    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+                    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+                    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
+                };
+
+                // Check if all required config values are present
+                const hasAllConfig = Object.values(firebaseConfig).every(value => value && value !== 'undefined');
+
+                if (!hasAllConfig) {
+                    console.warn('Firebase config incomplete, skipping initialization');
+                    setMounted(true);
+                    return;
+                }
+
+                // Initialize Firebase app
+                let firebaseApp;
+                if (!getApps().length) {
+                    firebaseApp = initializeApp(firebaseConfig);
+                } else {
+                    firebaseApp = getApps()[0];
+                }
+
+                // Initialize services
+                const firestore = getFirestore(firebaseApp);
+                const storageInstance = getStorage(firebaseApp);
+
+                setApp(firebaseApp);
+                setDb(firestore);
+                setStorage(storageInstance);
+                setMounted(true);
+            } catch (error) {
+                console.error('Error initializing Firebase services:', error);
+                setMounted(true); // Still set mounted to show the UI
+            }
+        }
+    }, []);
 
     // Fetch services
     useEffect(() => {
+        if (!db || !mounted) return;
+
         const fetchServices = async () => {
             try {
                 let q = query(collection(db, 'services'));
@@ -46,10 +96,12 @@ export default function ServicesMarketplace() {
             }
         };
         fetchServices();
-    }, [activeTab]);
+    }, [activeTab, db, mounted]);
 
     // Handle image upload
     const handleImageUpload = async (e) => {
+        if (!storage || !currentUser) return;
+
         const files = Array.from(e.target.files);
         if (files.length === 0) return;
 
@@ -75,7 +127,7 @@ export default function ServicesMarketplace() {
     const handleSubmitService = async (e) => {
         e.preventDefault();
 
-        if (!currentUser) {
+        if (!currentUser || !db) {
             alert('Please log in to post a service.');
             return;
         }
@@ -115,7 +167,7 @@ export default function ServicesMarketplace() {
 
     // Add comment to service
     const handleAddComment = async (serviceId) => {
-        if (!newComment.trim() || !currentUser) return;
+        if (!newComment.trim() || !currentUser || !db) return;
 
         try {
             const service = services.find(s => s.id === serviceId);
@@ -149,7 +201,7 @@ export default function ServicesMarketplace() {
 
     // Place order
     const handlePlaceOrder = async (serviceId) => {
-        if (!currentUser) {
+        if (!currentUser || !db) {
             alert('Please log in to place an order.');
             return;
         }
@@ -181,6 +233,43 @@ export default function ServicesMarketplace() {
             alert('Error placing order. Please try again.');
         }
     };
+
+    // Show loading state while Firebase initializes
+    if (!mounted) {
+        return (
+            <div className="min-h-screen flex flex-col bg-gray-50">
+                <HeadTag title="Frevi - Services Marketplace" />
+                <Navbar />
+                <main className="flex-1 flex items-center justify-center">
+                    <div className="text-center">
+                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                        <p className="text-gray-600">Loading services...</p>
+                    </div>
+                </main>
+            </div>
+        );
+    }
+
+    // Show error state if Firebase failed to initialize
+    if (!db) {
+        return (
+            <div className="min-h-screen flex flex-col bg-gray-50">
+                <HeadTag title="Frevi - Services Marketplace" />
+                <Navbar />
+                <main className="flex-1 flex items-center justify-center">
+                    <div className="text-center">
+                        <p className="text-red-600 mb-4">Unable to connect to services. Please check your connection.</p>
+                        <button
+                            onClick={() => window.location.reload()}
+                            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                        >
+                            Retry
+                        </button>
+                    </div>
+                </main>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen flex flex-col bg-gray-50">

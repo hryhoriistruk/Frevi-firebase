@@ -1,14 +1,15 @@
 import '@/styles/globals.css';
-import '@/components/posts/styles.css';
 import { SessionProvider } from 'next-auth/react';
-import { AuthProvider } from '@/context/AuthContext';
-import { ChatProvider } from '@/context/ChatContext';
-import { FriendsProvider } from '@/context/FriendsContext';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-import { getStorage } from 'firebase/storage';
-import { app } from '@/lib/firebase/firebase-config';
+
+// Динамічний імпорт контекстів
+const AuthProvider = dynamic(() => import('@/context/AuthContext').then(mod => mod.default), { ssr: false });
+const ChatProvider = dynamic(() => import('@/context/ChatContext').then(mod => mod.default), { ssr: false });
+// Temporarily comment out FriendsProvider to test
+// const FriendsProvider = dynamic(() => import('@/context/FriendsContext').then(mod => mod.default), { ssr: false });
 
 function RouteLoading() {
     const router = useRouter();
@@ -46,22 +47,15 @@ function RouteLoading() {
 }
 
 export default function MyApp({ Component, pageProps: { session, ...pageProps } }) {
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const storage = getStorage(app);
-            console.log("Firebase Storage initialized", storage);
-        }
-    }, []);
-
     return (
         <SessionProvider session={session}>
             <AuthProvider>
                 <ChatProvider>
-                    <FriendsProvider>
-                        <RouteLoading />
-                        <Component {...pageProps} />
-                    </FriendsProvider>
+                    {/* Temporarily comment out FriendsProvider */}
+                    {/* <FriendsProvider> */}
+                    <RouteLoading />
+                    <Component {...pageProps} />
+                    {/* </FriendsProvider> */}
                 </ChatProvider>
             </AuthProvider>
         </SessionProvider>
