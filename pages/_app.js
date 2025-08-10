@@ -1,5 +1,5 @@
 import '@/styles/globals.css';
-import '@/components/posts/styles.css';  // Add your posts styles here
+import '@/components/posts/styles.css';
 import { SessionProvider } from 'next-auth/react';
 import { AuthProvider } from '@/context/AuthContext';
 import { ChatProvider } from '@/context/ChatContext';
@@ -7,7 +7,8 @@ import { FriendsProvider } from '@/context/FriendsContext';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
-import { FaRobot } from 'react-icons/fa';
+import { getStorage } from 'firebase/storage';
+import { app } from '@/lib/firebase/firebase-config';
 
 function RouteLoading() {
     const router = useRouter();
@@ -45,6 +46,14 @@ function RouteLoading() {
 }
 
 export default function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const storage = getStorage(app);
+            console.log("Firebase Storage initialized", storage);
+        }
+    }, []);
+
     return (
         <SessionProvider session={session}>
             <AuthProvider>
