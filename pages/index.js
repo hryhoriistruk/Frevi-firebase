@@ -165,7 +165,7 @@ export default function Home() {
                            animate={{y: 0, opacity: 1}}
                            transition={{duration: 0.9}}
                 >
-                  How Work <br/> Should Work
+                  Frevi <br/> Marketplace
                 </motion.h1>
                 <motion.h6 className='text-zinc-500 xl:text-3xl lg:text-xl text-lg font-semibold'
                            initial={{y: "100%", opacity: 0}}
