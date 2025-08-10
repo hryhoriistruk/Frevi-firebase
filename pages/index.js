@@ -1,3 +1,4 @@
+import { FaRobot } from 'react-icons/fa';
 import React from 'react';
 import HeadTag from '../components/HeadTag';
 import Navbar from '../components/Navbar/Navbar';
@@ -17,6 +18,7 @@ import { useRouter } from "next/router";
 import { motion } from "framer-motion";
 import JobFeed from '../components/JobFeed';
 import CompanySlider from '../components/CompanySlider';
+
 
 export default function Home() {
   const router = useRouter();
@@ -127,12 +129,30 @@ export default function Home() {
       path: "/payment",
       name: "Payment",
       className: "bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-full font-bold transition"
+    },
+
+    {
+      path: "/gpt",
+      name: "AI Assistant",
+      className: "bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-6 py-3 rounded-full font-bold transition"
     }
   ];
 
   return (
       <div className="min-h-screen flex flex-col">
         <HeadTag title="Frevi - Professional Network"/>
+        <motion.div
+            className="fixed bottom-8 right-8 z-50"
+            whileHover={{scale: 1.1}}
+            whileTap={{scale: 0.9}}
+        >
+          <Link href="/gpt" passHref>
+            <button
+                className="flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-600 text-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all w-14 h-14">
+              <FaRobot className="text-xl"/>
+            </button>
+          </Link>
+        </motion.div>
 
         <header className="header-bg">
           <Navbar/>
@@ -141,25 +161,25 @@ export default function Home() {
             <section className="mt-7 flex items-center justify-between">
               <div className="flex flex-col space-y-5">
                 <motion.h1 className="xl:text-7xl lg:text-6xl text-4xl font-bold text-[#0C4A6E]"
-                           initial={{y:"100%", opacity:0}}
-                           animate={{y:0, opacity:1}}
-                           transition={{duration:0.9}}
+                           initial={{y: "100%", opacity: 0}}
+                           animate={{y: 0, opacity: 1}}
+                           transition={{duration: 0.9}}
                 >
                   How Work <br/> Should Work
                 </motion.h1>
                 <motion.h6 className='text-zinc-500 xl:text-3xl lg:text-xl text-lg font-semibold'
-                           initial={{y:"100%", opacity:0}}
-                           animate={{y:0, opacity:1}}
-                           transition={{duration:1.5}}
+                           initial={{y: "100%", opacity: 0}}
+                           animate={{y: 0, opacity: 1}}
+                           transition={{duration: 1.5}}
                 >
                   Forget the old rules. You can have the best people. <br className='lg:block md:hidden block'/>
                   Right now. Right here.
                 </motion.h6>
 
                 <motion.div className="flex flex-wrap gap-4 pt-4"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.4 }}
+                            initial={{y: 20, opacity: 0}}
+                            animate={{y: 0, opacity: 1}}
+                            transition={{delay: 0.4}}
                 >
                   {navButtons.map((button, index) => (
                       <Link
@@ -178,7 +198,8 @@ export default function Home() {
 
               <div className="relative">
                 <Link href="/jobs/todays-jobs">
-                  <div className="absolute lg:flex hidden flex-col items-center z-[9] bg-[#F3FFFC] shadow-2xl py-2 px-3 rounded-xl cursor-pointer left-[-3rem] top-0 transition hover:scale-105">
+                  <div
+                      className="absolute lg:flex hidden flex-col items-center z-[9] bg-[#F3FFFC] shadow-2xl py-2 px-3 rounded-xl cursor-pointer left-[-3rem] top-0 transition hover:scale-105">
                   <span className="text-[11px] font-semibold text-zinc-700 mb-1">
                     Today's Job
                   </span>
@@ -225,44 +246,48 @@ export default function Home() {
                 Browse Job
               </a></Link>
           </span>
-            <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 2xl:gap-x-20 gap-x-10 xl:gap-y-7 sm:gap-y-4 gap-y-3 lg:mt-10 mt-7 md:px-0 sm:px-7">
+            <div
+                className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 2xl:gap-x-20 gap-x-10 xl:gap-y-7 sm:gap-y-4 gap-y-3 lg:mt-10 mt-7 md:px-0 sm:px-7">
               <Category/>
             </div>
           </section>
 
           <section className="container mx-auto lg:mt-5 mt-3 py-3 md:px-5 sm:px-7 px-0 space-y-3">
-            <div className="bg-[url('/images/girlswork.png')] bg-top w-full sm:rounded-xl rounded-none xl:px-14 px-5 py-8">
+            <div
+                className="bg-[url('/images/girlswork.png')] bg-top w-full sm:rounded-xl rounded-none xl:px-14 px-5 py-8">
               <motion.h2 className="text-white font-semibold lg:text-3xl text-xl"
-                         initial={{y:"100%", opacity:0}}
-                         whileInView={{y:0, opacity:1}}
-                         transition={{duration:1}}
+                         initial={{y: "100%", opacity: 0}}
+                         whileInView={{y: 0, opacity: 1}}
+                         transition={{duration: 1}}
               >
                 For Clients
               </motion.h2>
 
-              <motion.h3 className="text-white 2xl:font-bold font-semibold lg:text-6xl text-4xl lg:mt-28 mt-20 leading-tight my-3"
-                         initial={{y:"100%", opacity:0}}
-                         whileInView={{y:0, opacity:1}}
-                         transition={{duration:1}}
+              <motion.h3
+                  className="text-white 2xl:font-bold font-semibold lg:text-6xl text-4xl lg:mt-28 mt-20 leading-tight my-3"
+                  initial={{y: "100%", opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: 1}}
               >
                 Find Talent <br/>
                 Your Way
               </motion.h3>
 
               <motion.p className="text-white font-semibold lg:text-xl text-md"
-                        initial={{y:"100%", opacity:0}}
-                        whileInView={{y:0, opacity:1}}
-                        transition={{duration:1}}
+                        initial={{y: "100%", opacity: 0}}
+                        whileInView={{y: 0, opacity: 1}}
+                        transition={{duration: 1}}
               >
                 Work with the largest network of independent <br/>
                 professionals and get things done—from quick <br/>
                 turnarounds to big transformations. <br/>
               </motion.p>
 
-              <motion.div className="grid md:grid-cols-3 grid-cols-1 2xl:gap-x-10 md:gap-y-0 gap-y-3 xl:gap-x-7 gap-x-5 mt-10"
-                          initial={{y:"100", opacity:0}}
-                          whileInView={{y:0, opacity:1}}
-                          transition={{duration:1}}
+              <motion.div
+                  className="grid md:grid-cols-3 grid-cols-1 2xl:gap-x-10 md:gap-y-0 gap-y-3 xl:gap-x-7 gap-x-5 mt-10"
+                  initial={{y: "100", opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: 1}}
               >
                 <ClintCat/>
               </motion.div>
@@ -271,20 +296,21 @@ export default function Home() {
 
           <section className="container mx-auto lg:mt-5 mt-1 py-3 md:px-5 sm:px-7">
             <div className="grid lg:grid-cols-3 grid-cols-1">
-              <div className="md:bg-[#E4FDF7] bg-none col-span-2 lg:rounded-l-xl lg:rounded-tr-none rounded-t-xl sm:px-7 px-5 pt-10 pb-14 relative">
+              <div
+                  className="md:bg-[#E4FDF7] bg-none col-span-2 lg:rounded-l-xl lg:rounded-tr-none rounded-t-xl sm:px-7 px-5 pt-10 pb-14 relative">
                 <motion.h2 className="text-zinc-700 font-semibold 2xl:text-6xl lg:text-5xl text-4xl"
-                           initial={{y:"100", opacity:0}}
-                           whileInView={{y:0, opacity:1}}
-                           transition={{duration:1}}
+                           initial={{y: "100", opacity: 0}}
+                           whileInView={{y: 0, opacity: 1}}
+                           transition={{duration: 1}}
                 >
                   Why business <br/>
                   turn to Frevi
                 </motion.h2>
 
                 <motion.div className="flex md:ml-3 ml-0 space-x-5 items-start mt-7"
-                            initial={{y:"100", opacity:0}}
-                            whileInView={{y:0, opacity:1}}
-                            transition={{duration:1}}
+                            initial={{y: "100", opacity: 0}}
+                            whileInView={{y: 0, opacity: 1}}
+                            transition={{duration: 1}}
                 >
               <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
                 <FaStar/>
@@ -301,9 +327,9 @@ export default function Home() {
                 </motion.div>
 
                 <motion.div className="flex md:ml-3 ml-0 space-x-5 items-start mt-7"
-                            initial={{y:"100", opacity:0}}
-                            whileInView={{y:0, opacity:1}}
-                            transition={{duration:1}}
+                            initial={{y: "100", opacity: 0}}
+                            whileInView={{y: 0, opacity: 1}}
+                            transition={{duration: 1}}
                 >
               <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
                 <IoLogoUsd/>
@@ -320,9 +346,9 @@ export default function Home() {
                 </motion.div>
 
                 <motion.div className="flex md:ml-3 ml-0 space-x-5 items-start mt-7"
-                            initial={{y:"100", opacity:0}}
-                            whileInView={{y:0, opacity:1}}
-                            transition={{duration:1}}
+                            initial={{y: "100", opacity: 0}}
+                            whileInView={{y: 0, opacity: 1}}
+                            transition={{duration: 1}}
                 >
               <span className="flex rounded-full py-1 px-1 bg-zinc-700 text-white xl:text-xl text-md mt-1">
                 <ImCheckmark/>
@@ -349,11 +375,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-b from-[#99F6E4] to-[#A5F3FC] lg:rounded-r-xl lg:rounded-bl-none md:rounded-b-xl md:rounded-none sm:rounded-xl rounded-none px-7 pt-10 pb-15 py-10">
+              <div
+                  className="bg-gradient-to-b from-[#99F6E4] to-[#A5F3FC] lg:rounded-r-xl lg:rounded-bl-none md:rounded-b-xl md:rounded-none sm:rounded-xl rounded-none px-7 pt-10 pb-15 py-10">
                 <motion.h2 className="text-zinc-700 font-semibold 2xl:text-5xl xl:text-4xl text-3xl"
-                           initial={{y:"100", opacity:0}}
-                           whileInView={{y:0, opacity:1}}
-                           transition={{duration:1}}
+                           initial={{y: "100", opacity: 0}}
+                           whileInView={{y: 0, opacity: 1}}
+                           transition={{duration: 1}}
                 >
                   we're <br/>
                   the world's work
@@ -361,9 +388,9 @@ export default function Home() {
                 </motion.h2>
 
                 <motion.div className="flex items-start space-x-7 mt-10"
-                            initial={{y:"100", opacity:0}}
-                            whileInView={{y:0, opacity:1}}
-                            transition={{duration:1}}
+                            initial={{y: "100", opacity: 0}}
+                            whileInView={{y: 0, opacity: 1}}
+                            transition={{duration: 1}}
                 >
               <span className="2xl:text-4xl xl:text-3xl text-2xl text-zinc-700 mt-1">
                 <FaStar/>
@@ -380,9 +407,9 @@ export default function Home() {
                 </motion.div>
 
                 <motion.div className="flex items-start space-x-7 xl:mt-10 md:mt-7 mt-5"
-                            initial={{y:"100", opacity:0}}
-                            whileInView={{y:0, opacity:1}}
-                            transition={{duration:1}}
+                            initial={{y: "100", opacity: 0}}
+                            whileInView={{y: 0, opacity: 1}}
+                            transition={{duration: 1}}
                 >
               <span className="2xl:text-4xl xl:text-3xl text-2xl text-zinc-700 mt-1">
                 <BsFillTrophyFill/>
@@ -411,34 +438,36 @@ export default function Home() {
                   className="md:rounded-l-xl md:rounded-tr-none sm:rounded-t-xl rounded-none flex flex-grow"
               />
 
-              <div className="bg-gradient-to-b from-[#A5F3FC] to-[#7DD3FC] 2xl:col-span-2 col-span-1 md:rounded-r-xl md:rounded-bl-none sm:rounded-b-xl rounded-none xl:px-10 px-5 lg:py-7 py-5">
+              <div
+                  className="bg-gradient-to-b from-[#A5F3FC] to-[#7DD3FC] 2xl:col-span-2 col-span-1 md:rounded-r-xl md:rounded-bl-none sm:rounded-b-xl rounded-none xl:px-10 px-5 lg:py-7 py-5">
                 <motion.h5 className="font-semibold lg:text-2xl text-xl text-zinc-700"
-                           initial={{y:"100", opacity:0}}
-                           whileInView={{y:0, opacity:1}}
-                           transition={{duration:1}}
+                           initial={{y: "100", opacity: 0}}
+                           whileInView={{y: 0, opacity: 1}}
+                           transition={{duration: 1}}
                 >
                   For Talent
                 </motion.h5>
                 <motion.h3 className="font-semibold lg:text-5xl text-4xl text-zinc-700 lg:mt-7 mt-5 lg:mb-3 mb-1"
-                           initial={{y:"100", opacity:0}}
-                           whileInView={{y:0, opacity:1}}
-                           transition={{duration:1}}
+                           initial={{y: "100", opacity: 0}}
+                           whileInView={{y: 0, opacity: 1}}
+                           transition={{duration: 1}}
                 >
                   Find great work
                 </motion.h3>
                 <motion.p className="text-zinc-500 font-semibold"
-                          initial={{y:"100", opacity:0}}
-                          whileInView={{y:0, opacity:1}}
-                          transition={{duration:1}}
+                          initial={{y: "100", opacity: 0}}
+                          whileInView={{y: 0, opacity: 1}}
+                          transition={{duration: 1}}
                 >
                   Meet clients you're excited to work with and take <br className="lg:block hidden"/>
                   your career or business to new heights.
                 </motion.p>
 
-                <motion.div className="grid lg:grid-cols-3 grid-cols-2 2xl:gap-x-14 xl:gap-x-10 gap-x-5 gap-y-5 lg:gap-y-0 lg:mt-14 mt-4 border-t border-zinc-500 lg:py-5 py-3"
-                            initial={{y:"100", opacity:0}}
-                            whileInView={{y:0, opacity:1}}
-                            transition={{duration:1}}
+                <motion.div
+                    className="grid lg:grid-cols-3 grid-cols-2 2xl:gap-x-14 xl:gap-x-10 gap-x-5 gap-y-5 lg:gap-y-0 lg:mt-14 mt-4 border-t border-zinc-500 lg:py-5 py-3"
+                    initial={{y: "100", opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    transition={{duration: 1}}
                 >
               <span className="2xl:text-xl xl:text-lg text-md text-zinc-700 font-semibold">
                 Find opportunities for every stage of your freelance career
@@ -451,10 +480,12 @@ export default function Home() {
               </span>
                 </motion.div>
 
-                <motion.button className="bg-zinc-700 py-2 px-5 text-white transition hover:bg-zinc-600 font-semibold rounded-full xl:mt-16 lg:mt-7 mt-3" onClick={() => router.push("#")}
-                               initial={{x:30, opacity:0}}
-                               whileInView={{x:0, opacity:1}}
-                               transition={{duration:1}}
+                <motion.button
+                    className="bg-zinc-700 py-2 px-5 text-white transition hover:bg-zinc-600 font-semibold rounded-full xl:mt-16 lg:mt-7 mt-3"
+                    onClick={() => router.push("#")}
+                    initial={{x: 30, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{duration: 1}}
                 >
                   Find Opportunities
                 </motion.button>

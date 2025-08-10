@@ -7,6 +7,7 @@ import { FriendsProvider } from '@/context/FriendsContext';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
+import { FaRobot } from 'react-icons/fa';
 
 function RouteLoading() {
     const router = useRouter();
