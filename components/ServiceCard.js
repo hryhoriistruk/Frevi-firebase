@@ -1,47 +1,42 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import OrderModal from './OrderModal';
+// components/services/ServiceCard.js
+import Link from 'next/link';
+import Image from 'next/image';
 
-export default function ServiceCard({ service, currentUser }) {
-    const router = useRouter();
-    const [showOrderModal, setShowOrderModal] = useState(false);
+export default function ServiceCard({ service }) {
+    if (!service) {
+        return null;
+    }
 
     return (
-        <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-            {service.images[0] && (
-                <img
-                    src={service.images[0]}
-                    className="w-full h-48 object-cover"
-                    onClick={() => router.push(`/services/${service.id}`)}
-                />
-            )}
-
-            <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600 mb-2 line-clamp-2">{service.description}</p>
-                <div className="flex justify-between items-center">
-                    <span className="font-bold">${service.price}</span>
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
-            {service.category}
-          </span>
-                </div>
-
-                {currentUser && currentUser.uid !== service.userId && (
-                    <button
-                        onClick={() => setShowOrderModal(true)}
-                        className="w-full mt-4 py-2 bg-green-600 text-white rounded"
-                    >
-                        Order Now
-                    </button>
+        <Link href={`/service/${service.id}`}>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                {service.images && service.images[0] && (
+                    <div className="relative h-48 w-full">
+                        <Image
+                            src={service.images[0]}
+                            alt={service.title || 'Service image'}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
                 )}
+                <div className="p-4">
+                    <h3 className="text-lg font-semibold mb-2">
+                        {service.title || 'Untitled Service'}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                        {service.description || 'No description available'}
+                    </p>
+                    {service.price && (
+                        <div className="flex justify-between items-center">
+                            <span className="text-lg font-bold text-blue-600">
+                                ${service.price}
+                            </span>
+                        </div>
+                    )}
+                </div>
             </div>
-
-            {showOrderModal && (
-                <OrderModal
-                    service={service}
-                    onClose={() => setShowOrderModal(false)}
-                />
-            )}
-        </div>
+        </Link>
     );
 }

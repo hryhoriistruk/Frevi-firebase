@@ -1,14 +1,9 @@
 // src/components/services/ClientBookingForm.jsx
 'use client';
 
-import { useState } from 'react';
-
 export default function ClientBookingForm({ serviceId, price }) {
-    const [date, setDate] = useState(new Date());
-
+    // Ваша логіка форми тут
     return (
-        <div className="border rounded-lg p-6">
-            {/* Реалізація форми */}
-        </div>
+        <div>Форма бронювання</div>
     );
 }

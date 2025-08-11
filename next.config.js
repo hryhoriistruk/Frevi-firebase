@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // output: 'export',
+  output: 'export', // Додайте цю лінію для статичного експорту
   distDir: 'out',
   images: {
     unoptimized: true,
@@ -13,25 +13,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   trailingSlash: true,
-  // Skip all dynamic routes during export
-  exportPathMap: async function () {
-    const paths = {
-      '/': { page: '/' },
-      // Add all your static routes here
-    };
-
-    // Explicitly exclude dynamic routes
-    const excludedRoutes = [
-      '/chat/[chatId]',
-      '/chat/[...fallback]'
-    ];
-
-    excludedRoutes.forEach(route => {
-      delete paths[route];
-    });
-
-    return paths;
-  },
 };
 
 module.exports = nextConfig;
