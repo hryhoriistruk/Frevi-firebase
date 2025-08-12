@@ -109,7 +109,7 @@ const HowToHire = () => {
                             transition={{duration:1}}
                         >
                             <h2 className="text-zinc-800 xl:text-4xl text-3xl font-semibold md:mt-0 mt-2">
-                                Post a job and hire a pro
+                                Post a service and share a service
                             </h2>
                             <p className="text-zinc-600 sm:text-lg text-md lg:mt-5 mt-3">
                                 Post your job on the world’s work marketplace and wait for the proposals to flood in from talented people around the world.
