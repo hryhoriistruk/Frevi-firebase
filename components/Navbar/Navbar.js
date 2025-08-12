@@ -331,7 +331,7 @@ const Navbar = () => {
 
                         <li>
                             <a className={`cursor-pointer flex items-center text-[1.03rem] font-semibold hover:text-cyan-700 ${subLinksII === true ? "text-cyan-700" : "text-zinc-700"}`} onClick={SecondLinkHandle}>
-                                Find Jobs
+                                Find Services
                                 <FaCaretDown className={`mt-1 xl:ml-1 ml-[1px] transition ${(subLinksII === true) ? "rotate-180" : "rotate-0"}`}/>
                             </a>
 
@@ -682,7 +682,7 @@ const Navbar = () => {
                                 className={`flex items-center justify-between font-semibold text-[1.03rem] hover:text-cyan-700 cursor-pointer ${(mobileSubListII === true ? "text-cyan-700" : "text-zinc-700")}`}
                                 onClick={SecondLinkHandleMb}
                             >
-                                Find Jobs
+                                Find Services
                                 <FaAngleDown className={`transition ${(mobileSubListII === true) ? "rotate-180" : "rotate-0"}`}/>
                             </a>
 

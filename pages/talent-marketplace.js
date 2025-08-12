@@ -18,7 +18,7 @@ const TalentMarketplace = () => {
     return (
         <div className="min-h-screen flex flex-col">
             {/* ============== Head Tag =============== */}
-            <HeadTag title="Talent Marketplace - Post a Job - Talent Marketplace | Frevi"/>
+            <HeadTag title="Talent Marketplace - Post a Service - Talent Marketplace | Frevi"/>
 
             {/* ================= Header ================= */}
             <header className="header-bg">
@@ -27,10 +27,10 @@ const TalentMarketplace = () => {
                 
                 {/* ============ Head Container ============ */}
                 <BannerContainer 
-                    heading={"Post a job today, hire tomorrow"}
+                    heading={"Post a service today, hire tomorrow"}
                     des={"content with talent that gets you, and hire them to take your business to the next level"}
-                    btnI = {{text: "Find Talent", link: "#"}}
-                    btnII = {{text: "Find work", link: "#"}}
+                    btnI = {{text: "Find Service", link: "#"}}
+                    btnII = {{text: "Find Service", link: "#"}}
                     img={"/images/team1.png"}
                 />
             </header>
@@ -176,7 +176,7 @@ const TalentMarketplace = () => {
                                 </div>
                             </div>
                             <button className="xl:mt-7 lg:mt-5 mt-2 bg-zinc-700 py-2 px-7 text-white transition hover:bg-zinc-600 font-semibold rounded-full" onClick={() => router.push("#")}>
-                                Post a Job
+                                Post a Service
                             </button>
                         </motion.div>
                     </div>
@@ -271,7 +271,7 @@ const TalentMarketplace = () => {
                                 </h2>
                                 <ul className="flex flex-col space-y-2">
                                     <li className="list-disc text-zinc-800 font-semibold xl:text-lg">
-                                        Post a job and receive proposals from talent
+                                        Post a service and receive proposals from talent
                                     </li>
                                     <li className="list-disc text-zinc-800 font-semibold xl:text-lg">
                                         See verified work history and reviews 

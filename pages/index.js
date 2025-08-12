@@ -27,12 +27,12 @@ export default function Home() {
         // Main actions (original buttons)
         {
             path: "/jobs",
-            name: "Find Jobs",
+            name: "Find Services",
             className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold transition"
         },
         {
             path: "/jobs/post-job",
-            name: "Post a Job",
+            name: "Post a Service",
             className: "border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition"
         },
         {

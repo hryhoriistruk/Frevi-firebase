@@ -42,7 +42,7 @@ export default function PostJob() {
 
     return (
         <div className="min-h-screen flex flex-col">
-            <HeadTag title="Post a Job | Frevi" />
+            <HeadTag title="Post a Service | Frevi" />
             <Navbar />
 
             <main className="flex-grow bg-gray-50 py-8">
@@ -53,14 +53,14 @@ export default function PostJob() {
                     className="container mx-auto px-4"
                 >
                     <div className="max-w-3xl mx-auto">
-                        <h1 className="text-3xl font-bold text-gray-800 mb-2">Post a Job</h1>
-                        <p className="text-gray-600 mb-8">Fill out the form below to post your job listing</p>
+                        <h1 className="text-3xl font-bold text-gray-800 mb-2">Post a Service</h1>
+                        <p className="text-gray-600 mb-8">Fill out the form below to post your sevice listing</p>
 
                         <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
                             <form onSubmit={handleSubmit}>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="md:col-span-2">
-                                        <label className="block text-gray-700 font-medium mb-2">Job Title*</label>
+                                        <label className="block text-gray-700 font-medium mb-2">Service Title*</label>
                                         <input
                                             type="text"
                                             name="title"

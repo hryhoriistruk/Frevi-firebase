@@ -9,7 +9,7 @@ const ClintCat = () => {
     const Data = [
         {
             id: 1,
-            name: `Post a job and hire a Pro`,
+            name: `Post a service and share a Pro`,
             leftIcon: <FaKeyboard/>,
             linkText: "Talent Marketplace",
             rightIcon: <FiArrowRight/>,

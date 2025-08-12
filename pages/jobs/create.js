@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <div className="min-h-screen flex flex-col">
-            <HeadTag title="Professional Network - Find Jobs & Talent"/>
+            <HeadTag title="Professional Network - Find Services"/>
 
             <header className="bg-gradient-to-r from-blue-800 to-blue-600">
                 <Navbar/>
@@ -47,13 +47,13 @@ export default function Home() {
                                     onClick={() => router.push("/jobs")}
                                     className="bg-white text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition"
                                 >
-                                    Find Jobs
+                                    Find Services
                                 </button>
                                 <button
                                     onClick={() => router.push("/post-job")}
                                     className="border-2 border-white text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition"
                                 >
-                                    Post a Job
+                                    Post a Service
                                 </button>
                             </motion.div>
                         </div>
@@ -104,7 +104,7 @@ export default function Home() {
                                 onClick={() => router.push("/post-job")}
                                 className="bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition"
                             >
-                                Post a Job
+                                Post a Service
                             </button>
                         </div>
                         <div className="md:w-1/2">

@@ -20,18 +20,18 @@ export default function JobsIndex() {
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <Link href="/jobs/all-jobs" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                            <h2 className="text-xl font-semibold mb-3">All Jobs</h2>
-                            <p className="text-gray-600">Browse all available positions</p>
+                            <h2 className="text-xl font-semibold mb-3">All Services</h2>
+                            <p className="text-gray-600">Browse all available services</p>
                         </Link>
 
                         <Link href="/jobs/todays-jobs" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                            <h2 className="text-xl font-semibold mb-3">Today's Jobs</h2>
-                            <p className="text-gray-600">Fresh job postings from today</p>
+                            <h2 className="text-xl font-semibold mb-3">Today's Services</h2>
+                            <p className="text-gray-600">Fresh services postings from today</p>
                         </Link>
 
                         <Link href="/jobs/post-job" className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-                            <h2 className="text-xl font-semibold mb-3">Post a Job</h2>
-                            <p className="text-gray-600">Looking to hire? Post your opening</p>
+                            <h2 className="text-xl font-semibold mb-3">Post a Service</h2>
+                            <p className="text-gray-600">Looking for a sevice? Post your needs</p>
                         </Link>
                     </div>
                 </motion.div>

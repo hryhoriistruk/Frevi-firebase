@@ -2,7 +2,7 @@
 const SubLinks1 = [
     {
         id: 1,
-        head: "Post a job and hire a pro",
+        head: "Post a service and hire a pro",
         headers: "Talent Marketplace",
         subhead: {
             name: "Talent Marketplace",
@@ -91,19 +91,19 @@ const SubLinks1 = [
     },
 ];
 
-// ====================== Sublinks for Find Jobs ==========================
+// ====================== Sublinks for Find Services ==========================
 const SubLinks2 = [
     {
         id: 1,
-        name: "Today's Jobs",
-        des: "Find your dream jobs work and rank your careare",
+        name: "Today's Services",
+        des: "Find your service that you need",
         link: "/jobs/todays-jobs"
     },
 
     {
         id: 2,
-        name: "All Jobs with your skill", 
-        des: "Explore the kind of Jobs available in your field.",
+        name: "All Services for you",
+        des: "Explore the kind of Services available in your field.",
         link: "/jobs/all-jobs"
     }
 ];
@@ -118,8 +118,8 @@ const SubLinks3 = [
     },
     { 
         id: 2,
-        name: "How to hire",
-        des: "Learn about the different ways to get work done",
+        name: "How to share your service",
+        des: "Learn about the different ways to share your service",
         link: "/how-to-hire"
     },
     { 
@@ -130,7 +130,7 @@ const SubLinks3 = [
     },
     { 
         id: 4,
-        name: "How to find work", 
+        name: "How to find Service",
         des: "Learn about how to grow your independent career",
         link: "/how-to-find-work"
     }
