@@ -8,277 +8,262 @@ import QuestionAsk from "../../components/QuestionAsk";
 import FindFreelancer from "../../components/FindFreelancer";
 import Footer from "../../components/Footer";
 
-{/* ============== Legal page =================== */}
-const Legal = () => {
+{/* ============== Home Renovation Services Page =================== */}
+const HomeRenovationServices = () => {
 
     // ================ Card Data =================
     const CardData = [
         {
             id: 1,
-            groupName: "Contract Law Professional",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "General Contractors",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/eng1.jpg"},
-                {id: 2, img: "/images/eng2.jpg"},
-                {id: 3, img: "/images/eng3.jpg"},
+                {id: 1, img: "/images/contractor1.jpg"},
+                {id: 2, img: "/images/contractor2.jpg"},
+                {id: 3, img: "/images/contractor3.jpg"},
             ],
             link: "#"
-        },        
-
+        },
         {
             id: 2,
-            groupName: "Corporite Law Professionals",
+            groupName: "Plumbing Specialists",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cveng1.jpg"},
-                {id: 2, img: "/images/cveng2.jpg"},
-                {id: 3, img: "/images/cveng3.jpg"},
+                {id: 1, img: "/images/plumber1.jpg"},
+                {id: 2, img: "/images/plumber2.jpg"},
+                {id: 3, img: "/images/plumber3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 3,
-            groupName: "Employment & Labor Law Professionals",
+            groupName: "Electricians",
             rating: "4.7/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/eleng1.jpg"},
-                {id: 2, img: "/images/eleng2.jpg"},
-                {id: 3, img: "/images/eleng3.jpg"},
+                {id: 1, img: "/images/electrician1.jpg"},
+                {id: 2, img: "/images/electrician2.jpg"},
+                {id: 3, img: "/images/electrician3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 4,
-            groupName: "Intellectural Property Law Professionals",
+            groupName: "Carpenters",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cheng1.jpg"},
-                {id: 2, img: "/images/cheng2.jpg"},
-                {id: 3, img: "/images/cheng3.jpg"},
+                {id: 1, img: "/images/carpenter1.jpg"},
+                {id: 2, img: "/images/carpenter2.jpg"},
+                {id: 3, img: "/images/carpenter3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 5,
-            groupName: "Legal Resercheres",
+            groupName: "Painters",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/areng1.jpg"},
-                {id: 2, img: "/images/areng2.jpg"},
-                {id: 3, img: "/images/areng3.jpg"},
-            ],
-            link: "#"
-        },   
-
-        {
-            id: 6,
-            groupName: "Paralegals",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
-            imgSection: [
-                {id: 1, img: "/images/md1.jpg"},
-                {id: 2, img: "/images/md2.jpg"},
-                {id: 3, img: "/images/md3.jpg"},
-            ],
-            link: "#"
-        },   
-
-        {
-            id: 7,
-            groupName: "Tax Law Professionals",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
-            imgSection: [
-                {id: 1, img: "/images/it-in1.png"},
-                {id: 2, img: "/images/it-in2.png"},
-                {id: 3, img: "/images/it-in3.png"},
+                {id: 1, img: "/images/painter1.jpg"},
+                {id: 2, img: "/images/painter2.jpg"},
+                {id: 3, img: "/images/painter3.jpg"},
             ],
             link: "#"
         },
-
         {
-            id: 8,
-            groupName: "Regulatory Compliance Spacialists",
+            id: 6,
+            groupName: "Flooring Experts",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cadeng1.png"},
-                {id: 2, img: "/images/cadeng2.png"},
-                {id: 3, img: "/images/cadeng3.png"},
+                {id: 1, img: "/images/flooring1.jpg"},
+                {id: 2, img: "/images/flooring2.jpg"},
+                {id: 3, img: "/images/flooring3.jpg"},
             ],
             link: "#"
-        },      
+        },
+        {
+            id: 7,
+            groupName: "HVAC Technicians",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
+            imgSection: [
+                {id: 1, img: "/images/hvac-tech1.jpg"},
+                {id: 2, img: "/images/hvac-tech2.jpg"},
+                {id: 3, img: "/images/hvac-tech3.jpg"},
+            ],
+            link: "#"
+        },
+        {
+            id: 8,
+            groupName: "Handyman Services",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
+            imgSection: [
+                {id: 1, img: "/images/handyman1.jpg"},
+                {id: 2, img: "/images/handyman2.jpg"},
+                {id: 3, img: "/images/handyman3.jpg"},
+            ],
+            link: "#"
+        },
     ];
 
     // ======================= List =============================
     const WorkList = [
         {
             id: 1,
-            name: "Legal Consulting",
+            name: "Kitchen Remodeling",
         },
-
         {
             id: 2,
-            name: "Trademark Registrations",
+            name: "Bathroom Renovation",
         },
-
         {
             id: 3,
-            name: "Legal Writing",
+            name: "Roofing Services",
         },
-
         {
             id: 4,
-            name: "Documentation & Contract Review",
+            name: "Window Installation",
         },
-
         {
             id: 5,
-            name: "Legal Translation",
+            name: "Deck Building",
         },
-
         {
             id: 6,
-            name: "Legal Law",
+            name: "Basement Finishing",
         }
     ]
 
-    // ===================== Find Freelancer List ==========================
-    const FreelancerList = {
-
-        headText: "Legals Roles",
-
+    // ===================== Find Professionals List ==========================
+    const ProfessionalsList = {
+        headText: "Home Improvement Services",
         listItem: [
-            {id: 1, text: "Real Estate Law Professional", link: "#"},
-            {id: 2, text: "Legal Assistants", link: "#"},
-            {id: 3, text: "Artibrition Law Professionals", link: "#"},
-            {id: 4, text: "Notaries", link: "#"},
-            {id: 5, text: "Compliance Specialist", link: "#"},
-            {id: 6, text: "Trademark Constultans", link: "#"},
-            {id: 7, text: "Brand Lincence Professionals", link: "#"},
-            {id: 8, text: "Immigration Law", link: "#"},
-            {id: 9, text: "Contarct Drafters", link: "#"},
-            {id: 10, text: "Legal Constultants", link: "#"},
-            {id: 11, text: "Deposite Summery", link: "#"},
-            {id: 12, text: "Bankruptcy Professionals", link: "#"},
-            {id: 13, text: "Copyright Law Professionals", link: "#"},
-            {id: 14, text: "Family Law Professionals", link: "#"},
-            {id: 15, text: "Workplace Safty & Health", link: "#"},
-            {id: 16, text: "Panty Law Professionals", link: "#"},
-            {id: 17, text: "Criminal Law Professionals", link: "#"},
+            {id: 1, text: "Drywall Installation", link: "#"},
+            {id: 2, text: "Tile Work", link: "#"},
+            {id: 3, text: "Masonry", link: "#"},
+            {id: 4, text: "Cabinet Installation", link: "#"},
+            {id: 5, text: "Countertop Installation", link: "#"},
+            {id: 6, text: "Appliance Installation", link: "#"},
+            {id: 7, text: "Lighting Installation", link: "#"},
+            {id: 8, text: "Fence Installation", link: "#"},
+            {id: 9, text: "Gutter Cleaning", link: "#"},
+            {id: 10, text: "Pressure Washing", link: "#"},
+            {id: 11, text: "Landscaping", link: "#"},
+            {id: 12, text: "Concrete Work", link: "#"},
+            {id: 13, text: "Siding Installation", link: "#"},
+            {id: 14, text: "Insulation Installation", link: "#"},
+            {id: 15, text: "Waterproofing", link: "#"},
+            {id: 16, text: "Smart Home Installation", link: "#"},
+            {id: 17, text: "Home Additions", link: "#"},
+            {id: 18, text: "Garage Door Repair", link: "#"},
+            {id: 19, text: "Chimney Repair", link: "#"},
+            {id: 20, text: "Pest Control", link: "#"}
         ]
     }
 
-  return (
-    <div className="min-h-screen flex flex-col">
-        {/* ============== Head Tag =============== */}
-        <HeadTag title="Top Legal Professional Experts for Hire in July 2022 | Frevi"/>
+    return (
+        <div className="min-h-screen flex flex-col">
+            {/* ============== Head Tag =============== */}
+            <HeadTag title="Professional Home Renovation & Repair Services | Find Local Contractors"/>
 
-        {/* ================= Header ================= */}
-        <header className="header-bg">
-            {/* ============== Navbar ============ */}
-            <Navbar/>
-                
-            {/* ============ Head Container ============ */}
-            <BannerContainer 
-                heading={"Find legal experts to give you the guidance you need"}
-                des={"Hundreds of independent professionals to help you create, navigate, and translate legal documents; register a trademark; or get general advice. "}
-                btnI = {{text: "Find Talent", link: "#"}}
-                btnII = {{text: "Find work", link: "#"}}
-                img={"/images/legal.png"}
-            />
-        </header>
+            {/* ================= Header ================= */}
+            <header className="header-bg">
+                {/* ============== Navbar ============ */}
+                <Navbar/>
 
-        {/* ================= Main ==================== */}
-        <main>
+                {/* ============ Head Container ============ */}
+                <BannerContainer
+                    heading={"Transform your home with trusted professionals"}
+                    des={"From small repairs to complete renovations, connect with licensed contractors in your area."}
+                    btnI = {{text: "Find a Pro", link: "#"}}
+                    btnII = {{text: "Offer Services", link: "#"}}
+                    img={"/images/renovation-banner.jpg"}
+                />
+            </header>
 
-            {/* ================= Developer section ================ */}
-           <TrustedExp
-                headText="Specialized legal experts you can count on"
-                rating="4.94/5"
-                ratingText="Average rating for work with legal professionals."
-                contracts="7,700+ contracts"
-                contractsText="Involving legal work in the last year."
-                skills="136 skills"
-                skillsText="epresented by talent on Frevi"
-                cardData={CardData}
-            />
+            {/* ================= Main ==================== */}
+            <main>
+                {/* ================= Services section ================ */}
+                <TrustedExp
+                    headText="Top-rated home improvement professionals"
+                    rating="4.9/5"
+                    ratingText="Average customer satisfaction"
+                    contracts="25K+ projects"
+                    contractsText="Completed through our platform"
+                    skills="50+ services"
+                    skillsText="Available for your home"
+                    cardData={CardData}
+                />
 
-            {/* ============== Prossesing work Section ================== */}
-            <PreWork
-                headText="GLegal projects to help you get what you need, fast"
-                headDes="Get advice on all things legal.
-                Protect your IP with a legal professional who’ll guide you through trademark searches, applications, and registration across just about every territory on the planet.Create wills, contracts, NDAs, and more.
-                Get an expert to cut through th"
-                list={WorkList}
-                imageI="/images/legal-c.jpg"
-                imageII="/images/legal-r.jpeg"
-                imageIII="/images/legal-w.jpg"
-                imageIv="/images/legal-con.jpg"
-                imageV="/images/legal-t.jpg"
-                imageVi="/images/legal.png"
-                btn={{text: "Browse Project"}}
-            />
+                {/* ============== Processing work Section ================== */}
+                <PreWork
+                    headText="Popular home renovation services"
+                    headDes="Quality workmanship for every area of your home"
+                    list={WorkList}
+                    imageI="/images/kitchen-remodel.jpg"
+                    imageII="/images/bathroom-reno.jpg"
+                    imageIII="/images/roofing.jpg"
+                    imageIv="/images/windows.jpg"
+                    imageV="/images/deck.jpg"
+                    imageVi="/images/basement.jpg"
+                    btn={{text: "Browse Services", link: "#"}}
+                />
 
-            {/* ========================== Flexible Section =========================== */}
-            <Flexible
-                firstHead="Lawyers with deep expertise"
-                firstSubHead="A small business lawyer enabled a quick valuation and exit of an LLC partner"
-                first_F_LeftRating="5/5"
-                first_F_RightText="Budget:"
-                first_F_RightValue="$2,062"
-                firstDes='"Ben was prompt and clear in communication. He helped to draft a few business legal documents with haste and modifications were quickly executed as well. Highly recommended to all."'
-                first_S_LeftText="Skills:"
-                first_S_F_RightValue="Business Law"
-                first_S_S_RightValue="Limited"
-                first_S_T_RightValue="Agrements"
-                firstImage="/images/legal.png"
-                
-                secondImage="/images/free.webp"
-                secondHead="Flexera discovers the freedom of the work marketplace"
-                secondDes="By engaging independent talent, Flexera found the expertise needed to help accelerate its growth. It strengthened its IT system and turned projects around twice as fast. CEO Jim Ryan said this enabled the company to quickly find talent for the breadth of skills needed to keep up with market changes: “They knew exactly what needed to be done, jumped in, and got it done.”"
-                secondRightText="50% Faster project turnaround time"
-                secondLeftBtn={{text: "Read Case Study", link: "#"}}
-            />
+                {/* ========================== Flexible Section =========================== */}
+                <Flexible
+                    firstHead="Complete kitchen transformation"
+                    firstSubHead="A contractor remodeled this outdated kitchen in just 3 weeks"
+                    first_F_LeftRating="5/5"
+                    first_F_RightText="Project Cost:"
+                    first_F_RightValue="$24,500"
+                    firstDes='"The contractor was professional, on-time, and delivered exactly what we envisioned. Our new kitchen is both beautiful and functional. The team cleaned up every day and kept us informed throughout the process."'
+                    first_S_LeftText="Services:"
+                    first_S_F_RightValue="Cabinetry"
+                    first_S_S_RightValue="Countertops"
+                    first_S_T_RightValue="Lighting"
+                    firstImage="/images/kitchen-before-after.jpg"
 
-            {/* ========================== Freequenly Ask Question Section ========================== */}
-            <QuestionAsk
-                firstHeadText="What is legal?"
-                firstDesText="Engineering and architecture refers to the use of science and math to design, plan, and create practical solutions to real-world problems. In business, engineering and architecture refers to the use of technical expertise to create products and services."
+                    secondImage="/images/bathroom-reno.jpg"
+                    secondHead="How a bathroom renovation increased home value"
+                    secondDes="Homeowners invested in a complete bathroom remodel that not only improved their daily life but increased their property value by 15%. The project included new tile, fixtures, plumbing upgrades, and custom storage solutions."
+                    secondRightText="72% ROI on renovation costs"
+                    secondLeftBtn={{text: "View Project Gallery", link: "#"}}
+                />
 
-                secondHeadText="What is the first step to hiring legal talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with engineering and architecture, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your needs, including."
+                {/* ========================== Frequently Asked Questions ========================== */}
+                <QuestionAsk
+                    firstHeadText="How do I find the right contractor?"
+                    firstDesText="Browse profiles by specialty, read reviews from previous clients, and compare quotes. Our platform verifies all contractors' licenses and insurance."
 
-                thirdHeadText="What are the various ways I can connect with legal talent through Frevi?"
-                thirdDesText=" Frevi gives you the flexibility you need to find the right talent for your projects.
-                Talent Marketplace: Find and source independent professionals for your projects directly from Frevi’s talent marketplace.Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From building information modeling services to trade show booth engineering services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                    secondHeadText="What's included in a free estimate?"
+                    secondDesText="Most contractors provide a detailed breakdown of costs, timeline, materials, and scope of work during free consultations."
 
-                fourHeadText="Why should I use Frevi to find talent for legal services?"
-                fourDesText="When it comes to engineering and architecture, you may need a multidisciplinary team to handle the various components of your project."
+                    thirdHeadText="Do you offer financing options?"
+                    thirdDesText="Many contractors partner with financing companies. Look for the 'Financing Available' badge on profiles."
 
-                lastLeftText="Still have questions?"
-                lastRightBtn={{text: "Visit our help center", link: "#"}}
-            />
+                    fourHeadText="How are payments handled?"
+                    fourDesText="We recommend paying in milestones - typically a deposit to start, progress payments, and final payment upon completion."
 
-            {/* ================== Find Freelancer Section ====================== */}
-            <FindFreelancer
-                headText="Find freelancers with the Engineering & Architecture skills you need"
-                FindFreelancerList={FreelancerList}
-            />
-        </main>
-        
-        {/* ==================== Footer ====================== */}
-        <Footer/>
-    </div>
-  )
+                    lastLeftText="Need help planning your project?"
+                    lastRightBtn={{text: "Get Free Consultation", link: "#"}}
+                />
+
+                {/* ================== Find Professionals Section ====================== */}
+                <FindFreelancer
+                    headText="Explore all home improvement services"
+                    FindFreelancerList={ProfessionalsList}
+                />
+            </main>
+
+            {/* ==================== Footer ====================== */}
+            <Footer/>
+        </div>
+    )
 }
 
-export default Legal;
+export default HomeRenovationServices;

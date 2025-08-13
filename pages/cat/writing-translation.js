@@ -8,292 +8,256 @@ import QuestionAsk from "../../components/QuestionAsk";
 import FindFreelancer from "../../components/FindFreelancer";
 import Footer from "../../components/Footer";
 
-{/* ============== Writing and Translation page =================== */}
-const WritingTranslation = () => {
-
+/* ============== Fitness & Personal Training Services Page =================== */
+const FitnessTraining = () => {
     // ================ Card Data =================
     const CardData = [
         {
             id: 1,
-            groupName: "Contnent Writers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Personal Trainers",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/ac1.jpeg"},
-                {id: 2, img: "/images/cveng3.jpg"},
-                {id: 3, img: "/images/eng3.jpg"},
+                {id: 1, img: "/images/personal-trainer1.jpg"},
+                {id: 2, img: "/images/personal-trainer2.jpg"},
+                {id: 3, img: "/images/personal-trainer3.jpg"},
             ],
             link: "#"
-        },        
-
+        },
         {
             id: 2,
-            groupName: "Translator",
+            groupName: "Yoga Instructors",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/tc3.jpeg"},
-                {id: 2, img: "/images/tc2.jpeg"},
-                {id: 3, img: "/images/mg2.jpeg"},
+                {id: 1, img: "/images/yoga-instructor1.jpg"},
+                {id: 2, img: "/images/yoga-instructor2.jpg"},
+                {id: 3, img: "/images/yoga-instructor3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 3,
-            groupName: "Editors",
-            rating: "4.9/5",
-            ratingText: "Avarage Rating",
+            groupName: "Pilates Instructors",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/em1.jpeg"},
-                {id: 2, img: "/images/em2.jpeg"},
-                {id: 3, img: "/images/em3.jpeg"},
+                {id: 1, img: "/images/pilates-instructor1.jpg"},
+                {id: 2, img: "/images/pilates-instructor2.jpg"},
+                {id: 3, img: "/images/pilates-instructor3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 4,
-            groupName: "Gost Writers",
+            groupName: "Nutrition Coaches",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/bk1.jpeg"},
-                {id: 2, img: "/images/bk3.jpeg"},
-                {id: 3, img: "/images/cadeng3.png"},
+                {id: 1, img: "/images/nutrition-coach1.jpg"},
+                {id: 2, img: "/images/nutrition-coach2.jpg"},
+                {id: 3, img: "/images/nutrition-coach3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 5,
-            groupName: "Copy Writers",
+            groupName: "CrossFit Trainers",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cadeng1.png"},
-                {id: 2, img: "/images/bk2.jpeg"},
-                {id: 3, img: "/images/em2.jpeg"},
-            ],
-            link: "#"
-        },   
-
-        {
-            id: 6,
-            groupName: "Proofreaders",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
-            imgSection: [
-                {id: 1, img: "/images/bk2.jpeg"},
-                {id: 2, img: "/images/areng2.jpg"},
-                {id: 3, img: "/images/fc3.jpeg"},
-            ],
-            link: "#"
-        },   
-
-        {
-            id: 7,
-            groupName: "Creative Writers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
-            imgSection: [
-                {id: 1, img: "/images/cveng1.jpg"},
-                {id: 2, img: "/images/cheng2.jpg"},
-                {id: 3, img: "/images/cveng2.jpg"},
+                {id: 1, img: "/images/crossfit-trainer1.jpg"},
+                {id: 2, img: "/images/crossfit-trainer2.jpg"},
+                {id: 3, img: "/images/crossfit-trainer3.jpg"},
             ],
             link: "#"
         },
-
         {
-            id: 8,
-            groupName: "Grant Writers",
+            id: 6,
+            groupName: "Dance Instructors",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/tc3.jpeg"},
-                {id: 2, img: "/images/tc2.jpeg"},
-                {id: 3, img: "/images/mg2.jpeg"},
+                {id: 1, img: "/images/dance-instructor1.jpg"},
+                {id: 2, img: "/images/dance-instructor2.jpg"},
+                {id: 3, img: "/images/dance-instructor3.jpg"},
             ],
             link: "#"
-        },      
+        },
+        {
+            id: 7,
+            groupName: "Martial Arts Coaches",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
+            imgSection: [
+                {id: 1, img: "/images/martial-arts-coach1.jpg"},
+                {id: 2, img: "/images/martial-arts-coach2.jpg"},
+                {id: 3, img: "/images/martial-arts-coach3.jpg"},
+            ],
+            link: "#"
+        },
+        {
+            id: 8,
+            groupName: "Senior Fitness Specialists",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
+            imgSection: [
+                {id: 1, img: "/images/senior-fitness1.jpg"},
+                {id: 2, img: "/images/senior-fitness2.jpg"},
+                {id: 3, img: "/images/senior-fitness3.jpg"},
+            ],
+            link: "#"
+        }
     ];
 
     // ======================= List =============================
     const WorkList = [
         {
             id: 1,
-            name: "Articales & Blogs",
+            name: "Personal Training",
         },
-
         {
             id: 2,
-            name: "Profreading & Edditing",
+            name: "Group Fitness",
         },
-
         {
             id: 3,
-            name: "Translation & Localization",
+            name: "Online Coaching",
         },
-
         {
             id: 4,
-            name: "Website Content",
+            name: "Nutrition Planning",
         },
-
         {
             id: 5,
-            name: "Resume Writers",
+            name: "Rehabilitation",
         },
-
         {
             id: 6,
-            name: "Books & eBooks",
+            name: "Sports Conditioning",
         }
-    ]
+    ];
 
-    // ===================== Find Freelancer List ==========================
-    const FreelancerList = {
-
-        headText: "Writing & Translation Roles",
-
+    // ===================== Find Professionals List ==========================
+    const ProfessionalsList = {
+        headText: "Fitness & Training Services",
         listItem: [
-            {id: 1, text: "Academic Writers", link: "#"},
-            {id: 2, text: "Business plan Writers", link: "#"},
-            {id: 3, text: "Copy Writers", link: "#"},
-            {id: 4, text: "Essay Writers", link: "#"},
-            {id: 5, text: "Legal Writers", link: "#"},
-            {id: 6, text: "Pres Realse Writers", link: "#"},
-            {id: 7, text: "Research Paper Writers", link: "#"},
-            {id: 8, text: "ScreenWriters", link: "#"},
-            {id: 9, text: "Travel Writers", link: "#"},
-            {id: 10, text: "Articale Writers", link: "#"},
-            {id: 11, text: "Business Writers", link: "#"},
-            {id: 12, text: "CopyWriters", link: "#"},
-            {id: 13, text: "Fact Checkers", link: "#"},
-            {id: 14, text: "Lyrics Writers", link: "#"},
-            {id: 15, text: "Proposal Writers", link: "#"},
-            {id: 16, text: "Resume Writers", link: "#"},
-            {id: 17, text: "SEO Writers", link: "#"},
-            {id: 18, text: "White Paper Writers", link: "#"},
-            {id: 19, text: "Biography Writers", link: "#"},
-            {id: 20, text: "Comedy Writers", link: "#"},
-            {id: 21, text: "Cover Latter Writers", link: "#"},
-            {id: 22, text: "Fasion Writers", link: "#"},
-            {id: 23, text: "Medical Writers", link: "#"},
-            {id: 24, text: "RFP Writers", link: "#"},
-            {id: 25, text: "Sales Writers", link: "#"},
-            {id: 26, text: "Speech Writers", link: "#"},
-            {id: 27, text: "Blog Writers", link: "#"},
-            {id: 28, text: "Content Writers", link: "#"},
-            {id: 29, text: "eBook Writers", link: "#"},
-            {id: 30, text: "Fiction Writers", link: "#"},
-            {id: 31, text: "Online Writers", link: "#"},
-            {id: 32, text: "Report Writers", link: "#"},
-            {id: 33, text: "Scientific Writers", link: "#"},
-            {id: 34, text: "Technical Writers", link: "#"},
+            {id: 1, text: "Weight Loss Coaches", link: "#"},
+            {id: 2, text: "Strength Coaches", link: "#"},
+            {id: 3, text: "Postnatal Fitness", link: "#"},
+            {id: 4, text: "Prehab Specialists", link: "#"},
+            {id: 5, text: "TRX Instructors", link: "#"},
+            {id: 6, text: "Kettlebell Trainers", link: "#"},
+            {id: 7, text: "Barre Instructors", link: "#"},
+            {id: 8, text: "Spin Instructors", link: "#"},
+            {id: 9, text: "Bootcamp Trainers", link: "#"},
+            {id: 10, text: "Functional Trainers", link: "#"},
+            {id: 11, text: "Corrective Exercise", link: "#"},
+            {id: 12, text: "Athletic Performance", link: "#"},
+            {id: 13, text: "Bodybuilding Coaches", link: "#"},
+            {id: 14, text: "Mind-Body Instructors", link: "#"},
+            {id: 15, text: "Kids Fitness", link: "#"},
+            {id: 16, text: "Aqua Fitness", link: "#"},
+            {id: 17, text: "Corporate Wellness", link: "#"},
+            {id: 18, text: "Injury Prevention", link: "#"},
+            {id: 19, text: "Flexibility Training", link: "#"},
+            {id: 20, text: "Endurance Coaching", link: "#"}
         ]
-    }
+    };
 
-  return (
-    <div className="min-h-screen flex flex-col">
-        {/* ============== Head Tag =============== */}
-        <HeadTag title="Top Writers & Translators Experts for Hire in July 2022 | Frevi"/>
+    return (
+        <div className="min-h-screen flex flex-col">
+            {/* ============== Head Tag =============== */}
+            <HeadTag title="Professional Fitness & Personal Training Services | Find Trainers Near You"/>
 
-        {/* ================= Header ================= */}
-        <header className="header-bg">
-            {/* ============== Navbar ============ */}
-            <Navbar/>
-                
-            {/* ============ Head Container ============ */}
-            <BannerContainer 
-                heading={"Hire freelance writing and translation experts in moments"}
-                des={"Thousands of pros are ready to finesse your language and help you go global. "}
-                btnI = {{text: "Find Talent", link: "#"}}
-                btnII = {{text: "Find work", link: "#"}}
-                img={"/images/writter.png"}
-            />
-        </header>
+            {/* ================= Header ================= */}
+            <header className="header-bg">
+                {/* ============== Navbar ============ */}
+                <Navbar/>
 
-        {/* ================= Main ==================== */}
-        <main>
+                {/* ============ Head Container ============ */}
+                <BannerContainer
+                    heading="Achieve your fitness goals with expert trainers"
+                    des="Connect with certified fitness professionals for personalized training, nutrition guidance, and wellness coaching."
+                    btnI={{text: "Find a Trainer", link: "#"}}
+                    btnII={{text: "Offer Services", link: "#"}}
+                    img="/images/fitness-banner.jpg"
+                />
+            </header>
 
-            {/* ================= Developer section ================ */}
-           <TrustedExp
-                headText="Specialized writing experts and translation professionals you can count on "
-                rating="4.86/5"
-                ratingText="Average rating for work with writing and translation talent"
-                contracts="146K+ contracts"
-                contractsText="Involving writing and translation work in the past year"
-                skills="331 skills"
-                skillsText="Represented by talent on Frevi"
-                cardData={CardData}
-            />
+            {/* ================= Main ==================== */}
+            <main>
+                {/* ================= Services section ================ */}
+                <TrustedExp
+                    headText="Certified fitness professionals you can trust"
+                    rating="4.9/5"
+                    ratingText="Average client satisfaction"
+                    contracts="25K+ sessions"
+                    contractsText="Completed through our platform"
+                    skills="50+ specialties"
+                    skillsText="Available for your fitness needs"
+                    cardData={CardData}
+                />
 
-            {/* ============== Prossesing work Section ================== */}
-            <PreWork
-                headText="Writing and translation projects for your most pressing work"
-                headDes="Produce engaging articles and blog content, prefreading and editing, Translation, website content, resume writter, ebook that resonates with your audience and target market."
-                list={WorkList}
-                imageI="/images/articles.png"
-                imageII="/images/preediting.png"
-                imageIII="/images/translation.png"
-                imageIv="/images/webcontent.png"
-                imageV="/images/resumewritters.png"
-                imageVi="/images/ebook.png"
-                btn={{text: "Browse Project"}}
-            />
+                {/* ============== Processing work Section ================== */}
+                <PreWork
+                    headText="Comprehensive fitness services"
+                    headDes="From personal training to specialized coaching, find the right professional for your goals"
+                    list={WorkList}
+                    imageI="/images/personal-training.jpg"
+                    imageII="/images/group-fitness.jpg"
+                    imageIII="/images/online-coaching.jpg"
+                    imageIv="/images/nutrition-planning.jpg"
+                    imageV="/images/rehabilitation.jpg"
+                    imageVi="/images/sports-conditioning.jpg"
+                    btn={{text: "Browse Services", link: "#"}}
+                />
 
-            {/* ========================== Flexible Section =========================== */}
-            <Flexible
-                firstHead="Translation that connects cultures"
-                firstSubHead="A translator works her way up to community support lead"
-                first_F_LeftRating="5/5"
-                first_F_RightText="Budget:"
-                first_F_RightValue="$6,426"
-                firstDes="Angelica is a very professional translator and is committed to successfully delivering quality work. After working for us as a Latin Spanish translator for over a year, she is now leading our community support in Latin America. It's always a pleasure to work with her and I can strongly recommend Angelica."
-                first_S_LeftText="Skills:"
-                first_S_F_RightValue="Localization"
-                first_S_S_RightValue="Proofreading"
-                first_S_T_RightValue="Spanish"
-                firstImage="/images/tranlation-content.png"
-                
-                secondImage="/images/team-time.png"
-                secondHead="How Penn Foster cut hiring time down to one hour"
-                secondDes="Penn Foster works with over 100 independent content specialists a year to design and write course content. Finding niche experts that can cover a variety of topics was a challenge. By using Frevi, the team gained access to the largest global talent pool and saved thousands of hours each year.”"
-                secondRightText="20x faster time to hire"
-                secondLeftBtn={{text: "Read Case Study", link: "#"}}
-            />
+                {/* ========================== Flexible Section =========================== */}
+                <Flexible
+                    firstHead="Transformative fitness journeys"
+                    firstSubHead="A personal trainer helped client lose 50 pounds"
+                    first_F_LeftRating="5/5"
+                    first_F_RightText="Results:"
+                    first_F_RightValue="50 lbs lost in 6 months"
+                    firstDes="My trainer was incredibly knowledgeable and supportive throughout my entire journey. They created customized workouts that fit my schedule and adapted as my fitness improved. I couldn't have done it without their guidance!"
+                    first_S_LeftText="Services:"
+                    first_S_F_RightValue="Weight Loss"
+                    first_S_S_RightValue="Strength Training"
+                    first_S_T_RightValue="Nutrition Coaching"
+                    firstImage="/images/weight-loss.jpg"
+                    secondImage="/images/senior-fitness.jpg"
+                    secondHead="How fitness training improved mobility for seniors"
+                    secondDes="A group of seniors participating in specialized fitness classes saw dramatic improvements in mobility, balance, and overall quality of life. Many reported reduced joint pain and increased independence in daily activities."
+                    secondRightText="85% improvement in mobility scores"
+                    secondLeftBtn={{text: "Read Success Stories", link: "#"}}
+                />
 
-            {/* ========================== Freequenly Ask Question Section ========================== */}
-            <QuestionAsk
-                firstHeadText="What is writing and translation?"
-                firstDesText="Writing is the process of creating written content for a variety of purposes. It can be used to communicate information, tell a story, or persuade an audience. Translation is the process of converting written content from one language to another, allowing businesses to communicate with their customers in their native language. ."
+                {/* ========================== Frequently Asked Questions ========================== */}
+                <QuestionAsk
+                    firstHeadText="How do I choose the right trainer?"
+                    firstDesText="Consider your fitness goals, preferred training style, and schedule. Our platform lets you filter trainers by specialty, certification, and availability to find the perfect match."
+                    secondHeadText="What certifications do your trainers have?"
+                    secondDesText="All trainers are verified for current certifications from accredited organizations like NASM, ACE, ACSM, or other nationally recognized programs."
+                    thirdHeadText="Can I do online training sessions?"
+                    thirdDesText="Yes, many trainers offer virtual sessions via video call. You can filter for online-only trainers or those offering both in-person and virtual options."
+                    fourHeadText="What if I need to cancel a session?"
+                    fourDesText="Cancellation policies vary by trainer but typically require 24 hours notice. You can manage bookings through your account dashboard."
+                    lastLeftText="Need help finding the right trainer?"
+                    lastRightBtn={{text: "Get Personalized Recommendations", link: "#"}}
+                />
 
-                secondHeadText="What is the first step to hiring writing and translation talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with sales and marketing, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your sales and marketing needs, including"
+                {/* ================== Find Professionals Section ====================== */}
+                <FindFreelancer
+                    headText="Explore all fitness specialties"
+                    FindFreelancerList={ProfessionalsList}
+                />
+            </main>
 
-                thirdHeadText="What are the various ways you can connect with writing and translation talent through Frevi?"
-                thirdDesText=" If you need help finding talent for your marketing project, Frevi gives you the flexibility you need to succeed.Talent Marketplace: Find and source independent professionals for your sales or marketing project directly from Frevi’s talent marketplace.
-                Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From market research and strategy to SEO and SEM services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+            {/* ==================== Footer ====================== */}
+            <Footer/>
+        </div>
+    );
+};
 
-                fourHeadText="Why should I use Frevi to find talent for writing and translation services?"
-                fourDesText="When it comes to sales and marketing, you may need a multidisciplinary team of talent to handle the various components of your project. Examples of professionals you might need for a sales and marketing projects include"
-
-                lastLeftText="Still have questions?"
-                lastRightBtn={{text: "Visit our help center", link: "#"}}
-            />
-
-            {/* ================== Find Freelancer Section ====================== */}
-            <FindFreelancer
-                headText="Find freelancers with the sales & marketing skills you need"
-                FindFreelancerList={FreelancerList}
-            />
-        </main>
-        
-        {/* ==================== Footer ====================== */}
-        <Footer/>
-    </div>
-  )
-}
-
-export default WritingTranslation;
+export default FitnessTraining;

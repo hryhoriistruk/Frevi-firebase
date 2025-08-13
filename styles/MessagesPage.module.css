@@ -1,0 +1,204 @@
+.messengerContainer {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Сайдбар зі списком чатів */
+.chatSidebar {
+    width: 350px;
+    border-right: 1px solid #e0e0e0;
+    background: #f8f9fa;
+}
+
+.sidebarHeader {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.chatList {
+    overflow-y: auto;
+    height: calc(100vh - 61px);
+}
+
+.chatItem {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chatItem:hover {
+    background: #e9ecef;
+}
+
+.chatItem.active {
+    background: #e2e6ea;
+}
+
+.chatAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #4e73df;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.chatInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.chatName {
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chatPreview {
+    color: #6c757d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.unreadBadge {
+    background: #4e73df;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Основна область чату */
+.chatArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatHeader {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+.partnerAvatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #4e73df;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.partnerName {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.status {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.messagesContainer {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f0f2f5;
+}
+
+.message {
+    max-width: 70%;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    position: relative;
+}
+
+.message.user {
+    background: #4e73df;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.message.other {
+    background: white;
+    margin-right: auto;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.messageTime {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: right;
+    opacity: 0.8;
+}
+
+.messageInputContainer {
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    background: white;
+    display: flex;
+}
+
+.messageInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 24px;
+    outline: none;
+    font-size: 16px;
+}
+
+.sendButton {
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .chatSidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        height: auto;
+        max-height: 200px;
+    }
+
+    .messengerContainer {
+        flex-direction: column;
+    }
+}

@@ -8,288 +8,287 @@ import QuestionAsk from "../../components/QuestionAsk";
 import FindFreelancer from "../../components/FindFreelancer";
 import Footer from "../../components/Footer";
 
-{/* ============== Finance and Accounting page =================== */}
-const FinanceAccounting = () => {
+{/* ============== Healthcare & Wellness Services Page =================== */}
+const HealthcareWellness = () => {
 
     // ================ Card Data =================
     const CardData = [
         {
             id: 1,
-            groupName: "Accountants",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "General Practitioners",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/ac1.jpeg"},
-                {id: 2, img: "/images/ac2.jpeg"},
-                {id: 3, img: "/images/ac3.jpeg"},
+                {id: 1, img: "/images/gp1.jpg"},
+                {id: 2, img: "/images/gp2.jpg"},
+                {id: 3, img: "/images/gp3.jpg"},
             ],
             link: "#"
-        },        
+        },
 
         {
             id: 2,
-            groupName: "Financial Analysts",
+            groupName: "Physical Therapists",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/fn1.jpeg"},
-                {id: 2, img: "/images/fn2.jpeg"},
-                {id: 3, img: "/images/fn3.jpeg"},
+                {id: 1, img: "/images/pt1.jpg"},
+                {id: 2, img: "/images/pt2.jpg"},
+                {id: 3, img: "/images/pt3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 3,
-            groupName: "Interim CFOs",
-            rating: "4.9/5",
-            ratingText: "Avarage Rating",
+            groupName: "Nutritionists",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/ic1.gif"},
-                {id: 2, img: "/images/ic2.jpeg"},
-                {id: 3, img: "/images/ic3.jpeg"},
+                {id: 1, img: "/images/nutri1.jpg"},
+                {id: 2, img: "/images/nutri2.jpg"},
+                {id: 3, img: "/images/nutri3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 4,
-            groupName: "Mangament Consultants",
+            groupName: "Mental Health Counselors",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/mg1.jpeg"},
-                {id: 2, img: "/images/mg2.jpeg"},
-                {id: 3, img: "/images/mg3.jpeg"},
+                {id: 1, img: "/images/mhc1.jpg"},
+                {id: 2, img: "/images/mhc2.jpg"},
+                {id: 3, img: "/images/mhc3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 5,
-            groupName: "Financial Modelers",
+            groupName: "Yoga Instructors",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/fm1.jpeg"},
-                {id: 2, img: "/images/fm2.jpeg"},
-                {id: 3, img: "/images/fm3.jpeg"},
+                {id: 1, img: "/images/yoga1.jpg"},
+                {id: 2, img: "/images/yoga2.jpg"},
+                {id: 3, img: "/images/yoga3.jpg"},
             ],
             link: "#"
-        },   
+        },
 
         {
             id: 6,
-            groupName: "Fundraising Consultants",
+            groupName: "Massage Therapists",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/fc1.jpeg"},
-                {id: 2, img: "/images/fc2.jpeg"},
-                {id: 3, img: "/images/fc3.jpeg"},
+                {id: 1, img: "/images/massage1.jpg"},
+                {id: 2, img: "/images/massage2.jpg"},
+                {id: 3, img: "/images/massage3.jpg"},
             ],
             link: "#"
-        },   
+        },
 
         {
             id: 7,
-            groupName: "Tax Consultants",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Dentists",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/tc1.jpeg"},
-                {id: 2, img: "/images/tc2.jpeg"},
-                {id: 3, img: "/images/tc3.jpeg"},
+                {id: 1, img: "/images/dentist1.jpg"},
+                {id: 2, img: "/images/dentist2.jpg"},
+                {id: 3, img: "/images/dentist3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 8,
-            groupName: "Bookkeepers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Personal Trainers",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/bk1.jpeg"},
-                {id: 2, img: "/images/bk2.jpeg"},
-                {id: 3, img: "/images/bk3.jpeg"},
+                {id: 1, img: "/images/trainer1.jpg"},
+                {id: 2, img: "/images/trainer2.jpg"},
+                {id: 3, img: "/images/trainer3.jpg"},
             ],
             link: "#"
-        },      
+        },
     ];
 
     // ======================= List =============================
     const WorkList = [
         {
             id: 1,
-            name: "Financial Analysis",
+            name: "Medical Consultations",
         },
 
         {
             id: 2,
-            name: "Accouting & Bookkeeping",
+            name: "Physical Rehabilitation",
         },
 
         {
             id: 3,
-            name: "Financial Foecasting & Modeling",
+            name: "Nutrition Planning",
         },
 
         {
             id: 4,
-            name: "Tax Consulting",
+            name: "Mental Health Support",
         },
 
         {
             id: 5,
-            name: "Financial Wealth Mangment",
+            name: "Fitness Training",
         },
 
         {
             id: 6,
-            name: "Stock Analysis",
+            name: "Preventive Care",
         }
     ]
 
-    // ===================== Find Freelancer List ==========================
-    const FreelancerList = {
+    // ===================== Find Professionals List ==========================
+    const ProfessionalsList = {
 
-        headText: "Finance & Accounting Roles",
+        headText: "Healthcare & Wellness Services",
 
         listItem: [
-            {id: 1, text: "Accounts", link: "#"},
-            {id: 2, text: "Business Consultants", link: "#"},
-            {id: 3, text: "CPAs", link: "#"},
-            {id: 4, text: "Marketing Research", link: "#"},
-            {id: 5, text: "Business Analytics", link: "#"},
-            {id: 6, text: "Financial Modeler", link: "#"},
-            {id: 7, text: "Financial Planer", link: "#"},
-            {id: 8, text: "Accounts Payable Managers", link: "#"},
-            {id: 9, text: "Civil Law Lawyers & Legal", link: "#"},
-            {id: 10, text: "Data Entry Spacialists", link: "#"},
-            {id: 11, text: "Financial Reporting Analysis", link: "#"},
-            {id: 12, text: "Payroll Progressing Speciallist", link: "#"},
-            {id: 13, text: "Business Development", link: "#"},
-            {id: 14, text: "Tax Prepares", link: "#"},
-            {id: 15, text: "Wave Accounting SPaciallist", link: "#"},
-            {id: 16, text: "Bookkepers", link: "#"},
-            {id: 17, text: "Consultants", link: "#"},
-            {id: 18, text: "Excel Experts", link: "#"},
-            {id: 19, text: "Intellectual Property Law", link: "#"},
-            {id: 20, text: "Project Managers", link: "#"},
-            {id: 21, text: "Financial Accountes", link: "#"},
-            {id: 22, text: "Forex Accounts", link: "#"},
-            {id: 23, text: "Intuit QuickBooks Spaciallists", link: "#"},
-            {id: 24, text: "Contarct Law Legal", link: "#"},
-            {id: 25, text: "Financial Anlysts", link: "#"},
-            {id: 26, text: "Intuit Turbo Tax Spaciallists", link: "#"},
-            {id: 27, text: "Legal Advisor", link: "#"},
-            {id: 28, text: "Financial Forecasting", link: "#"},
-            {id: 29, text: "Spreadsheet Experts", link: "#"},
+            {id: 1, text: "Acupuncturists", link: "#"},
+            {id: 2, text: "Allergists", link: "#"},
+            {id: 3, text: "Ayurvedic Practitioners", link: "#"},
+            {id: 4, text: "Cardiologists", link: "#"},
+            {id: 5, text: "Chiropractors", link: "#"},
+            {id: 6, text: "Dermatologists", link: "#"},
+            {id: 7, text: "Dietitians", link: "#"},
+            {id: 8, text: "Ear Nose Throat Specialists", link: "#"},
+            {id: 9, text: "Endocrinologists", link: "#"},
+            {id: 10, text: "Family Medicine Doctors", link: "#"},
+            {id: 11, text: "Functional Medicine Doctors", link: "#"},
+            {id: 12, text: "Geriatric Specialists", link: "#"},
+            {id: 13, text: "Health Coaches", link: "#"},
+            {id: 14, text: "Holistic Practitioners", link: "#"},
+            {id: 15, text: "Immunologists", link: "#"},
+            {id: 16, text: "Lactation Consultants", link: "#"},
+            {id: 17, text: "Naturopathic Doctors", link: "#"},
+            {id: 18, text: "Occupational Therapists", link: "#"},
+            {id: 19, text: "Osteopaths", link: "#"},
+            {id: 20, text: "Pediatricians", link: "#"},
+            {id: 21, text: "Pilates Instructors", link: "#"},
+            {id: 22, text: "Psychiatrists", link: "#"},
+            {id: 23, text: "Reflexologists", link: "#"},
+            {id: 24, text: "Speech Therapists", link: "#"},
+            {id: 25, text: "Surgeons", link: "#"},
+            {id: 26, text: "Traditional Chinese Medicine", link: "#"},
+            {id: 27, text: "Urologists", link: "#"},
+            {id: 28, text: "Veterinarians", link: "#"},
+            {id: 29, text: "Weight Loss Specialists", link: "#"},
+            {id: 30, text: "Wellness Coaches", link: "#"}
         ]
     }
 
-  return (
-    <div className="min-h-screen flex flex-col">
-        {/* ============== Head Tag =============== */}
-        <HeadTag title="Top Finance & Accouting Talent Experts for Hire in July 2022 | Frevi"/>
+    return (
+        <div className="min-h-screen flex flex-col">
+            {/* ============== Head Tag =============== */}
+            <HeadTag title="Professional Healthcare & Wellness Services | Find Doctors & Specialists"/>
 
-        {/* ================= Header ================= */}
-        <header className="header-bg">
-            {/* ============== Navbar ============ */}
-            <Navbar/>
-                
-            {/* ============ Head Container ============ */}
-            <BannerContainer 
-                heading={"Adapt fast with freelance finance and accounting experts"}
-                des={"Thousands of pros are ready to help with invoicing, tax returns, bookkeeping, and more."}
-                btnI = {{text: "Find Talent", link: "#"}}
-                btnII = {{text: "Find work", link: "#"}}
-                img={"/images/finance.png"}
-            />
-        </header>
+            {/* ================= Header ================= */}
+            <header className="header-bg">
+                {/* ============== Navbar ============ */}
+                <Navbar/>
 
-        {/* ================= Main ==================== */}
-        <main>
-        
+                {/* ============ Head Container ============ */}
+                <BannerContainer
+                    heading={"Your health and wellness journey starts here"}
+                    des={"Connect with licensed healthcare providers and wellness experts for personalized care."}
+                    btnI = {{text: "Find Providers", link: "#"}}
+                    btnII = {{text: "Join as Provider", link: "#"}}
+                    img={"/images/healthcare-banner.jpg"}
+                />
+            </header>
 
+            {/* ================= Main ==================== */}
+            <main>
 
-            {/* ================= Developer section ================ */}
-           <TrustedExp
-                headText="Specialized accounting and finance experts you can count on"
-                rating="4.87/5"
-                ratingText="Average rating for work with finance and accounting talent"
-                contracts="9.7K+ contracts"
-                contractsText="Involving finance and accounting work in the past year"
-                skills="102 skills"
-                skillsText="Represented by talent on Frevi"
-                cardData={CardData}
-            />
+                {/* ================= Services section ================ */}
+                <TrustedExp
+                    headText="Trusted healthcare and wellness professionals"
+                    rating="4.9/5"
+                    ratingText="Average patient satisfaction rating"
+                    contracts="50K+ consultations"
+                    contractsText="Completed through our platform monthly"
+                    skills="100+ specialties"
+                    skillsText="Available for your health needs"
+                    cardData={CardData}
+                />
 
-            {/* ============== Prossesing work Section ================== */}
-            <PreWork
-                headText="Finance and accounting projects for your most pressing work"
-                headDes="Make informed business, Financial & Bookeeping, Tax Consulting, Financial Welth decisions with budget forecasting, KPI tracking, pricing analysis, and more."
-                list={WorkList}
-                imageI="/images/fac.png"
-                imageII="/images/aandbook.png"
-                imageIII="/images/fcil.png"
-                imageIv="/images/tax.png"
-                imageV="/images/fw.png"
-                imageVi="/images/stock.png"
-                btn={{text: "Browse Project"}}
-            />
+                {/* ============== Processing work Section ================== */}
+                <PreWork
+                    headText="Comprehensive health and wellness services"
+                    headDes="From preventive care to specialized treatments, find the right professional for your needs"
+                    list={WorkList}
+                    imageI="/images/consultation.jpg"
+                    imageII="/images/rehab.jpg"
+                    imageIII="/images/nutrition.jpg"
+                    imageIv="/images/mental-health.jpg"
+                    imageV="/images/fitness.jpg"
+                    imageVi="/images/preventive.jpg"
+                    btn={{text: "Browse Services", link: "#"}}
+                />
 
-            {/* ========================== Flexible Section =========================== */}
-            <Flexible
-                firstHead="Financial analysis that shapes strategy"
-                firstSubHead="A financial analyst tackles the details in SaaS financial modeling"
-                first_F_LeftRating="5/5"
-                first_F_RightText="Budget:"
-                first_F_RightValue="$3,850"
-                firstDes='“I really enjoyed working with Henry on two projects. He is very committed to the deadlines, excellent communicator, and detail oriented.”'
-                first_S_LeftText="Skills:"
-                first_S_F_RightValue="Analysis"
-                first_S_S_RightValue="Modeling"
-                first_S_T_RightValue="Budgeting"
-                firstImage="/images/fa.png"
-                
-                secondImage="/images/wbf.png"
-                secondHead="Using freelancers to boost work/life balance"
-                secondDes="Accounting departments face busy reporting periods every month and quarter, increasing work hours and overall affecting the work/life balance of full-time employees. By matching independent talent to deadline-oriented work, the team was able to get more done while focusing on higher-value work and improved retention and morale.”"
-                secondRightText="6+ hours less overtime per employee"
-                secondLeftBtn={{text: "Read Case Study", link: "#"}}
-            />
+                {/* ========================== Flexible Section =========================== */}
+                <Flexible
+                    firstHead="Personalized care that makes a difference"
+                    firstSubHead="A nutritionist helped transform a client's health journey"
+                    first_F_LeftRating="5/5"
+                    first_F_RightText="Cost:"
+                    first_F_RightValue="$1,200"
+                    firstDes='"Working with my nutritionist completely changed my relationship with food. She created a customized plan that fit my lifestyle and health goals. After 6 months, I lost 25 pounds and my blood work improved dramatically!"'
+                    first_S_LeftText="Services:"
+                    first_S_F_RightValue="Meal Planning"
+                    first_S_S_RightValue="Nutrition Coaching"
+                    first_S_T_RightValue="Lifestyle Changes"
+                    firstImage="/images/nutrition-success.jpg"
 
-            {/* ========================== Freequenly Ask Question Section ========================== */}
-            <QuestionAsk
-                firstHeadText="What is finance and accounting?"
-                firstDesText="Finance is the process of managing money and other financial resources for a business. Accounting is the process of recording, classifying, and summarizing financial transactions."
+                    secondImage="/images/pt-success.jpg"
+                    secondHead="How physical therapy helped recover from injury"
+                    secondDes="After a serious knee injury, the patient was matched with a specialized physical therapist who developed a progressive rehabilitation program. Through virtual and in-person sessions over 12 weeks, the patient regained full mobility and returned to their active lifestyle pain-free."
+                    secondRightText="95% recovery rate for similar cases"
+                    secondLeftBtn={{text: "Read Success Stories", link: "#"}}
+                />
 
-                secondHeadText="What is the first step to hiring finance and accounting talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with finance and accounting, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your finance and accounting needs, including"
+                {/* ========================== Frequently Asked Questions ========================== */}
+                <QuestionAsk
+                    firstHeadText="How do I book an appointment with a healthcare provider?"
+                    firstDesText="Simply browse our directory of providers, select the professional that matches your needs, and book an appointment directly through their profile. Many providers offer same-day or next-day availability."
 
-                thirdHeadText="What are the various ways I can connect with finance and accounting talent through Frevi?"
-                thirdDesText=" Frevi gives you the flexibility you need to find the right talent for your finance and accounting projects. To trade show booth engineering services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                    secondHeadText="Are all providers licensed and verified?"
+                    secondDesText="Yes, we verify all healthcare providers' licenses and credentials before they join our platform. You can view each provider's qualifications and certifications on their profile."
 
-                fourHeadText="Why should I use Frevi to find talent for finance and accounting services?"
-                fourDesText="When it comes to finance and accounting, you may need a multidisciplinary team of talent to handle the various components of your project. Examples of professionals you might need for finance and accounting projects include"
+                    thirdHeadText="Can I use insurance for these services?"
+                    thirdDesText="Many providers accept insurance. You can filter providers by insurance acceptance and check individual profiles for specific insurance information."
 
-                lastLeftText="Still have questions?"
-                lastRightBtn={{text: "Visit our help center", link: "#"}}
-            />
+                    fourHeadText="What if I need to cancel or reschedule an appointment?"
+                    fourDesText="You can easily cancel or reschedule appointments through your account dashboard. Please check each provider's cancellation policy, as cancellation fees may apply for late changes."
 
-            {/* ================== Find Freelancer Section ====================== */}
-            <FindFreelancer
-                headText="Find freelancers with the finance and accounting skills you need"
-                FindFreelancerList={FreelancerList}
-            />
-        </main>
-        
-        {/* ==================== Footer ====================== */}
-        <Footer/>
-    </div>
-  )
+                    lastLeftText="Need help finding the right provider?"
+                    lastRightBtn={{text: "Contact Support", link: "#"}}
+                />
+
+                {/* ================== Find Professionals Section ====================== */}
+                <FindFreelancer
+                    headText="Explore all healthcare specialties"
+                    FindFreelancerList={ProfessionalsList}
+                />
+            </main>
+
+            {/* ==================== Footer ====================== */}
+            <Footer/>
+        </div>
+    )
 }
 
-export default FinanceAccounting;
+export default HealthcareWellness;

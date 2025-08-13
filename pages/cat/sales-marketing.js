@@ -8,287 +8,255 @@ import QuestionAsk from "../../components/QuestionAsk";
 import FindFreelancer from "../../components/FindFreelancer";
 import Footer from "../../components/Footer";
 
-{/* ============== Sales and Marketing page =================== */}
-const SalesMarketing = () => {
-
+const PetCareServices = () => {
     // ================ Card Data =================
     const CardData = [
         {
             id: 1,
-            groupName: "SEM Spacialists",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Dog Walkers",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/bk1.jpeg"},
-                {id: 2, img: "/images/sem2.webp"},
-                {id: 3, img: "/images/mg3.jpeg"},
+                {id: 1, img: "/images/dog-walker1.jpg"},
+                {id: 2, img: "/images/dog-walker2.jpg"},
+                {id: 3, img: "/images/dog-walker3.jpg"},
             ],
             link: "#"
-        },        
-
+        },
         {
             id: 2,
-            groupName: "SEO Spacialists",
+            groupName: "Pet Sitters",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/tc3.jpeg"},
-                {id: 2, img: "/images/tc2.jpeg"},
-                {id: 3, img: "/images/mg2.jpeg"},
+                {id: 1, img: "/images/pet-sitter1.jpg"},
+                {id: 2, img: "/images/pet-sitter2.jpg"},
+                {id: 3, img: "/images/pet-sitter3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 3,
-            groupName: "Social Media Marketing",
-            rating: "4.9/5",
-            ratingText: "Avarage Rating",
+            groupName: "Veterinary Assistants",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/mg3.jpeg"},
-                {id: 2, img: "/images/mg1.jpeg"},
-                {id: 3, img: "/images/md1.jpg"},
+                {id: 1, img: "/images/vet-assistant1.jpg"},
+                {id: 2, img: "/images/vet-assistant2.jpg"},
+                {id: 3, img: "/images/vet-assistant3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 4,
-            groupName: "Paid Media Experts",
+            groupName: "Pet Groomers",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/bk1.jpeg"},
-                {id: 2, img: "/images/bk3.jpeg"},
-                {id: 3, img: "/images/cadeng3.png"},
+                {id: 1, img: "/images/groomer1.jpg"},
+                {id: 2, img: "/images/groomer2.jpg"},
+                {id: 3, img: "/images/groomer3.jpg"},
             ],
             link: "#"
         },
-
         {
             id: 5,
-            groupName: "Email Marketing",
+            groupName: "Pet Trainers",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/em1.jpeg"},
-                {id: 2, img: "/images/em2.jpeg"},
-                {id: 3, img: "/images/em3.jpeg"},
-            ],
-            link: "#"
-        },   
-
-        {
-            id: 6,
-            groupName: "Marketing Analysts",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
-            imgSection: [
-                {id: 1, img: "/images/bk2.jpeg"},
-                {id: 2, img: "/images/areng2.jpg"},
-                {id: 3, img: "/images/fc3.jpeg"},
-            ],
-            link: "#"
-        },   
-
-        {
-            id: 7,
-            groupName: "Marketing Researchers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
-            imgSection: [
-                {id: 1, img: "/images/cveng1.jpg"},
-                {id: 2, img: "/images/cheng2.jpg"},
-                {id: 3, img: "/images/cveng2.jpg"},
+                {id: 1, img: "/images/trainer1.jpg"},
+                {id: 2, img: "/images/trainer2.jpg"},
+                {id: 3, img: "/images/trainer3.jpg"},
             ],
             link: "#"
         },
-
         {
-            id: 8,
-            groupName: "Sales Representative",
+            id: 6,
+            groupName: "Pet Taxi Services",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cadeng1.png"},
-                {id: 2, img: "/images/bk2.jpeg"},
-                {id: 3, img: "/images/em2.jpeg"},
+                {id: 1, img: "/images/pet-taxi1.jpg"},
+                {id: 2, img: "/images/pet-taxi2.jpg"},
+                {id: 3, img: "/images/pet-taxi3.jpg"},
             ],
             link: "#"
-        },      
+        },
+        {
+            id: 7,
+            groupName: "Pet Photographers",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
+            imgSection: [
+                {id: 1, img: "/images/pet-photographer1.jpg"},
+                {id: 2, img: "/images/pet-photographer2.jpg"},
+                {id: 3, img: "/images/pet-photographer3.jpg"},
+            ],
+            link: "#"
+        },
+        {
+            id: 8,
+            groupName: "Pet Nutritionists",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
+            imgSection: [
+                {id: 1, img: "/images/nutritionist1.jpg"},
+                {id: 2, img: "/images/nutritionist2.jpg"},
+                {id: 3, img: "/images/nutritionist3.jpg"},
+            ],
+            link: "#"
+        },
     ];
 
     // ======================= List =============================
     const WorkList = [
         {
             id: 1,
-            name: "Social Media Managment",
+            name: "Daily Dog Walking",
         },
-
         {
             id: 2,
-            name: "Lead Generation",
+            name: "Overnight Pet Sitting",
         },
-
         {
             id: 3,
-            name: "SEO",
+            name: "Pet Grooming",
         },
-
         {
             id: 4,
-            name: "Facebook Advertising",
+            name: "Obedience Training",
         },
-
         {
             id: 5,
-            name: "Marketing Startegy",
+            name: "Veterinary Support",
         },
-
         {
             id: 6,
-            name: "Video Marketing",
+            name: "Pet Transportation",
         }
-    ]
+    ];
 
-    // ===================== Find Freelancer List ==========================
-    const FreelancerList = {
-
-        headText: "Sales & Marketing Roles",
-
+    // ===================== Find Professionals List ==========================
+    const ProfessionalsList = {
+        headText: "Pet Care Services",
         listItem: [
-            {id: 1, text: "Adward Expert", link: "#"},
-            {id: 2, text: "Content Marketars", link: "#"},
-            {id: 3, text: "Facebook Marketers", link: "#"},
-            {id: 4, text: "Internate Marketers", link: "#"},
-            {id: 5, text: "Marketing Automotion", link: "#"},
-            {id: 6, text: "PPC Specialists", link: "#"},
-            {id: 7, text: "Social Media Manager", link: "#"},
-            {id: 8, text: "Youtube Marketers", link: "#"},
-            {id: 9, text: "Affiliate Marketing", link: "#"},
-            {id: 10, text: "Digital Marketers", link: "#"},
-            {id: 11, text: "Google Anlytics Consultants", link: "#"},
-            {id: 12, text: "Lead Generators", link: "#"},
-            {id: 13, text: "Marketing Consultants", link: "#"},
-            {id: 14, text: "Search Engine Optimization", link: "#"},
-            {id: 15, text: "Social Media Marketing", link: "#"},
-            {id: 16, text: "Amazon SEO Experts", link: "#"},
-            {id: 17, text: "Email Marketing", link: "#"},
-            {id: 18, text: "Google Tag Managers", link: "#"},
-            {id: 19, text: "Link Builders", link: "#"},
-            {id: 20, text: "Marketing Strategists", link: "#"},
-            {id: 21, text: "SEO Audit Freelancer", link: "#"},
-            {id: 22, text: "Telemerketers", link: "#"},
-            {id: 23, text: "Blog Writters", link: "#"},
-            {id: 24, text: "Email Marketing Consultants", link: "#"},
-            {id: 25, text: "Instagram Marketing", link: "#"},
-            {id: 26, text: "Mailchimp Freelancer", link: "#"},
-            {id: 27, text: "Pinterest Marketers", link: "#"},
-            {id: 28, text: "SEO Experts", link: "#"},
-            {id: 29, text: "Yoast SEO Freelancer", link: "#"},
+            {id: 1, text: "Cat Sitting", link: "#"},
+            {id: 2, text: "Puppy Training", link: "#"},
+            {id: 3, text: "Exotic Pet Care", link: "#"},
+            {id: 4, text: "Pet First Aid", link: "#"},
+            {id: 5, text: "Pet Massage", link: "#"},
+            {id: 6, text: "Pet Acupuncture", link: "#"},
+            {id: 7, text: "Dog Running", link: "#"},
+            {id: 8, text: "Pet Daycare", link: "#"},
+            {id: 9, text: "Pet Behaviorist", link: "#"},
+            {id: 10, text: "Pet Reiki", link: "#"},
+            {id: 11, text: "Pet Chiropractic", link: "#"},
+            {id: 12, text: "Pet Swimming", link: "#"},
+            {id: 13, text: "Pet Funeral", link: "#"},
+            {id: 14, text: "Pet Portrait", link: "#"},
+            {id: 15, text: "Pet Boarding", link: "#"},
+            {id: 16, text: "Pet Adoption", link: "#"},
+            {id: 17, text: "Pet Waste Removal", link: "#"},
+            {id: 18, text: "Pet Therapy", link: "#"},
+            {id: 19, text: "Pet Insurance", link: "#"},
+            {id: 20, text: "Pet ID Tags", link: "#"}
         ]
-    }
+    };
 
-  return (
-    <div className="min-h-screen flex flex-col">
-        {/* ============== Head Tag =============== */}
-        <HeadTag title="Top Sales & Marketing Experts for Hire in July 2022 | Frevi"/>
+    return (
+        <div className="min-h-screen flex flex-col">
+            {/* ============== Head Tag =============== */}
+            <HeadTag title="Professional Pet Care Services | Find Trusted Pet Professionals"/>
 
-        {/* ================= Header ================= */}
-        <header className="header-bg">
-            {/* ============== Navbar ============ */}
-            <Navbar/>
-                
-            {/* ============ Head Container ============ */}
-            <BannerContainer 
-                heading={"Scale when you need to with marketing and sales experts "}
-                des={"Build some buzz around your business with professionals from the world’s work marketplace."}
-                btnI = {{text: "Find Talent", link: "#"}}
-                btnII = {{text: "Find work", link: "#"}}
-                img={"/images/sales.png"}
-            />
-        </header>
+            {/* ================= Header ================= */}
+            <header className="header-bg">
+                {/* ============== Navbar ============ */}
+                <Navbar/>
 
-        {/* ================= Main ==================== */}
-        <main>
+                {/* ============ Head Container ============ */}
+                <BannerContainer
+                    heading="Loving care for your furry family members"
+                    des="Connect with trusted pet care professionals for all your pet's needs - from walks to grooming to training."
+                    btnI={{text: "Find Pet Care", link: "#"}}
+                    btnII={{text: "Offer Services", link: "#"}}
+                    img="/images/pet-care-banner.jpg"
+                />
+            </header>
 
-            {/* ================= Developer section ================ */}
-           <TrustedExp
-                headText="Specialized sales experts and marketing professionals you can count on"
-                rating="4.78/5"
-                ratingText="Average client rating for work with sales and marketing talent."
-                contracts="65K+ contracts"
-                contractsText="Involving sales and marketing work in the past year."
-                skills="358 skills"
-                skillsText="Represented by talent on Frevi"
-                cardData={CardData}
-            />
+            {/* ================= Main ==================== */}
+            <main>
+                {/* ================= Services section ================ */}
+                <TrustedExp
+                    headText="Trusted pet care professionals"
+                    rating="4.9/5"
+                    ratingText="Average pet owner satisfaction"
+                    contracts="35K+ bookings"
+                    contractsText="Completed through our platform"
+                    skills="50+ services"
+                    skillsText="Available for your pets"
+                    cardData={CardData}
+                />
 
-            {/* ============== Prossesing work Section ================== */}
-            <PreWork
-                headText="Sales and marketing projects for your most pressing work"
-                headDes="Grow your following on Facebook, Instagram, and LinkedIn with a full range of social media management services."
-                list={WorkList}
-                imageI="/images/scm.png"
-                imageII="/images/ld.png"
-                imageIII="/images/seo2.png"
-                imageIv="/images/fca.png"
-                imageV="/images/ms.png"
-                imageVi="/images/vdm.png"
-                btn={{text: "Browse Project"}}
-            />
+                {/* ============== Processing work Section ================== */}
+                <PreWork
+                    headText="Popular pet care services"
+                    headDes="Quality care for every type of pet"
+                    list={WorkList}
+                    imageI="/images/dog-walking.jpg"
+                    imageII="/images/pet-sitting.jpg"
+                    imageIII="/images/pet-grooming.jpg"
+                    imageIv="/images/pet-training.jpg"
+                    imageV="/images/vet-care.jpg"
+                    imageVi="/images/pet-transport.jpg"
+                    btn={{text: "Browse Services", link: "#"}}
+                />
 
-            {/* ========================== Flexible Section =========================== */}
-            <Flexible
-                firstHead="How Frevi works for clients"
-                firstSubHead="A graphic design pro creates a logo, branding, and style guide"
-                first_F_LeftRating="5/5"
-                first_F_RightText="Budget:"
-                first_F_RightValue="$1,580"
-                firstDes="If you have an opportunity to hire Felice, dont delay! He has great ideas, but is open to feedback and changes. He was always well prepared, kept me informed, met his timelines, and delivered what he said and more. My best experience on Frevi. In fact, I've started up another project with him and am still working with him."
-                first_S_LeftText="Skills:"
-                first_S_F_RightValue="Brand Indentity"
-                first_S_S_RightValue="Logo"
-                first_S_T_RightValue="Graphics"
-                firstImage="/images/gra.png"
-                
-                secondImage="/images/sales-team.png"
-                secondHead="Nasdaq transforms itself into a digital media leader"
-                secondDes="How freelance talent brought a fresh perspective to Nasdaq’s social media”"
-                secondRightText="80-100 Facebook Live shows per month"
-                secondLeftBtn={{text: "Read Case Study", link: "#"}}
-            />
+                {/* ========================== Flexible Section =========================== */}
+                <Flexible
+                    firstHead="Transformative pet training"
+                    firstSubHead="A professional trainer helped rehabilitate an aggressive dog"
+                    first_F_LeftRating="5/5"
+                    first_F_RightText="Results:"
+                    first_F_RightValue="Complete behavior change"
+                    firstDes="Our rescue dog had severe anxiety and aggression issues. After 8 weeks with the trainer, he's a completely different dog - calm and obedient and happy. The trainer used positive reinforcement methods that really worked."
+                    first_S_LeftText="Services:"
+                    first_S_F_RightValue="Behavior Modification"
+                    first_S_S_RightValue="Obedience Training"
+                    first_S_T_RightValue="Anxiety Reduction"
+                    firstImage="/images/dog-training.jpg"
+                    secondImage="/images/pet-grooming.jpg"
+                    secondHead="How professional grooming improved a pet's health"
+                    secondDes="A long-haired cat was suffering from painful matting and skin issues. Regular grooming sessions not only improved the cat's coat but revealed underlying skin conditions that were then treated by a veterinarian."
+                    secondRightText="100% of pets show health improvement"
+                    secondLeftBtn={{text: "Read Success Stories", link: "#"}}
+                />
 
-            {/* ========================== Freequenly Ask Question Section ========================== */}
-            <QuestionAsk
-                firstHeadText="What is sales and marketing?"
-                firstDesText="Sales refers to all activities directly involved in the exchange of goods and services for revenue. It deals primarily with salespeople and the infrastructure that allows them to build relationships with customers. Marketing is the process of identifying, anticipating, and even shaping customers’ needs and desires. Marketing includes all aspects of advertising, promoting, and communicating information about products and services to consumers or other businesses in a persuasive manner. Together sales and marketing are like two sides of the same coin—marketing drives the interest needed to attract leads to your business, and sales is responsible for turning those leads directly into revenue. You need both for a successful business."
+                {/* ========================== Frequently Asked Questions ========================== */}
+                <QuestionAsk
+                    firstHeadText="How do I book a pet care service?"
+                    firstDesText="Simply browse our directory of pet professionals, read reviews, and book directly through their profile. Most services can be scheduled same-day or in advance."
+                    secondHeadText="Are your pet care providers certified?"
+                    secondDesText="All providers are vetted for experience and many hold certifications in pet first aid, grooming, training, or other specialties."
+                    thirdHeadText="What if I need to cancel a booking?"
+                    thirdDesText="You can cancel or reschedule through your account dashboard. Cancellation policies vary by provider."
+                    fourHeadText="Do you offer services for exotic pets?"
+                    fourDesText="Yes, we have specialists for birds, reptiles, small mammals, and other exotic pets."
+                    lastLeftText="Need help choosing a service?"
+                    lastRightBtn={{text: "Contact Support", link: "#"}}
+                />
 
-                secondHeadText="What is the first step to hiring sales and marketing talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with sales and marketing, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your sales and marketing needs, including"
+                {/* ================== Find Professionals Section ====================== */}
+                <FindFreelancer
+                    headText="Explore all pet care services"
+                    FindFreelancerList={ProfessionalsList}
+                />
+            </main>
 
-                thirdHeadText="What are the various ways I can connect with sales and marketing talent through Frevi?"
-                thirdDesText=" If you need help finding talent for your marketing project, Frevi gives you the flexibility you need to succeed.Talent Marketplace: Find and source independent professionals for your sales or marketing project directly from Frevi’s talent marketplace.
-                Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From market research and strategy to SEO and SEM services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+            {/* ==================== Footer ====================== */}
+            <Footer/>
+        </div>
+    );
+};
 
-                fourHeadText="Why should I use Frevi to find talent for sales and marketing services?"
-                fourDesText="When it comes to sales and marketing, you may need a multidisciplinary team of talent to handle the various components of your project. Examples of professionals you might need for a sales and marketing projects include"
-
-                lastLeftText="Still have questions?"
-                lastRightBtn={{text: "Visit our help center", link: "#"}}
-            />
-
-            {/* ================== Find Freelancer Section ====================== */}
-            <FindFreelancer
-                headText="Find freelancers with the sales & marketing skills you need"
-                FindFreelancerList={FreelancerList}
-            />
-        </main>
-        
-        {/* ==================== Footer ====================== */}
-        <Footer/>
-    </div>
-  )
-}
-
-export default SalesMarketing;
+export default PetCareServices;

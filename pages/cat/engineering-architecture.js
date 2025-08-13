@@ -8,278 +8,287 @@ import QuestionAsk from "../../components/QuestionAsk";
 import FindFreelancer from "../../components/FindFreelancer";
 import Footer from "../../components/Footer";
 
-{/* ============== Engineering and Architecture page =================== */}
-const EngineeringArchitecture = () => {
+{/* ============== Legal Services Page =================== */}
+const LegalServices = () => {
 
     // ================ Card Data =================
     const CardData = [
         {
             id: 1,
-            groupName: "Machanical Engineers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Corporate Lawyers",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/eng1.jpg"},
-                {id: 2, img: "/images/eng2.jpg"},
-                {id: 3, img: "/images/eng3.jpg"},
+                {id: 1, img: "/images/corp-lawyer1.jpg"},
+                {id: 2, img: "/images/corp-lawyer2.jpg"},
+                {id: 3, img: "/images/corp-lawyer3.jpg"},
             ],
             link: "#"
-        },        
+        },
 
         {
             id: 2,
-            groupName: "Civil Engineers",
+            groupName: "Family Law Attorneys",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cveng1.jpg"},
-                {id: 2, img: "/images/cveng2.jpg"},
-                {id: 3, img: "/images/cveng3.jpg"},
+                {id: 1, img: "/images/family-lawyer1.jpg"},
+                {id: 2, img: "/images/family-lawyer2.jpg"},
+                {id: 3, img: "/images/family-lawyer3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 3,
-            groupName: "Electrical Engineers",
+            groupName: "Immigration Lawyers",
             rating: "4.7/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/eleng1.jpg"},
-                {id: 2, img: "/images/eleng2.jpg"},
-                {id: 3, img: "/images/eleng3.jpg"},
+                {id: 1, img: "/images/immigration-lawyer1.jpg"},
+                {id: 2, img: "/images/immigration-lawyer2.jpg"},
+                {id: 3, img: "/images/immigration-lawyer3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 4,
-            groupName: "Chemical Engineers",
+            groupName: "Intellectual Property Attorneys",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cheng1.jpg"},
-                {id: 2, img: "/images/cheng2.jpg"},
-                {id: 3, img: "/images/cheng3.jpg"},
+                {id: 1, img: "/images/ip-lawyer1.jpg"},
+                {id: 2, img: "/images/ip-lawyer2.jpg"},
+                {id: 3, img: "/images/ip-lawyer3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 5,
-            groupName: "Architectural Designers",
+            groupName: "Real Estate Lawyers",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/areng1.jpg"},
-                {id: 2, img: "/images/areng2.jpg"},
-                {id: 3, img: "/images/areng3.jpg"},
+                {id: 1, img: "/images/re-lawyer1.jpg"},
+                {id: 2, img: "/images/re-lawyer2.jpg"},
+                {id: 3, img: "/images/re-lawyer3.jpg"},
             ],
             link: "#"
-        },   
+        },
 
         {
             id: 6,
-            groupName: "3D Modelers",
+            groupName: "Tax Attorneys",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/md1.jpg"},
-                {id: 2, img: "/images/md2.jpg"},
-                {id: 3, img: "/images/md3.jpg"},
+                {id: 1, img: "/images/tax-lawyer1.jpg"},
+                {id: 2, img: "/images/tax-lawyer2.jpg"},
+                {id: 3, img: "/images/tax-lawyer3.jpg"},
             ],
             link: "#"
-        },   
+        },
 
         {
             id: 7,
-            groupName: "Industrial Designers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Criminal Defense Lawyers",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/it-in1.png"},
-                {id: 2, img: "/images/it-in2.png"},
-                {id: 3, img: "/images/it-in3.png"},
+                {id: 1, img: "/images/criminal-lawyer1.jpg"},
+                {id: 2, img: "/images/criminal-lawyer2.jpg"},
+                {id: 3, img: "/images/criminal-lawyer3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 8,
-            groupName: "CAD Engineers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Contract Specialists",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cadeng1.png"},
-                {id: 2, img: "/images/cadeng2.png"},
-                {id: 3, img: "/images/cadeng3.png"},
+                {id: 1, img: "/images/contract-spec1.jpg"},
+                {id: 2, img: "/images/contract-spec2.jpg"},
+                {id: 3, img: "/images/contract-spec3.jpg"},
             ],
             link: "#"
-        },      
+        },
     ];
 
     // ======================= List =============================
     const WorkList = [
         {
             id: 1,
-            name: "Bulding Information Modeling",
+            name: "Business Formation",
         },
 
         {
             id: 2,
-            name: "Architectural Floor Plans",
+            name: "Contract Review",
         },
 
         {
             id: 3,
-            name: "Architectural 3D Models & Rendering",
+            name: "Trademark Registration",
         },
 
         {
             id: 4,
-            name: "LandScape Design",
+            name: "Will & Estate Planning",
         },
 
         {
             id: 5,
-            name: "Trade Show Booth Design",
+            name: "Immigration Paperwork",
         },
 
         {
             id: 6,
-            name: "Industrial & Product Design",
+            name: "Legal Consultation",
         }
     ]
 
-    // ===================== Find Freelancer List ==========================
-    const FreelancerList = {
+    // ===================== Find Professionals List ==========================
+    const ProfessionalsList = {
 
-        headText: "Engineering & Architecture Roles",
+        headText: "Legal Services & Specializations",
 
         listItem: [
-            {id: 1, text: "3D Printing Experts", link: "#"},
-            {id: 2, text: "Biologists", link: "#"},
-            {id: 3, text: "Engineering Drawing", link: "#"},
-            {id: 4, text: "Mathematics Specialists", link: "#"},
-            {id: 5, text: "SketchUp Specialists", link: "#"},
-            {id: 6, text: "3D Rendering Artists", link: "#"},
-            {id: 7, text: "Chemists", link: "#"},
-            {id: 8, text: "Estimator Specialists", link: "#"},
-            {id: 9, text: "PCB Designers", link: "#"},
-            {id: 10, text: "SolidWorks Designers", link: "#"},
-            {id: 11, text: "AutoCAD Specialists", link: "#"},
-            {id: 12, text: "Contract Manufacturing", link: "#"},
-            {id: 13, text: "Interior Designers", link: "#"},
-            {id: 14, text: "Product Designers", link: "#"},
-            {id: 15, text: "Sourcing Specialists", link: "#"},
-            {id: 16, text: "Autodesk Fusion 360", link: "#"},
-            {id: 17, text: "Drafting Specialists", link: "#"},
-            {id: 18, text: "Logistics Specialists", link: "#"},
-            {id: 19, text: "Robotics Engineers", link: "#"},
-            {id: 20, text: "Welders", link: "#"}
+            {id: 1, text: "Bankruptcy Attorneys", link: "#"},
+            {id: 2, text: "Business Lawyers", link: "#"},
+            {id: 3, text: "Contract Lawyers", link: "#"},
+            {id: 4, text: "Copyright Lawyers", link: "#"},
+            {id: 5, text: "Corporate Attorneys", link: "#"},
+            {id: 6, text: "Criminal Defense Lawyers", link: "#"},
+            {id: 7, text: "Divorce Lawyers", link: "#"},
+            {id: 8, text: "Employment Lawyers", link: "#"},
+            {id: 9, text: "Estate Planning Attorneys", link: "#"},
+            {id: 10, text: "Family Law Attorneys", link: "#"},
+            {id: 11, text: "General Practice Lawyers", link: "#"},
+            {id: 12, text: "Immigration Lawyers", link: "#"},
+            {id: 13, text: "Intellectual Property Lawyers", link: "#"},
+            {id: 14, text: "International Law Specialists", link: "#"},
+            {id: 15, text: "Labor Lawyers", link: "#"},
+            {id: 16, text: "Landlord-Tenant Lawyers", link: "#"},
+            {id: 17, text: "Legal Consultants", link: "#"},
+            {id: 18, text: "Litigation Attorneys", link: "#"},
+            {id: 19, text: "Mediation Specialists", link: "#"},
+            {id: 20, text: "Medical Malpractice Lawyers", link: "#"},
+            {id: 21, text: "Mergers & Acquisitions Lawyers", link: "#"},
+            {id: 22, text: "Notary Services", link: "#"},
+            {id: 23, text: "Patent Attorneys", link: "#"},
+            {id: 24, text: "Personal Injury Lawyers", link: "#"},
+            {id: 25, text: "Real Estate Attorneys", link: "#"},
+            {id: 26, text: "Tax Attorneys", link: "#"},
+            {id: 27, text: "Trademark Lawyers", link: "#"},
+            {id: 28, text: "Trust & Estate Lawyers", link: "#"},
+            {id: 29, text: "Workers Compensation Lawyers", link: "#"},
+            {id: 30, text: "Legal Document Reviewers", link: "#"}
         ]
     }
 
-  return (
-    <div className="min-h-screen flex flex-col">
-        {/* ============== Head Tag =============== */}
-        <HeadTag title="Top Engineering & Architecture Experts for Hire in July 2022 | Frevi"/>
+    return (
+        <div className="min-h-screen flex flex-col">
+            {/* ============== Head Tag =============== */}
+            <HeadTag title="Professional Legal Services & Attorneys for Hire | Find Legal Experts"/>
 
-        {/* ================= Header ================= */}
-        <header className="header-bg">
-            {/* ============== Navbar ============ */}
-            <Navbar/>
-                
-            {/* ============ Head Container ============ */}
-            <BannerContainer 
-                heading={"Scale up fast with engineering and architecture experts"}
-                des={"Hundreds of independent professionals who’ll design everything from floor plans to landscapes to interiors."}
-                btnI = {{text: "Find Talent", link: "#"}}
-                btnII = {{text: "Find work", link: "#"}}
-                img={"/images/engarch.jpg"}
-            />
-        </header>
+            {/* ================= Header ================= */}
+            <header className="header-bg">
+                {/* ============== Navbar ============ */}
+                <Navbar/>
 
-        {/* ================= Main ==================== */}
-        <main>
+                {/* ============ Head Container ============ */}
+                <BannerContainer
+                    heading={"Expert legal services for businesses and individuals"}
+                    des={"Connect with qualified attorneys and legal professionals for all your legal needs."}
+                    btnI = {{text: "Find Legal Help", link: "#"}}
+                    btnII = {{text: "Offer Legal Services", link: "#"}}
+                    img={"/images/legal-banner.jpg"}
+                />
+            </header>
 
-            {/* ================= Developer section ================ */}
-           <TrustedExp
-                headText="Specialized engineering and architecture experts you can count on"
-                rating="4.90/5"
-                ratingText="Average rating for work with engineering and architecture talent."
-                contracts="34,500+ contracts"
-                contractsText="Involving engineering and architecture work in the last year."
-                skills="670 skills"
-                skillsText="epresented by talent on Frevi"
-                cardData={CardData}
-            />
+            {/* ================= Main ==================== */}
+            <main>
 
-            {/* ============== Prossesing work Section ================== */}
-            <PreWork
-                headText="Get your engineering and architecture projects done"
-                headDes="Get 3D models, Architectural, Lanscape, Booth Industrial to help you plan and construct buildings and other facilities."
-                list={WorkList}
-                imageI="/images/3d-building.png"
-                imageII="/images/3d-floor.png"
-                imageIII="/images/3d-rendering.png"
-                imageIv="/images/landscape.png"
-                imageV="/images/3d-booth.png"
-                imageVi="/images/3d-inddesign.png"
-                btn={{text: "Browse Project"}}
-            />
+                {/* ================= Legal Services section ================ */}
+                <TrustedExp
+                    headText="Trusted legal professionals in your area"
+                    rating="4.9/5"
+                    ratingText="Average client satisfaction rating"
+                    contracts="25K+ cases"
+                    contractsText="Handled through our platform"
+                    skills="50+ specializations"
+                    skillsText="Available for your legal needs"
+                    cardData={CardData}
+                />
 
-            {/* ========================== Flexible Section =========================== */}
-            <Flexible
-                firstHead="3D Modeling that brings your vision to life"
-                firstSubHead="An architect leveraged Autodesk 3ds Max to model a client’s house"
-                first_F_LeftRating="5/5"
-                first_F_RightText="Budget:"
-                first_F_RightValue="$3,699"
-                firstDes='"Alaa is simply the best when it comes to 3D projects, most of all he is very reliable and has great communication."'
-                first_S_LeftText="Skills:"
-                first_S_F_RightValue="Autodesk"
-                first_S_S_RightValue="Architectural"
-                first_S_T_RightValue="3D Modeling"
-                firstImage="/images/vision-house.png"
-                
-                secondImage="/images/free.webp"
-                secondHead="How GE Delivers Work 50% Faster With Agile Talent Strategy"
-                secondDes="When GE needs to create a new aircraft engine, for instance, they have a pool of external global experts at their fingertips. By turning to us, they’ve tripled the number of people in that pool—which means they can go from idea to product even faster.”"
-                secondRightText="50% Faster project turnaround time"
-                secondLeftBtn={{text: "Read Case Study", link: "#"}}
-            />
+                {/* ============== Processing work Section ================== */}
+                <PreWork
+                    headText="Common legal services we provide"
+                    headDes="From business formation to personal legal matters, find the right professional for your needs"
+                    list={WorkList}
+                    imageI="/images/business-formation.jpg"
+                    imageII="/images/contract-review.jpg"
+                    imageIII="/images/trademark.jpg"
+                    imageIv="/images/estate-planning.jpg"
+                    imageV="/images/immigration.jpg"
+                    imageVi="/images/legal-consult.jpg"
+                    btn={{text: "Browse Legal Services", link: "#"}}
+                />
 
-            {/* ========================== Freequenly Ask Question Section ========================== */}
-            <QuestionAsk
-                firstHeadText="What is engineering and architecture?"
-                firstDesText="Engineering and architecture refers to the use of science and math to design, plan, and create practical solutions to real-world problems. In business, engineering and architecture refers to the use of technical expertise to create products and services."
+                {/* ========================== Flexible Section =========================== */}
+                <Flexible
+                    firstHead="Corporate legal support that scales with your business"
+                    firstSubHead="A startup secured their intellectual property with expert legal guidance"
+                    first_F_LeftRating="5/5"
+                    first_F_RightText="Fees:"
+                    first_F_RightValue="$2,500"
+                    firstDes='"The IP attorney we found through this platform was incredibly knowledgeable and helped us secure trademarks for our brand and products. They explained everything in plain English and made sure we were protected as we expanded."'
+                    first_S_LeftText="Services:"
+                    first_S_F_RightValue="Trademark Filing"
+                    first_S_S_RightValue="Patent Search"
+                    first_S_T_RightValue="Legal Consultation"
+                    firstImage="/images/ip-protection.jpg"
 
-                secondHeadText="What is the first step to hiring engineering and architecture talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with engineering and architecture, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your needs, including."
+                    secondImage="/images/divorce-case.jpg"
+                    secondHead="How a family law attorney helped navigate a complex divorce"
+                    secondDes="Facing a complicated divorce with significant assets and custody issues, the client was matched with an experienced family law attorney who specialized in high-net-worth divorces. The attorney negotiated a favorable settlement while maintaining professionalism throughout the emotionally charged process."
+                    secondRightText="90% of clients report satisfaction with case outcomes"
+                    secondLeftBtn={{text: "Read Client Stories", link: "#"}}
+                />
 
-                thirdHeadText="What are the various ways I can connect with engineering and architecture talent through Frevi?"
-                thirdDesText=" Frevi gives you the flexibility you need to find the right talent for your projects.
-                Talent Marketplace: Find and source independent professionals for your projects directly from Frevi’s talent marketplace.Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From building information modeling services to trade show booth engineering services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                {/* ========================== Frequently Asked Questions ========================== */}
+                <QuestionAsk
+                    firstHeadText="How does the legal services platform work?"
+                    firstDesText="Our platform connects you with qualified legal professionals for your specific needs. You can browse attorney profiles, read reviews, and schedule consultations directly through our system."
 
-                fourHeadText="Why should I use Frevi to find talent for engineering and architecture services?"
-                fourDesText="When it comes to engineering and architecture, you may need a multidisciplinary team to handle the various components of your project."
+                    secondHeadText="Are the lawyers on your platform licensed?"
+                    secondDesText="Yes, all legal professionals on our platform are verified to be in good standing with their state bar associations. We confirm their licenses and check for any disciplinary history."
 
-                lastLeftText="Still have questions?"
-                lastRightBtn={{text: "Visit our help center", link: "#"}}
-            />
+                    thirdHeadText="What if I need emergency legal help?"
+                    thirdDesText="For urgent legal matters, we can connect you with available attorneys within hours. Look for professionals marked as 'Available Now' in their profiles."
 
-            {/* ================== Find Freelancer Section ====================== */}
-            <FindFreelancer
-                headText="Find freelancers with the Engineering & Architecture skills you need"
-                FindFreelancerList={FreelancerList}
-            />
-        </main>
-        
-        {/* ==================== Footer ====================== */}
-        <Footer/>
-    </div>
-  )
+                    fourHeadText="How are legal fees structured?"
+                    fourDesText="Fees vary by service and professional. Many attorneys offer free initial consultations, flat fees for specific services, or hourly rates. All fee structures are clearly displayed before you book."
+
+                    lastLeftText="Need legal advice?"
+                    lastRightBtn={{text: "Contact Support", link: "#"}}
+                />
+
+                {/* ================== Find Professionals Section ====================== */}
+                <FindFreelancer
+                    headText="Explore all legal specializations"
+                    FindFreelancerList={ProfessionalsList}
+                />
+            </main>
+
+            {/* ==================== Footer ====================== */}
+            <Footer/>
+        </div>
+    )
 }
 
-export default EngineeringArchitecture;
+export default LegalServices;

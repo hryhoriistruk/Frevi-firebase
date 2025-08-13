@@ -8,280 +8,287 @@ import QuestionAsk from "../../components/QuestionAsk";
 import FindFreelancer from "../../components/FindFreelancer";
 import Footer from "../../components/Footer";
 
-{/* ============== Hr and Training page =================== */}
-const HrTraning = () => {
+{/* ============== Education & Tutoring Services Page =================== */}
+const EducationTutoring = () => {
 
     // ================ Card Data =================
     const CardData = [
         {
             id: 1,
-            groupName: "Human Resource Managers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Math Tutors",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/hr1.jpg"},
-                {id: 2, img: "/images/hr-2.jpg"},
-                {id: 3, img: "/images/hr-3.jpg"},
+                {id: 1, img: "/images/math-tutor1.jpg"},
+                {id: 2, img: "/images/math-tutor2.jpg"},
+                {id: 3, img: "/images/math-tutor3.jpg"},
             ],
             link: "#"
-        },        
+        },
 
         {
             id: 2,
-            groupName: "HR Contracts",
+            groupName: "Science Tutors",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/bk1.jpeg"},
-                {id: 2, img: "/images/bk3.jpeg"},
-                {id: 3, img: "/images/cadeng3.png"},
-
+                {id: 1, img: "/images/science-tutor1.jpg"},
+                {id: 2, img: "/images/science-tutor2.jpg"},
+                {id: 3, img: "/images/science-tutor3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 3,
-            groupName: "Recruiters",
-            rating: "4.9/5",
-            ratingText: "Avarage Rating",
+            groupName: "Language Tutors",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/em1.jpeg"},
-                {id: 2, img: "/images/em2.jpeg"},
-                {id: 3, img: "/images/em3.jpeg"},
+                {id: 1, img: "/images/language-tutor1.jpg"},
+                {id: 2, img: "/images/language-tutor2.jpg"},
+                {id: 3, img: "/images/language-tutor3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 4,
-            groupName: "Compensation Specialists",
+            groupName: "Test Prep Experts",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/tc3.jpeg"},
-                {id: 2, img: "/images/tc2.jpeg"},
-                {id: 3, img: "/images/mg2.jpeg"},
+                {id: 1, img: "/images/testprep1.jpg"},
+                {id: 2, img: "/images/testprep2.jpg"},
+                {id: 3, img: "/images/testprep3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 5,
-            groupName: "HRIS Spacialists",
+            groupName: "College Counselors",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cadeng1.png"},
-                {id: 2, img: "/images/bk2.jpeg"},
-                {id: 3, img: "/images/em2.jpeg"},
+                {id: 1, img: "/images/counselor1.jpg"},
+                {id: 2, img: "/images/counselor2.jpg"},
+                {id: 3, img: "/images/counselor3.jpg"},
             ],
             link: "#"
-        },   
+        },
 
         {
             id: 6,
-            groupName: "eLarning Spacialists",
+            groupName: "Music Teachers",
             rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/bk2.jpeg"},
-                {id: 2, img: "/images/areng2.jpg"},
-                {id: 3, img: "/images/fc3.jpeg"},
+                {id: 1, img: "/images/music-teacher1.jpg"},
+                {id: 2, img: "/images/music-teacher2.jpg"},
+                {id: 3, img: "/images/music-teacher3.jpg"},
             ],
             link: "#"
-        },   
+        },
 
         {
             id: 7,
-            groupName: "Instrational Designers",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Special Education Tutors",
+            rating: "4.9/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/cveng1.jpg"},
-                {id: 2, img: "/images/cheng2.jpg"},
-                {id: 3, img: "/images/cveng2.jpg"},
+                {id: 1, img: "/images/special-ed1.jpg"},
+                {id: 2, img: "/images/special-ed2.jpg"},
+                {id: 3, img: "/images/special-ed3.jpg"},
             ],
             link: "#"
         },
 
         {
             id: 8,
-            groupName: "Tranning & Development Spacialist",
-            rating: "4.8/5",
-            ratingText: "Avarage Rating",
+            groupName: "Coding Instructors",
+            rating: "4.7/5",
+            ratingText: "Average Rating",
             imgSection: [
-                {id: 1, img: "/images/tc3.jpeg"},
-                {id: 2, img: "/images/tc2.jpeg"},
-                {id: 3, img: "/images/mg2.jpeg"},
+                {id: 1, img: "/images/coding-teacher1.jpg"},
+                {id: 2, img: "/images/coding-teacher2.jpg"},
+                {id: 3, img: "/images/coding-teacher3.jpg"},
             ],
             link: "#"
-        },      
+        },
     ];
 
     // ======================= List =============================
     const WorkList = [
         {
             id: 1,
-            name: "Recruiting",
+            name: "Academic Tutoring",
         },
 
         {
             id: 2,
-            name: "Employee Learing & Development",
+            name: "Test Preparation",
         },
 
         {
             id: 3,
-            name: "Performance Managment",
+            name: "College Admissions",
         },
 
         {
             id: 4,
-            name: "Organization Development",
+            name: "Language Learning",
         },
 
         {
             id: 5,
-            name: "HR Information System",
+            name: "Music Lessons",
         },
 
         {
             id: 6,
-            name: "Compension & Benifits",
+            name: "Professional Development",
         }
     ]
 
-    // ===================== Find Freelancer List ==========================
-    const FreelancerList = {
+    // ===================== Find Professionals List ==========================
+    const ProfessionalsList = {
 
-        headText: "HR & Training Roles",
+        headText: "Education & Tutoring Services",
 
         listItem: [
-            {id: 1, text: "Articulate Spacialists", link: "#"},
-            {id: 2, text: "Curriculam Developers", link: "#"},
-            {id: 3, text: "HR Policies Spacialists", link: "#"},
-            {id: 4, text: "QHSE Spacialists", link: "#"},
-            {id: 5, text: "Teachble Spacialists", link: "#"},
-            {id: 6, text: "Articulate Storyline Specialists", link: "#"},
-            {id: 7, text: "Distance Educations Specialists", link: "#"},
-            {id: 8, text: "Interviewr", link: "#"},
-            {id: 9, text: "Linkdin Recruiters", link: "#"},
-            {id: 10, text: "Salary Surveys Spacialists", link: "#"},
-            {id: 11, text: "Technical Recruiters", link: "#"},
-            {id: 12, text: "Boolean Search Spacialists", link: "#"},
-            {id: 13, text: "Employee Engagment", link: "#"},
-            {id: 14, text: "ISO 9000 Spacialists", link: "#"},
-            {id: 15, text: "Onboarding Spacialists", link: "#"},
-            {id: 16, text: "SAP Success Fators", link: "#"},
-            {id: 17, text: "Competencies Assessment", link: "#"},
-            {id: 18, text: "Executive Coaches", link: "#"},
-            {id: 19, text: "Job Description Writters", link: "#"},
-            {id: 20, text: "Online Freelancer", link: "#"},
-            {id: 21, text: "SCORM Spacialists", link: "#"},
+            {id: 1, text: "Algebra Tutors", link: "#"},
+            {id: 2, text: "Biology Tutors", link: "#"},
+            {id: 3, text: "Chemistry Tutors", link: "#"},
+            {id: 4, text: "English Tutors", link: "#"},
+            {id: 5, text: "French Tutors", link: "#"},
+            {id: 6, text: "German Tutors", link: "#"},
+            {id: 7, text: "History Tutors", link: "#"},
+            {id: 8, text: "IELTS Prep Tutors", link: "#"},
+            {id: 9, text: "Japanese Tutors", link: "#"},
+            {id: 10, text: "Kindergarten Tutors", link: "#"},
+            {id: 11, text: "Literature Tutors", link: "#"},
+            {id: 12, text: "Math Competition Tutors", link: "#"},
+            {id: 13, text: "Physics Tutors", link: "#"},
+            {id: 14, text: "Reading Tutors", link: "#"},
+            {id: 15, text: "SAT Prep Tutors", link: "#"},
+            {id: 16, text: "Spanish Tutors", link: "#"},
+            {id: 17, text: "TOEFL Prep Tutors", link: "#"},
+            {id: 18, text: "Writing Tutors", link: "#"},
+            {id: 19, text: "ACT Prep Tutors", link: "#"},
+            {id: 20, text: "Art Tutors", link: "#"},
+            {id: 21, text: "Calculus Tutors", link: "#"},
+            {id: 22, text: "Computer Science Tutors", link: "#"},
+            {id: 23, text: "Drama Tutors", link: "#"},
+            {id: 24, text: "Economics Tutors", link: "#"},
+            {id: 25, text: "Essay Editing", link: "#"},
+            {id: 26, text: "Geometry Tutors", link: "#"},
+            {id: 27, text: "Grammar Tutors", link: "#"},
+            {id: 28, text: "Mandarin Tutors", link: "#"},
+            {id: 29, text: "Piano Teachers", link: "#"},
+            {id: 30, text: "Statistics Tutors", link: "#"}
         ]
     }
 
-  return (
-    <div className="min-h-screen flex flex-col">
-        {/* ============== Head Tag =============== */}
-        <HeadTag title="Top HR & Training Experts for Hire in July 2022 | Frevi"/>
+    return (
+        <div className="min-h-screen flex flex-col">
+            {/* ============== Head Tag =============== */}
+            <HeadTag title="Professional Tutors & Educators | Find Learning Support Online"/>
 
-        {/* ================= Header ================= */}
-        <header className="header-bg">
-            {/* ============== Navbar ============ */}
-            <Navbar/>
-                
-            {/* ============ Head Container ============ */}
-            <BannerContainer 
-                heading={"Help your team thrive with HR and training experts"}
-                des={"Hundreds of independent professionals who’ll give your people the experience they deserve, and keep your organization running smoothly."}
-                btnI = {{text: "Find Talent", link: "#"}}
-                btnII = {{text: "Find work", link: "#"}}
-                img={"/images/hr.png"}
-            />
-        </header>
+            {/* ================= Header ================= */}
+            <header className="header-bg">
+                {/* ============== Navbar ============ */}
+                <Navbar/>
 
-        {/* ================= Main ==================== */}
-        <main>
+                {/* ============ Head Container ============ */}
+                <BannerContainer
+                    heading={"Personalized learning with expert educators"}
+                    des={"Connect with qualified tutors and instructors for all subjects and skill levels."}
+                    btnI = {{text: "Find a Tutor", link: "#"}}
+                    btnII = {{text: "Become a Tutor", link: "#"}}
+                    img={"/images/education-banner.jpg"}
+                />
+            </header>
 
-            {/* ================= Developer section ================ */}
-           <TrustedExp
-                headText="Specialized HR and training experts you can count on"
-                rating="4.90/5"
-                ratingText="Average rating for work with HR professionals."
-                contracts="1,900+ contracts"
-                contractsText="Involving HR & training work in the last year."
-                skills="105 skills"
-                skillsText="Represented by talent on Frevi"
-                cardData={CardData}
-            />
+            {/* ================= Main ==================== */}
+            <main>
 
-            {/* ============== Prossesing work Section ================== */}
-            <PreWork
-                headText="Get the job done fast with HR and training projects"
-                headDes="Find a recruitment expert to put together job ads, headhunt or screen candidates, and land you the right person."
-                list={WorkList}
-                imageI="/images/rec.jpg"
-                imageII="/images/emp.jpg"
-                imageIII="/images/pm.jpg"
-                imageIv="/images/od.jpg"
-                imageV="/images/hi.jpg"
-                imageVi="/images/cmf.jpg"
-                btn={{text: "Browse Project"}}
-            />
+                {/* ================= Education Services section ================ */}
+                <TrustedExp
+                    headText="Top-rated educators and tutors"
+                    rating="4.9/5"
+                    ratingText="Average student satisfaction rating"
+                    contracts="50K+ sessions"
+                    contractsText="Completed through our platform monthly"
+                    skills="100+ subjects"
+                    skillsText="Available for your learning needs"
+                    cardData={CardData}
+                />
 
-            {/* ========================== Flexible Section =========================== */}
-            <Flexible
-                firstHead="HR pros that help your organization thrive"
-                firstSubHead="A human resources expert helped a small business get their process up and running"
-                first_F_LeftRating="5/5"
-                first_F_RightText="Budget:"
-                first_F_RightValue="$1,700"
-                firstDes="Lindsey was a pleasure to work with! He was super helpful and very thorough in her work. Her guidance allowed us to be more confident in our new processes and tools."
-                first_S_LeftText="Skills:"
-                first_S_F_RightValue="HR Admistration"
-                first_S_S_RightValue="Recruting"
-                first_S_T_RightValue="Hs"
-                firstImage="/images/res.png"
-                
-                secondImage="/images/team-pl.png"
-                secondHead="Lone UCLA Professor Builds Online Learning Platform In Just 3 Months"
-                secondDes="UCLA needed a team of program consultants and web developers to build a bespoke e-learning platform. So they came to us. Independent professionals on Frevi helped put together the plan, then execute it, with some seriously niche roles playing a big part.”"
-                secondRightText="1 week to source & contract talent"
-                secondLeftBtn={{text: "Read Case Study", link: "#"}}
-            />
+                {/* ============== Processing work Section ================== */}
+                <PreWork
+                    headText="Comprehensive learning services"
+                    headDes="From academic support to skill development, find the right educator for your needs"
+                    list={WorkList}
+                    imageI="/images/academic-tutoring.jpg"
+                    imageII="/images/test-prep.jpg"
+                    imageIII="/images/college-counseling.jpg"
+                    imageIv="/images/language-learning.jpg"
+                    imageV="/images/music-lessons.jpg"
+                    imageVi="/images/prof-dev.jpg"
+                    btn={{text: "Browse Learning Services", link: "#"}}
+                />
 
-            {/* ========================== Freequenly Ask Question Section ========================== */}
-            <QuestionAsk
-                firstHeadText="What is HR and training?"
-                firstDesText="Writing is the process of creating written content for a variety of purposes. It can be used to communicate information, tell a story, or persuade an audience. Translation is the process of converting written content from one language to another, allowing businesses to communicate with their customers in their native language. ."
+                {/* ========================== Flexible Section =========================== */}
+                <Flexible
+                    firstHead="Transformative learning experiences"
+                    firstSubHead="A math tutor helped a struggling student achieve academic success"
+                    first_F_LeftRating="5/5"
+                    first_F_RightText="Results:"
+                    first_F_RightValue="Grade improved from D to A"
+                    firstDes='"My daughter was struggling with algebra and nearly failing. After just 8 weeks with her tutor, she not only caught up but became one of the top students in her class. The personalized approach made all the difference!"'
+                    first_S_LeftText="Subjects:"
+                    first_S_F_RightValue="Algebra"
+                    first_S_S_RightValue="Study Skills"
+                    first_S_T_RightValue="Test Strategies"
+                    firstImage="/images/math-success.jpg"
 
-                secondHeadText="What is the first step to hiring HR talent and determining the project cost?"
-                secondDesText="One of the first steps in hiring any talent is to determine which skills you need for your project. You know you need help with sales and marketing, but what specific things are you trying to do? Frevi matches you with proven remote talent who can help you with all your sales and marketing needs, including"
+                    secondImage="/images/language-success.jpg"
+                    secondHead="How language tutoring opened new opportunities"
+                    secondDes="A professional needed to learn Spanish quickly for an international assignment. Through intensive sessions with a native-speaking tutor, they achieved conversational fluency in just 3 months, allowing them to confidently take on the new role abroad."
+                    secondRightText="92% of students achieve their learning goals"
+                    secondLeftBtn={{text: "Read Success Stories", link: "#"}}
+                />
 
-                thirdHeadText="What are the various ways I can connect with HR talent through Frevi?"
-                thirdDesText=" If you need help finding talent for your marketing project, Frevi gives you the flexibility you need to succeed.Talent Marketplace: Find and source independent professionals for your sales or marketing project directly from Frevi’s talent marketplace.
-                Project Catalog: Project Catalog is a new way to quickly get started and expand your capabilities through Frevi. From market research and strategy to SEO and SEM services, projects are predefined for you, so you can get to know talent through a clearly defined project within their expertise, then easily scale up and down as needed."
+                {/* ========================== Frequently Asked Questions ========================== */}
+                <QuestionAsk
+                    firstHeadText="How does online tutoring work?"
+                    firstDesText="Our platform connects you with educators for virtual sessions via video chat. You can schedule sessions at convenient times and access learning materials through our secure platform."
 
-                fourHeadText="Why should I use Frevi to find talent for HR services?"
-                fourDesText="When it comes to sales and marketing, you may need a multidisciplinary team of talent to handle the various components of your project. Examples of professionals you might need for a sales and marketing projects include"
+                    secondHeadText="Are your tutors qualified?"
+                    secondDesText="Yes, all tutors are vetted for subject expertise and teaching experience. Many hold advanced degrees and teaching certifications in their fields."
 
-                lastLeftText="Still have questions?"
-                lastRightBtn={{text: "Visit our help center", link: "#"}}
-            />
+                    thirdHeadText="What technology do I need for sessions?"
+                    thirdDesText="You'll need a computer or tablet with a webcam, microphone, and internet connection. Most sessions use our built-in video platform or Zoom."
 
-            {/* ================== Find Freelancer Section ====================== */}
-            <FindFreelancer
-                headText="Find freelancers with the sales & marketing skills you need"
-                FindFreelancerList={FreelancerList}
-            />
-        </main>
-        
-        {/* ==================== Footer ====================== */}
-        <Footer/>
-    </div>
-  )
+                    fourHeadText="Can I get help with homework assignments?"
+                    fourDesText="Yes, many tutors specialize in homework help. They'll guide you through concepts and problem-solving without providing direct answers."
+
+                    lastLeftText="Need help choosing a tutor?"
+                    lastRightBtn={{text: "Contact Support", link: "#"}}
+                />
+
+                {/* ================== Find Professionals Section ====================== */}
+                <FindFreelancer
+                    headText="Explore all tutoring subjects"
+                    FindFreelancerList={ProfessionalsList}
+                />
+            </main>
+
+            {/* ==================== Footer ====================== */}
+            <Footer/>
+        </div>
+    )
 }
 
-export default HrTraning;
+export default EducationTutoring;
