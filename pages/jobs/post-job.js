@@ -5,16 +5,16 @@ import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
-export default function PostJob() {
+export default function PostService() {
     const router = useRouter();
     const [formData, setFormData] = useState({
         title: '',
-        company: '',
-        location: '',
-        salary: '',
-        type: 'Full-time',
+        category: 'Design',
+        price: '',
+        duration: '',
         description: '',
-        requirements: ''
+        deliverables: '',
+        skillsRequired: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -30,14 +30,14 @@ export default function PostJob() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Тут буде логіка відправки на сервер
-        console.log('Submitting:', formData);
+        // Here will be the logic to submit to the server
+        console.log('Submitting service:', formData);
 
-        // Імітація затримки
+        // Simulate delay
         await new Promise(resolve => setTimeout(resolve, 1500));
 
         setIsSubmitting(false);
-        router.push('/jobs');
+        router.push('/services');
     };
 
     return (
@@ -54,7 +54,7 @@ export default function PostJob() {
                 >
                     <div className="max-w-3xl mx-auto">
                         <h1 className="text-3xl font-bold text-gray-800 mb-2">Post a Service</h1>
-                        <p className="text-gray-600 mb-8">Fill out the form below to post your sevice listing</p>
+                        <p className="text-gray-600 mb-8">Fill out the form below to create your service listing</p>
 
                         <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
                             <form onSubmit={handleSubmit}>
@@ -66,86 +66,90 @@ export default function PostJob() {
                                             name="title"
                                             value={formData.title}
                                             onChange={handleChange}
+                                            placeholder="e.g. Professional Logo Design"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                             required
                                         />
                                     </div>
 
                                     <div>
-                                        <label className="block text-gray-700 font-medium mb-2">Company Name*</label>
-                                        <input
-                                            type="text"
-                                            name="company"
-                                            value={formData.company}
-                                            onChange={handleChange}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                            required
-                                        />
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-gray-700 font-medium mb-2">Location*</label>
-                                        <input
-                                            type="text"
-                                            name="location"
-                                            value={formData.location}
-                                            onChange={handleChange}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                            required
-                                        />
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-gray-700 font-medium mb-2">Salary Range</label>
-                                        <input
-                                            type="text"
-                                            name="salary"
-                                            value={formData.salary}
-                                            onChange={handleChange}
-                                            placeholder="e.g. $90,000 - $120,000"
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                        />
-                                    </div>
-
-                                    <div>
-                                        <label className="block text-gray-700 font-medium mb-2">Job Type*</label>
+                                        <label className="block text-gray-700 font-medium mb-2">Category*</label>
                                         <select
-                                            name="type"
-                                            value={formData.type}
+                                            name="category"
+                                            value={formData.category}
                                             onChange={handleChange}
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                             required
                                         >
-                                            <option value="Full-time">Full-time</option>
-                                            <option value="Part-time">Part-time</option>
-                                            <option value="Contract">Contract</option>
-                                            <option value="Internship">Internship</option>
-                                            <option value="Remote">Remote</option>
+                                            <option value="Design">Design</option>
+                                            <option value="Development">Development</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Writing">Writing</option>
+                                            <option value="Consulting">Consulting</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
 
+                                    <div>
+                                        <label className="block text-gray-700 font-medium mb-2">Price*</label>
+                                        <input
+                                            type="text"
+                                            name="price"
+                                            value={formData.price}
+                                            onChange={handleChange}
+                                            placeholder="e.g. $100 or $50/hour"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-gray-700 font-medium mb-2">Estimated Duration</label>
+                                        <input
+                                            type="text"
+                                            name="duration"
+                                            value={formData.duration}
+                                            onChange={handleChange}
+                                            placeholder="e.g. 3-5 days"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                        />
+                                    </div>
+
                                     <div className="md:col-span-2">
-                                        <label className="block text-gray-700 font-medium mb-2">Job Description*</label>
+                                        <label className="block text-gray-700 font-medium mb-2">Service Description*</label>
                                         <textarea
                                             name="description"
                                             value={formData.description}
                                             onChange={handleChange}
                                             rows={6}
+                                            placeholder="Describe your service in detail"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                             required
                                         />
                                     </div>
 
                                     <div className="md:col-span-2">
-                                        <label className="block text-gray-700 font-medium mb-2">Requirements*</label>
+                                        <label className="block text-gray-700 font-medium mb-2">Deliverables*</label>
                                         <textarea
-                                            name="requirements"
-                                            value={formData.requirements}
+                                            name="deliverables"
+                                            value={formData.deliverables}
                                             onChange={handleChange}
                                             rows={4}
-                                            placeholder="List requirements, one per line"
+                                            placeholder="What will the client receive? (e.g., Source files, Documentation, etc.)"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                             required
+                                        />
+                                    </div>
+
+                                    <div className="md:col-span-2">
+                                        <label className="block text-gray-700 font-medium mb-2">Skills Required</label>
+                                        <textarea
+                                            name="skillsRequired"
+                                            value={formData.skillsRequired}
+                                            onChange={handleChange}
+                                            rows={3}
+                                            placeholder="List any specific skills or tools required for this service"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                         />
                                     </div>
                                 </div>
@@ -156,7 +160,7 @@ export default function PostJob() {
                                         disabled={isSubmitting}
                                         className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition disabled:opacity-50"
                                     >
-                                        {isSubmitting ? 'Posting...' : 'Post Job'}
+                                        {isSubmitting ? 'Creating...' : 'Create Service'}
                                     </button>
                                 </div>
                             </form>
