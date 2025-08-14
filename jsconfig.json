@@ -4,11 +4,12 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
+      "@/services/*": ["./services/*"],
       "@/pages/*": ["./pages/*"],
       "@/styles/*": ["./styles/*"],
-      "@lib/*": ["lib/*"]
+      "@/firebase/*": ["./firebase/*"],
+      "@/lib/*": ["./lib/*"]
     }
   },
-  "exclude": ["node_modules", ".next", "out"]
+  "exclude": ["node_modules", "out"]
 }

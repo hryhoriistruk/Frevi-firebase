@@ -110,6 +110,18 @@ export default function Home() {
             className: "bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold transition"
         },
         {
+            path: "/services/analytics",
+            name: "Analytics",
+            className: "bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-bold transition"
+        },
+
+        // Messaging Service
+        {
+            path: "/services/messaging",
+            name: "Messaging",
+            className: "bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold transition"
+        },
+        {
             path: "/assistance",
             name: "Assistance",
             className: "bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-bold transition"

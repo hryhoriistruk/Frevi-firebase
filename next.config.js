@@ -1,37 +1,23 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
-  distDir: 'out',
-  images: {
-    unoptimized: true,
-    domains: ['firebasestorage.googleapis.com'],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  trailingSlash: true,
-  async headers() {
-    return [
-      {
-        source: '/api/:path*',
-        headers: [
-          { key: 'Access-Control-Allow-Origin', value: '*' },
-          { key: 'Access-Control-Allow-Credentials', value: 'true' },
-          { key: 'Access-Control-Allow-Methods', value: 'GET,POST,PUT,DELETE,OPTIONS' },
-          { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
-        ],
-      },
-    ];
-  },
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname),
-    };
-    return config;
-  }
+    output: 'export', // Генерує статичний HTML/CSS/JS
+    images: {
+        domains: ['firebasestorage.googleapis.com'],
+        unoptimized: true, // Додайте це для статичного експорту
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    webpack: (config) => {
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            '@lib': path.resolve(__dirname, 'lib'),
+            '@/lib': path.resolve(__dirname, 'lib'),
+        };
+        return config;
+    },
 };
 
 module.exports = nextConfig;
