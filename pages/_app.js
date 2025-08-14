@@ -9,9 +9,11 @@ import { useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner';
 import { FaRobot } from 'react-icons/fa';
 
+
 function RouteLoading() {
     const router = useRouter();
     const [routeLoading, setRouteLoading] = useState(false);
+
 
     useEffect(() => {
         const handleStart = (url) => (url !== router.asPath) && setRouteLoading(true);

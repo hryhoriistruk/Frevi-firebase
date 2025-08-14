@@ -70,7 +70,7 @@ export default function Home() {
             className: "bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold transition"
         },
         {
-            path: "/messenger",
+            path: "/messenger/index",
             name: "Messenger",
             className: "bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-bold transition"
         },
@@ -93,7 +93,7 @@ export default function Home() {
             className: "bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-bold transition"
         },
         {
-            path: "/users",
+            path: "/users/list",
             name: "Users List",
             className: "bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full font-bold transition"
         },
