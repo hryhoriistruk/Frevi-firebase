@@ -1,0 +1,64 @@
+.messenger-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background: #f9f9f9;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.messages-list {
+    flex: 1;
+    overflow-y: auto;
+    height: 300px; /* Set a height for scrolling */
+    margin-bottom: 20px;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    background: #e3f2fd; /* Light blue for messages */
+}
+
+.message strong {
+    color: #1976d2; /* Darker blue for user names */
+}
+
+.message-input {
+    display: flex;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.message-input input:focus {
+    border-color: #1976d2; /* Change border color on focus */
+}
+
+.message-input button {
+    padding: 10px 15px;
+    background: #1976d2; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.message-input button:hover {
+    background: #125ea1; /* Darker blue on hover */
+}
