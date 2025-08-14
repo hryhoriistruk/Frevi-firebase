@@ -4,9 +4,13 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { db } from '../../firebase';
+import { useAuth } from '../../context/AuthContext'; // Adjust this import based on your auth setup
 
 export default function PostService() {
     const router = useRouter();
+    const { currentUser } = useAuth(); // Get current user from your auth context
     const [formData, setFormData] = useState({
         title: '',
         category: 'Design',
@@ -17,6 +21,7 @@ export default function PostService() {
         skillsRequired: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -29,17 +34,28 @@ export default function PostService() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setError(null);
 
-        // Тут буде логіка відправки даних на сервер
-        console.log('Submitting service:', formData);
+        try {
+            // Add service to Firestore
+            const docRef = await addDoc(collection(db, 'services'), {
+                ...formData,
+                createdAt: serverTimestamp(),
+                authorId: currentUser.uid,
+                authorName: currentUser.displayName || 'Anonymous',
+                status: 'active',
+                rating: 0,
+                reviewsCount: 0
+            });
 
-        // Імітуємо затримку
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
-        setIsSubmitting(false);
-
-        // Переходимо на сторінку s.js
-        router.push('/jobs/s');
+            // Redirect to the newly created service page
+            router.push(`/services/${docRef.id}`);
+        } catch (err) {
+            console.error('Error creating service:', err);
+            setError('Failed to create service. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -59,6 +75,11 @@ export default function PostService() {
                         <p className="text-gray-600 mb-8">Fill out the form below to create your service listing</p>
 
                         <div className="bg-white rounded-xl shadow-md p-6 md:p-8">
+                            {error && (
+                                <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+                                    {error}
+                                </div>
+                            )}
                             <form onSubmit={handleSubmit}>
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="md:col-span-2">
@@ -71,6 +92,7 @@ export default function PostService() {
                                             placeholder="e.g. Professional Logo Design"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                             required
+                                            maxLength="100"
                                         />
                                     </div>
 
@@ -127,6 +149,7 @@ export default function PostService() {
                                             placeholder="Describe your service in detail"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                             required
+                                            maxLength="2000"
                                         />
                                     </div>
 
@@ -140,6 +163,7 @@ export default function PostService() {
                                             placeholder="What will the client receive? (e.g., Source files, Documentation, etc.)"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                             required
+                                            maxLength="1000"
                                         />
                                     </div>
 
@@ -152,6 +176,7 @@ export default function PostService() {
                                             rows={3}
                                             placeholder="List any specific skills or tools required for this service"
                                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                            maxLength="500"
                                         />
                                     </div>
                                 </div>
@@ -162,7 +187,15 @@ export default function PostService() {
                                         disabled={isSubmitting}
                                         className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition disabled:opacity-50"
                                     >
-                                        {isSubmitting ? 'Creating...' : 'Create Service'}
+                                        {isSubmitting ? (
+                                            <span className="flex items-center">
+                                                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                </svg>
+                                                Creating...
+                                            </span>
+                                        ) : 'Create Service'}
                                     </button>
                                 </div>
                             </form>

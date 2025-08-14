@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { FiTrash2, FiEdit, FiPlus, FiSearch, FiRefreshCw } from 'react-icons/fi';
 import { getOrders, deleteOrder } from '@/lib/orderService';
-import styles from '/Users/grigorii/IdeaProjects/Frevi-firebase8666/pages/orders/OrdersPage.module.css';
+import styles from './OrdersPage.module.css';
 
 export default function OrdersPage() {
     const [orders, setOrders] = useState([]);

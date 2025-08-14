@@ -80,8 +80,19 @@ export default function GPTAssistant() {
         "How to improve my profile?",
         "Best practices for freelancing",
         "How to network effectively?",
-        "Tips for job interviews",
-        "Writing a winning proposal"
+        "Writing a winning proposal",
+        "How to network effectively on a service marketplace to find clients and partners?",
+        "What communication strategies help build trust with clients on a marketplace?",
+        "How to stand out among other service providers through networking?",
+        "Which platforms or tools are best for networking in the service industry?",
+        "How to create a compelling service proposal to attract clients on a marketplace?",
+        "What key elements should a service description include to increase conversion?",
+        "How to properly design a service page so it looks professional and appealing?",
+        "What mistakes should be avoided when writing a service proposal on a marketplace?",
+        "How to choose the best pricing strategy for services on a marketplace?",
+        "What are the most effective ways to promote services on a marketplace?",
+        "How to select the right categories and keywords for services to improve visibility?",
+        "How to handle reviews and respond to customer inquiries to improve ratings?"
     ];
 
     return (
