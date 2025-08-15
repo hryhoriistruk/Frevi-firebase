@@ -2,7 +2,7 @@
 const path = require('path');
 
 const nextConfig = {
-    // output: 'export', // Генерує статичний HTML/CSS/JS
+     output: 'export', // Генерує статичний HTML/CSS/JS
     images: {
         domains: ['firebasestorage.googleapis.com'],
         unoptimized: true, // Додайте це для статичного експорту
