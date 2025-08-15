@@ -1,33 +1,33 @@
 import { useState, useEffect, useRef } from 'react';
-import styles from '../styles/Messenger.module.css';
 import { FiSend, FiPaperclip, FiSmile, FiMoreVertical, FiSearch } from 'react-icons/fi';
 
 export default function MessengerPage() {
+    // Состояния для управления чатами и сообщениями
     const [messages, setMessages] = useState({
         john: [
-            { id: 1, text: "Привіт! Як справи?", sender: "other", time: "10:30", status: "read" },
-            { id: 2, text: "Все добре, дякую! А в тебе?", sender: "user", time: "10:32", status: "read" },
-            { id: 3, text: "Теж добре. Що робиш?", sender: "other", time: "10:33", status: "read" },
+            { id: 1, text: "Привіт! Як справи?", sender: "john", time: "10:30", status: "read" },
         ],
         jane: [
-            { id: 1, text: "Доброго дня!", sender: "other", time: "09:15", status: "read" },
-            { id: 2, text: "Привіт! Що потрібно?", sender: "user", time: "09:20", status: "read" },
+            { id: 1, text: "Доброго дня!", sender: "jane", time: "09:15", status: "read" },
         ],
         team: [
-            { id: 1, text: "Meeting at 3pm tomorrow", sender: "other", time: "14:45", status: "read" },
-            { id: 2, text: "Got it, I'll be there", sender: "user", time: "14:50", status: "read" },
+            { id: 1, text: "Meeting at 3pm tomorrow", sender: "alex", time: "14:45", status: "read" },
         ]
     });
+
     const [newMessage, setNewMessage] = useState("");
     const [activeChat, setActiveChat] = useState("john");
+    const [currentUser, setCurrentUser] = useState("user"); // Текущий пользователь
     const messagesEndRef = useRef(null);
 
+    // Список чатов
     const chats = [
-        { id: "john", name: "John Doe", avatar: "JD", lastMessage: "Теж добре. Що робиш?", unread: 0, online: true },
-        { id: "jane", name: "Jane Smith", avatar: "JS", lastMessage: "Привіт! Що потрібно?", unread: 2, online: false },
-        { id: "team", name: "Work Group", avatar: "WG", lastMessage: "Got it, I'll be there", unread: 5, online: true }
+        { id: "john", name: "John Doe", avatar: "JD", lastMessage: "Привіт! Як справи?", unread: 0, online: true },
+        { id: "jane", name: "Jane Smith", avatar: "JS", lastMessage: "Доброго дня!", unread: 2, online: false },
+        { id: "team", name: "Work Group", avatar: "WG", lastMessage: "Meeting at 3pm", unread: 5, online: true }
     ];
 
+    // Прокрутка к последнему сообщению
     useEffect(() => {
         scrollToBottom();
     }, [messages, activeChat]);
@@ -36,18 +36,19 @@ export default function MessengerPage() {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
+    // Отправка сообщения
     const handleSend = () => {
         if (!newMessage.trim()) return;
 
         const newMsg = {
             id: Date.now(),
             text: newMessage,
-            sender: "user",
+            sender: currentUser,
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
             status: "sent"
         };
 
-        // Update messages for the active chat
+        // Обновляем сообщения в активном чате
         setMessages(prev => ({
             ...prev,
             [activeChat]: [...(prev[activeChat] || []), newMsg]
@@ -55,29 +56,8 @@ export default function MessengerPage() {
 
         setNewMessage("");
 
-        // Simulate response after a delay (in a real app, this would come from another user)
-        setTimeout(() => {
-            const responses = {
-                john: ["Цікаво! А я щойно закінчив обід.", "Як твої справи на роботі?", "Може, зустрінемося на вихідних?"],
-                jane: ["Мені потрібна допомога з проектом.", "Ти вільний зараз?", "Дякую, що відповів!"],
-                team: ["Great! Don't forget to bring your laptops.", "We'll discuss the new project.", "Anyone has updates on the client request?"]
-            };
-
-            const randomResponse = responses[activeChat][Math.floor(Math.random() * responses[activeChat].length)];
-
-            const responseMsg = {
-                id: Date.now() + 1,
-                text: randomResponse,
-                sender: "other",
-                time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-                status: "read"
-            };
-
-            setMessages(prev => ({
-                ...prev,
-                [activeChat]: [...(prev[activeChat] || []), responseMsg]
-            }));
-        }, 1000 + Math.random() * 2000);
+        // В реальном приложении здесь бы отправлялось сообщение на сервер
+        // и получался бы ответ через WebSocket или аналогичную технологию
     };
 
     const handleKeyPress = (e) => {
@@ -87,9 +67,10 @@ export default function MessengerPage() {
         }
     };
 
+    // Переключение между чатами
     const handleChatChange = (chatId) => {
         setActiveChat(chatId);
-        // Mark messages as read when switching to chat
+        // Помечаем сообщения как прочитанные
         setMessages(prev => {
             const updatedMessages = {...prev};
             if (updatedMessages[chatId]) {
@@ -102,15 +83,26 @@ export default function MessengerPage() {
         });
     };
 
+    // Переключение пользователя (для демонстрации)
+    const switchUser = () => {
+        setCurrentUser(prev => prev === "user" ? "user2" : "user");
+    };
+
     return (
         <div className="flex h-screen bg-gray-50">
-            {/* Sidebar */}
+            {/* Боковая панель с чатами */}
             <div className="w-80 border-r border-gray-200 bg-white flex flex-col">
-                <div className="p-4 border-b border-gray-200">
+                <div className="p-4 border-b border-gray-200 flex justify-between items-center">
                     <h2 className="text-xl font-semibold">Messages</h2>
+                    <button
+                        onClick={switchUser}
+                        className="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded"
+                    >
+                        Switch User
+                    </button>
                 </div>
 
-                {/* Search */}
+                {/* Поиск */}
                 <div className="p-3 border-b border-gray-200">
                     <div className="relative">
                         <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -122,7 +114,7 @@ export default function MessengerPage() {
                     </div>
                 </div>
 
-                {/* Chat list */}
+                {/* Список чатов */}
                 <div className="flex-1 overflow-y-auto">
                     {chats.map(chat => (
                         <div
@@ -141,10 +133,14 @@ export default function MessengerPage() {
                             <div className="flex-1 min-w-0">
                                 <div className="flex justify-between items-baseline">
                                     <h3 className="font-medium truncate">{chat.name}</h3>
-                                    <span className="text-xs text-gray-500">{chat.lastMessage}</span>
+                                    <span className="text-xs text-gray-500">
+                                        {messages[chat.id]?.[messages[chat.id]?.length - 1]?.time}
+                                    </span>
                                 </div>
                                 <div className="flex justify-between items-center">
-                                    <p className="text-sm text-gray-500 truncate">{chat.lastMessage}</p>
+                                    <p className="text-sm text-gray-500 truncate">
+                                        {messages[chat.id]?.[messages[chat.id]?.length - 1]?.text}
+                                    </p>
                                     {chat.unread > 0 && (
                                         <span className="bg-blue-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                                             {chat.unread}
@@ -157,9 +153,9 @@ export default function MessengerPage() {
                 </div>
             </div>
 
-            {/* Chat area */}
+            {/* Область чата */}
             <div className="flex-1 flex flex-col">
-                {/* Chat header */}
+                {/* Заголовок чата */}
                 <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white">
                     <div className="flex items-center">
                         <div className="relative mr-4">
@@ -182,21 +178,21 @@ export default function MessengerPage() {
                     </button>
                 </div>
 
-                {/* Messages */}
+                {/* Сообщения */}
                 <div className="flex-1 p-4 overflow-y-auto bg-gray-100">
                     <div className="space-y-3">
                         {messages[activeChat]?.map((msg) => (
                             <div
                                 key={msg.id}
-                                className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                                className={`flex ${msg.sender === currentUser ? 'justify-end' : 'justify-start'}`}
                             >
                                 <div
-                                    className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${msg.sender === 'user' ? 'bg-blue-500 text-white' : 'bg-white'}`}
+                                    className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${msg.sender === currentUser ? 'bg-blue-500 text-white' : 'bg-white'}`}
                                 >
                                     <p>{msg.text}</p>
-                                    <div className={`flex items-center justify-end mt-1 text-xs ${msg.sender === 'user' ? 'text-blue-100' : 'text-gray-500'}`}>
+                                    <div className={`flex items-center justify-end mt-1 text-xs ${msg.sender === currentUser ? 'text-blue-100' : 'text-gray-500'}`}>
                                         <span>{msg.time}</span>
-                                        {msg.sender === 'user' && (
+                                        {msg.sender === currentUser && (
                                             <span className="ml-1">
                                                 {msg.status === 'read' ? '✓✓' : '✓'}
                                             </span>
@@ -209,7 +205,7 @@ export default function MessengerPage() {
                     </div>
                 </div>
 
-                {/* Message input */}
+                {/* Поле ввода сообщения */}
                 <div className="p-4 border-t border-gray-200 bg-white">
                     <div className="flex items-center">
                         <button className="p-2 text-gray-500 hover:text-gray-700 mr-2">
