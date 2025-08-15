@@ -2,14 +2,15 @@
 const path = require('path');
 
 const nextConfig = {
-    // output: 'export', // Генерує статичний HTML/CSS/JS
+    output: 'export', // Розкоментуйте це для статичного експорту
     images: {
         domains: ['firebasestorage.googleapis.com'],
-        unoptimized: true, // Додайте це для статичного експорту
+        unoptimized: true, // Обов'язково для статичного експорту
     },
     eslint: {
         ignoreDuringBuilds: true,
     },
+    trailingSlash: true, // Додайте це для узгодженості з firebase.json
     webpack: (config) => {
         config.resolve.alias = {
             ...config.resolve.alias,
