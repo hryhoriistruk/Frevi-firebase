@@ -221,7 +221,7 @@ export default function Home() {
                                 <div
                                     className="absolute lg:flex hidden flex-col items-center z-[9] bg-[#F3FFFC] shadow-2xl py-2 px-3 rounded-xl cursor-pointer left-[-3rem] top-0 transition hover:scale-105">
                   <span className="text-[11px] font-semibold text-zinc-700 mb-1">
-                    Today's Job
+                    Today's Service
                   </span>
                                     <Image src="/images/bag.png" height={30} width={40} alt="bag-image"/>
                                 </div>
@@ -240,19 +240,19 @@ export default function Home() {
             <main>
                 <section className="container mx-auto mt-16 py-3 md:px-5 sm:px-7 px-3">
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-[#0C4A6E] text-2xl font-bold">Recommended Jobs For You</h2>
+                        <h2 className="text-[#0C4A6E] text-2xl font-bold">Recommended Services For You</h2>
                         <button
                             onClick={() => router.push("/jobs")}
                             className="text-cyan-700 hover:underline font-semibold"
                         >
-                            See all jobs
+                            See all services
                         </button>
                     </div>
                     <JobFeed limit={4}/>
                 </section>
 
                 <section className="container mx-auto mt-16 py-3 md:px-5 sm:px-7 px-3">
-                    <h2 className="text-[#0C4A6E] text-2xl font-bold mb-6">Top Companies Hiring Now</h2>
+                    <h2 className="text-[#0C4A6E] text-2xl font-bold mb-6">Top Companies with the best services provide their services Now</h2>
                     <CompanySlider/>
                 </section>
 
@@ -261,9 +261,9 @@ export default function Home() {
                         Browse talent by category
                     </h2>
                     <span className="text-zinc-600 font-semibold lg:text-lg text-md">
-            Looking for work?
+            Looking for service?
             <Link href="/jobs/all-jobs" legacyBehavior><a className="ml-2 text-cyan-700 cursor-pointer hover:underline">
-                Browse Job
+                Browse Service
               </a></Link>
           </span>
                     <div
@@ -359,7 +359,7 @@ export default function Home() {
                                         No cost until you hire
                                     </h3>
                                     <span className="text-zinc-500 font-semibold text-md">
-                  Interview potential fits for your job, negotiate <br className="md:block hidden"/>
+                  Interview potential fits for your service, negotiate <br className="md:block hidden"/>
                   rates, and only pay for work you approve.
                 </span>
                                 </div>

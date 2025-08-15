@@ -156,7 +156,7 @@ const TalentMarketplace = () => {
                                 Post today, hire tomorrow
                             </h2>
                             <p className="text-zinc-600 sm:text-lg text-md lg:mt-5 mt-3">
-                                We've got you covered from idea to delivery. Post your job  and you'll start
+                                We've got you covered from idea to delivery. Post your service  and you'll start
                                 getting proposals. Once you've found your expert, you can talk timings,
                                 availability, and prices before going ahead.
                             </p>
@@ -277,7 +277,7 @@ const TalentMarketplace = () => {
                                         See verified work history and reviews 
                                     </li>
                                     <li className="list-disc text-zinc-800 font-semibold xl:text-lg">
-                                        Send 30 invitations to talent per job post
+                                        Send 30 invitations to talent per service post
                                     </li>
                                     <li className="list-disc text-zinc-800 font-semibold xl:text-lg">
                                         Use advanced search filters
@@ -370,7 +370,7 @@ const TalentMarketplace = () => {
                                         Pay as you go billing for milestone and hourly contracts 
                                     </li>
                                     <li className="list-disc text-zinc-700 font-semibold xl:text-lg">
-                                        Send 30 invitations to talent per job post
+                                        Send 30 invitations to talent per service post
                                     </li>
                                     <li className="list-disc text-zinc-700 font-semibold xl:text-lg">
                                         3-5% marketplace fee depending on payment method

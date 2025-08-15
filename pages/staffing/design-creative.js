@@ -313,7 +313,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (26 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (26 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -364,7 +364,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (51 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (51 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -417,7 +417,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (26 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (26 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -467,7 +467,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (51 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (51 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -508,7 +508,7 @@ const Development = () => {
 
                                             <div>
                                                 <h2 className="xl:text-2xl text-xl font-semibold text-zinc-800">
-                                                    Kimberly T.
+                                                   Hryhorii-Volodymyr Struk
                                                 </h2>
                                                 <span className="text-zinc-500 font-semibold">
                                                     Illustrator
@@ -519,7 +519,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (15 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (15 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -590,8 +590,7 @@ const Development = () => {
                                 whileInView={{y:0, opacity:1}}
                                 transition={{duration:1}}
                             >
-                                Our recruiters look at the talent’s creative ‘hard’ skills and their ‘soft skills’ to help make sure they can hit the ground running. We then put forward a shortlist of names from our pool of proven remote talent, all ready to help you meet your goals on time and within budget. <br/> <br/>
-                                With Talent Scout they’ll be ready to jumpstart your creative overhaul in days, without the high cost of a traditional creative staffing agency. And there’s nothing to pay until you choose the right candidate for you.                            
+                                Services for you
                             </motion.p>
                         </div>
                     </div>
@@ -630,7 +629,7 @@ const Development = () => {
                         </div>
 
                         <button className="bg-zinc-700 py-2 px-5 text-white transition hover:bg-zinc-600 font-semibold rounded-full lg:mt-8 mt-4" onClick={() => router.push("#")}>
-                            Hire the Right Creative
+                            Buy the service at best
                         </button>
                     </div>
                 </section>
@@ -937,7 +936,7 @@ const Development = () => {
 
                                <div className="min-w-[25%]">
                                     <button className="bg-gray-100 text-zinc-800 px-4 lg:py-2 py-1 rounded-full font-semibold transition hover:bg-gray-200" onClick={() => router.push("#")}>
-                                        Hire the Best
+                                        Take the Service at the Best
                                     </button>
                                </div>
                             </div>

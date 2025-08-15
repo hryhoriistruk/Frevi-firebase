@@ -147,7 +147,7 @@ const HowToFindWork = () => {
                                         Talent comes to you
                                     </h5>
                                     <p className="text-zinc-500 text-[17px] font-semibold mt-1">
-                                        Work and earn in different ways. Bid for jobs. Pitch your projects. Discuss your in-demand skills with our recruiters so they can find opportunities aligned with your passions and career goals. Do all three. Create a predictable pipeline and build your network.
+                                        Work and earn in different ways. Bid for services. Pitch your projects.
                                     </p>
                                 </div>
                             </motion.div>
@@ -514,7 +514,7 @@ const HowToFindWork = () => {
                                     What can I gain from freelancing with Frevi?
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
-                                    Many more people like you are choosing to leave their day jobs and grow as independent professionals. Why? Because of the freedom and flexibility that comes with being your own boss. And for the chance to work with great clients and well-known brands. Many choose Frevi because we help them do it well. How to Succeed as a Freelancer gives you a taste of the support we offer to boost your success.
+                                    Many more people like you are choosing to leave their day services and grow as independent professionals. Why? Because of the freedom and flexibility that comes with being your own boss. And for the chance to work with great clients and well-known brands. Many choose Frevi because we help them do it well. How to Succeed as a Freelancer gives you a taste of the support we offer to boost your success.
                                 </p>
                             </div>
 
@@ -532,7 +532,7 @@ const HowToFindWork = () => {
                                     What projects can I find on Frevi?
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
-                                    Clients are looking for help across almost every industry, job, and skill set. Find the work you’re looking for, from specific projects to ongoing, long-term work, on fixed-price and hourly contracts. 
+                                    Clients are looking for help across almost every industry, service, and skill set. Find the work you’re looking for, from specific projects to ongoing, long-term work.
                                 </p>
                             </div>
 
@@ -541,7 +541,7 @@ const HowToFindWork = () => {
                                     What are Connects? 
                                 </h4>
                                 <p className="text-zinc-600 xl:text-xl sm:text-lg text-md">
-                                    Connects are Frevi’s virtual currency. Freelancers and agencies use them to show their genuine interest as they submit proposals. Different jobs require different amounts of Connects, some none at all. Freelancer accounts receive free Connects every month. You can buy bundles of them. And freelancers and agencies earn Connects by winning client interviews, getting great reviews, and demonstrating their skills.
+                                    Connects are Frevi’s virtual currency. Freelancers and agencies use them to show their genuine interest as they submit proposals. Different services require different amounts of Connects, some none at all. Freelancer accounts receive free Connects every month. You can buy bundles of them. And freelancers and agencies earn Connects by winning client interviews, getting great reviews, and demonstrating their skills.
                                 </p>
                             </div>
                         </div>

@@ -270,7 +270,7 @@ const HomeRepairServices = () => {
                     secondDesText="Yes, all professionals on our platform are verified for proper licensing (where required) and carry liability insurance. We also conduct background checks for your safety and peace of mind."
 
                     thirdHeadText="What if I'm not satisfied with the work?"
-                    thirdDesText="We stand behind our professionals' work. If you're not completely satisfied, contact us within 7 days and we'll work with the professional to make it right or arrange for another qualified pro to complete the job."
+                    thirdDesText="We stand behind our professionals' work. If you're not completely satisfied, contact us within 7 days and we'll work with the professional to make it right or arrange for another qualified pro to complete the service."
 
                     fourHeadText="How are prices determined?"
                     fourDesText="Prices are based on the type of service, scope of work, and materials needed. Many services offer free estimates where the professional will assess your specific needs and provide a detailed quote before starting work."

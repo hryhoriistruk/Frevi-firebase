@@ -20,7 +20,7 @@ const SearchLink = [
     {
         id: 3,
         title: "Jobs",
-        dec: "Apply to jobs posted by clintes",
+        dec: "Apply to services posted by clintes",
         icon: <BsBag/>
     }
 ]

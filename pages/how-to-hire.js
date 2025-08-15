@@ -112,7 +112,7 @@ const HowToHire = () => {
                                 Post a service and share a service
                             </h2>
                             <p className="text-zinc-600 sm:text-lg text-md lg:mt-5 mt-3">
-                                Post your job on the world’s work marketplace and wait for the proposals to flood in from talented people around the world.
+                                Post your service on the world’s service marketplace and wait for the proposals to flood in from talented people around the world.
                                 Our advanced algorithms help you shortlist candidates who are the best fit. And you can check profiles, portfolios, and reviews before you give someone the green light.
                             </p>
 
@@ -138,7 +138,7 @@ const HowToHire = () => {
                                 Start critical work right away with Project Catalog
                             </p>
                             <p className="text-zinc-600 sm:text-lg text-md lg:mt-5 mt-3">
-                                Post your job on the world’s work marketplace and wait for the proposals to flood in from talented people around the world.
+                                Post your service on the world’s service marketplace and wait for the proposals to flood in from talented people around the world.
                                 Our advanced algorithms help you shortlist candidates who are the best fit. And you can check profiles, portfolios, and reviews before you give someone the green light.
                             </p>
 
@@ -277,7 +277,7 @@ const HowToHire = () => {
                                 </span>
                                 <div className="flex items-center space-x-2 mt-3">
                                     <span className="text-green-500 text-lg"> <FaStar/> </span>
-                                    <span className="text-zinc-500 text-lg font-semibold"> 4.9/5 (15 jobs) </span>
+                                    <span className="text-zinc-500 text-lg font-semibold"> 4.9/5 (15 services) </span>
                                 </div>
                             </div>
                             
@@ -298,7 +298,7 @@ const HowToHire = () => {
                                 </span>
                                 <div className="flex items-center space-x-2 mt-3">
                                     <span className="text-green-500 text-lg"> <FaStar/> </span>
-                                    <span className="text-zinc-500 text-lg font-semibold"> 4.9/5 (15 jobs) </span>
+                                    <span className="text-zinc-500 text-lg font-semibold"> 4.9/5 (15 services) </span>
                                 </div>
                             </div>
                         </motion.div>
@@ -333,7 +333,7 @@ const HowToHire = () => {
                     </div>
                     <div className="grid md:grid-cols-2 xl:gap-x-16 lg:gap-x-10 md:gap-x-7 md:gap-y-0 gap-y-3 sm:mt-5 mt-3">
                         <p className="font-semibold lg:text-[22px] sm:text-[21px] text-[20px] text-zinc-600">
-                            You’ll have plenty of help choosing the right person for the job. And no matter who you’re hiring you can:
+                            You’ll have plenty of help choosing the right person for the service you need. And no matter who you’re you can getting help from:
                         </p>
 
                         <div className="space-y-4">

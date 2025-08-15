@@ -17,7 +17,7 @@ const JobSuccessCard = () => {
                 >
 
                 <span className="text-zinc-700 font-semibold text-[13px]">
-                    Today Job Success
+                    Today Service Success
                 </span>
                 <div className="flex space-x-[-3px]">
                     <span className="translate-x-0">

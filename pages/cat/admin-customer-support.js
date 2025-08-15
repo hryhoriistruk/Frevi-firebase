@@ -263,7 +263,7 @@ const ServicesMarketplace = () => {
                     firstDesText="Our platform connects people who need services with qualified professionals. Simply search for the service you need, compare providers based on ratings and prices, and book directly through the platform. Service providers will come to your location or provide the service remotely, depending on the type of service."
 
                     secondHeadText="How do I know if a service provider is qualified?"
-                    secondDesText="All providers on our platform are vetted through a verification process. You can check their ratings and reviews from previous customers, view their certifications (where applicable), and see how many jobs they've completed through our platform. Many providers also include portfolios of their previous work."
+                    secondDesText="All providers on our platform are vetted through a verification process. You can check their ratings and reviews from previous customers, view their certifications (where applicable), and see how many services they've completed through our platform. Many providers also include portfolios of their previous work."
 
                     thirdHeadText="What if I need to cancel or reschedule a service?"
                     thirdDesText="You can cancel or reschedule directly through your booking dashboard. Cancellation policies vary by provider - most require at least 24 hours notice for a full refund. In case of emergencies, our customer support team can help mediate any issues."

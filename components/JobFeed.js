@@ -1,96 +1,158 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import { FaMapMarkerAlt, FaMoneyBillWave, FaClock, FaBroom, FaTools, FaTruckMoving, FaHome } from 'react-icons/fa';
 
-const JobFeed = ({ limit }) => {
+const ServiceFeed = ({ limit }) => {
     const router = useRouter();
-    const [jobs, setJobs] = useState([]);
+    const [services, setServices] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Тут буде реальний запит до API
-        const mockJobs = [
+        // Mock data for services
+        const mockServices = [
             {
                 id: 1,
-                title: "Senior React Developer",
-                company: "Tech Innovations Inc.",
-                location: "Remote",
-                salary: "$90,000 - $120,000",
+                title: "Apartment Deep Cleaning",
+                company: "CleanHome Services",
+                location: "Kyiv, Ukraine",
+                price: "₴800 - ₴1500",
                 posted: "2 days ago",
-                logo: "/images/company1.png"
+                type: "Cleaning",
+                logo: "/images/cleaning-service.png"
             },
             {
                 id: 2,
-                title: "UX/UI Designer",
-                company: "Creative Solutions",
-                location: "New York, NY",
-                salary: "$80,000 - $100,000",
+                title: "Furniture Assembly",
+                company: "HandyPro",
+                location: "Lviv, Ukraine",
+                price: "₴500 - ₴3000",
                 posted: "1 week ago",
-                logo: "/images/company2.png"
+                type: "Installation",
+                logo: "/images/handypro.png"
             },
             {
                 id: 3,
-                title: "Backend Engineer (Node.js)",
-                company: "Data Systems LLC",
-                location: "San Francisco, CA",
-                salary: "$110,000 - $140,000",
+                title: "Local Moving Assistance",
+                company: "EasyMove",
+                location: "Odesa, Ukraine",
+                price: "₴2000 - ₴8000",
                 posted: "3 days ago",
-                logo: "/images/company3.png"
+                type: "Moving",
+                logo: "/images/easymove.png"
             },
             {
                 id: 4,
-                title: "Product Manager",
-                company: "Innovate Tech",
-                location: "Chicago, IL",
-                salary: "$95,000 - $125,000",
+                title: "Plumbing Repair",
+                company: "FixIt Pro",
+                location: "Kharkiv, Ukraine",
+                price: "₴600 - ₴2500",
                 posted: "Just now",
-                logo: "/images/company4.png"
+                type: "Repair",
+                logo: "/images/fixit.png"
+            },
+            {
+                id: 5,
+                title: "Window Installation",
+                company: "Home Comfort",
+                location: "Dnipro, Ukraine",
+                price: "₴3000 - ₴10000",
+                posted: "5 hours ago",
+                type: "Installation",
+                logo: "/images/home-comfort.png"
+            },
+            {
+                id: 6,
+                title: "Carpet Cleaning",
+                company: "FreshClean",
+                location: "Kyiv, Ukraine",
+                price: "₴400 - ₴1200",
+                posted: "1 day ago",
+                type: "Cleaning",
+                logo: "/images/freshclean.png"
+            },
+            {
+                id: 7,
+                title: "Appliance Installation",
+                company: "TechHandlers",
+                location: "Lviv, Ukraine",
+                price: "₴700 - ₴3500",
+                posted: "2 days ago",
+                type: "Installation",
+                logo: "/images/techhandlers.png"
+            },
+            {
+                id: 8,
+                title: "Office Cleaning",
+                company: "ProClean",
+                location: "Kyiv, Ukraine",
+                price: "₴1500 - ₴5000",
+                posted: "1 week ago",
+                type: "Cleaning",
+                logo: "/images/proclean.png"
             }
         ];
 
-        setJobs(limit ? mockJobs.slice(0, limit) : mockJobs);
+        setServices(limit ? mockServices.slice(0, limit) : mockServices);
         setLoading(false);
     }, [limit]);
 
-    if (loading) return <div>Loading jobs...</div>;
+    const getServiceIcon = (type) => {
+        switch(type.toLowerCase()) {
+            case 'cleaning':
+                return <FaBroom className="mr-2" />;
+            case 'installation':
+                return <FaTools className="mr-2" />;
+            case 'moving':
+                return <FaTruckMoving className="mr-2" />;
+            case 'repair':
+                return <FaTools className="mr-2" />;
+            default:
+                return <FaHome className="mr-2" />;
+        }
+    };
+
+    if (loading) return <div className="text-center py-8">Loading services...</div>;
 
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {jobs.map((job, index) => (
+            {services.map((service, index) => (
                 <motion.div
-                    key={job.id}
+                    key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer"
-                    onClick={() => router.push(`/jobs/${job.id}`)}
+                    onClick={() => router.push(`/services/${service.id}`)}
                 >
                     <div className="flex items-center mb-4">
                         <img
-                            src={job.logo}
-                            alt={job.company}
+                            src={service.logo}
+                            alt={service.company}
                             className="w-12 h-12 object-contain mr-4"
                         />
                         <div>
-                            <h3 className="font-bold text-lg">{job.title}</h3>
-                            <p className="text-gray-600">{job.company}</p>
+                            <h3 className="font-bold text-lg">{service.title}</h3>
+                            <p className="text-gray-600">{service.company}</p>
                         </div>
                     </div>
                     <div className="space-y-2">
                         <p className="flex items-center text-gray-600">
-                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            {job.location}
+                            <FaMapMarkerAlt className="mr-2" />
+                            {service.location}
                         </p>
                         <p className="flex items-center text-gray-600">
-                            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            {job.salary}
+                            <FaMoneyBillWave className="mr-2" />
+                            {service.price}
                         </p>
-                        <p className="text-sm text-gray-500">{job.posted}</p>
+                        <p className="flex items-center text-gray-600">
+                            {getServiceIcon(service.type)}
+                            {service.type}
+                        </p>
+                        <p className="text-sm text-gray-500">
+                            <FaClock className="inline mr-2" />
+                            {service.posted}
+                        </p>
                     </div>
                 </motion.div>
             ))}
@@ -98,4 +160,4 @@ const JobFeed = ({ limit }) => {
     );
 };
 
-export default JobFeed;
+export default ServiceFeed;

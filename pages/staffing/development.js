@@ -313,7 +313,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (26 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (26 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -366,7 +366,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (51 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (51 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -421,7 +421,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (26 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (26 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -473,7 +473,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (51 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (51 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">
@@ -528,7 +528,7 @@ const Development = () => {
                                         <div className="my-3 space-y-2">
                                             <div className="flex items-center space-x-1 text-zinc-800 font-semibold">
                                                 <FaStar className="text-sm text-green-600 mr-1"/>
-                                                5/5 <span className="text-zinc-500"> (15 jobs) </span>
+                                                5/5 <span className="text-zinc-500"> (15 services) </span>
                                             </div>
 
                                             <div className="flex flex-wrap">

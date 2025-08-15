@@ -34,7 +34,7 @@ const Footer = () => {
     const listII = [
         {id: 1, name: "How to find work", link: "/how-to-find-work"},
         {id: 2, name: "Direct Contracs", link: "#"},
-        {id: 3, name: "Find Freelace Job Worldwide", link: "#"},
+        {id: 3, name: "Find Freelace Service Worldwide", link: "#"},
     ];
 
     const listIII = [

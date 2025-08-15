@@ -40,7 +40,7 @@ const AllJobs = () => {
         <div className="min-h-screen flex flex-col">
 
             {/* ============== Head Tag =============== */}
-            <HeadTag title="Freelance Today's Jobs - Frevi"/>
+            <HeadTag title="Freelance Today's Services - Frevi"/>
 
             {/* ================== Header =================== */}
             <header className="header-bg">
@@ -92,7 +92,7 @@ const AllJobs = () => {
                             <div className="py-4 border-b-2 border-zinc-200 mt-1">
                                 <div className="flex justify-between items-center cursor-pointer" onClick={() => (jobType == true) ? useJobType(false) : useJobType(true)}>
                                     <span className="text-zinc-800 font-semibold text-[17px]"> 
-                                        Job type
+                                        Service type
                                     </span>
                                     <span className={`text-zinc-800 font-semibold text-2xl hover:text-zinc-600 transition ${(jobType == true) ? "rotate-180" : "rotate-0"}`}>
                                         <IoIosArrowDown/>
@@ -233,7 +233,7 @@ const AllJobs = () => {
                                         <input 
                                             type="text" 
                                             className="flex-grow focus:outline-none bg-transparent mx-3 text-zinc-700"
-                                            placeholder="Search for jobs"
+                                            placeholder="Search for services"
                                         />
                                         <span className="px-3 py-2 rounded-r-xl duration-300 ease-in bg-zinc-800 cursor-pointer hover:bg-[#2b4241fd]">
                                             <FaSearch className="h-5 text-white"/>
@@ -242,14 +242,14 @@ const AllJobs = () => {
 
                                     <div className="mt-2">
                                         <Link href="#" legacyBehavior><a className="font-semibold text-zinc-800 hover:underline hover:text-[#525554fd] cursor-pointer">
-                                                Today's jobs
+                                                Today's services
                                             </a></Link>
                                     </div>
                                 </div>
 
                                 <div className="flex sm:flex-row flex-col justify-between sm:items-center sm:space-y-0 space-y-5 mt-5">
                                     <div className="text-zinc-700">
-                                        <span className="text-zinc-800 font-semibold"> 125 </span> jobs found
+                                        <span className="text-zinc-800 font-semibold"> 125 </span> services found
                                     </div>
                                     
                                     <div className="flex items-center space-x-3">
@@ -319,7 +319,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments.
+                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this service is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this service are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments.
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -467,7 +467,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                       The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
+                                       The purpose of this service is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this service are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -578,7 +578,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools,"
+                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this service is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this service are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools,"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -615,7 +615,7 @@ const AllJobs = () => {
                                     </small>
 
                                     <p className="text-[15px] text-zinc-800">
-                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this job is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this job are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
+                                        Looking for an experienced individual who has a strong understanding of Lead Generation/ Data Entry. The purpose of this service is to source and build a contact list of small businesses that are located in the Ontario area. They must be using Shopify to host their websites. The responsibilities for this service are as follows: -Discover small businesses located in Ontario Canada that use Shopify to host their website- Use various research tools, Google and LinkedIn to discover the direct emails of marketing departments/business owners -Ability to locate any other relevant business information. -Thoroughly review all leads to ensure they meet our requirements. -Dedication to meet project deadlines in a timely manner - Data entry tasks using excel/Google sheets and potentially HubSpot. - The ability to communicate with our team on a daily basis using Frevi and Email"
                                     </p>
 
                                     <div className="flex space-x-2 space-y-1 items-start flex-wrap">
@@ -635,7 +635,7 @@ const AllJobs = () => {
                                     {/* =========== Left =========== */}
                                     <div className="flex md:flex-row flex-col md:items-center md:space-x-3 md:space-y-0 space-y-3">
                                         <label htmlFor="jobpages" className="text-zinc-800 font-semibold text-[13px]"> 
-                                            Jobs Per Page:  
+                                            Services Per Page: 
                                         </label>
                                         <select id="jobpages" className="bg-transparent border-2 border-gray-300 text-zinc-800 text-sm rounded-lg focus:ring-blue-500 focus:border-[#b8d8d4fd] block w-full px-3 py-2 cursor-pointer font-semibold">
                                             <option value="10">10</option>

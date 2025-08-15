@@ -34,7 +34,7 @@ export default function Home() {
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
                             >
-                                Find the right job or candidate for your business
+                                Find the right service for your business
                             </motion.p>
 
                             <motion.div
@@ -81,12 +81,12 @@ export default function Home() {
                 {/* Секція рекомендуваних вакансій */}
                 <section className="mb-16">
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-2xl font-bold text-gray-800">Recommended Jobs For You</h2>
+                        <h2 className="text-2xl font-bold text-gray-800">Recommended Services For You</h2>
                         <button
                             onClick={() => router.push("/jobs")}
                             className="text-blue-600 hover:underline"
                         >
-                            See all jobs
+                            See all services
                         </button>
                     </div>
                     <JobFeed limit={4}/>
@@ -98,7 +98,7 @@ export default function Home() {
                         <div className="md:w-1/2 mb-8 md:mb-0">
                             <h2 className="text-2xl font-bold mb-4 text-gray-800">Are you hiring?</h2>
                             <p className="text-gray-600 mb-6">
-                                Post your job to millions of professionals looking for work. Find the perfect candidate faster.
+                                Post your services to millions of people looking for service. Bacome the perfect candidate faster.
                             </p>
                             <button
                                 onClick={() => router.push("/post-job")}

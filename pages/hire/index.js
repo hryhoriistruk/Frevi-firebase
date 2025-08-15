@@ -390,7 +390,7 @@ const Hire = () => {
                                 Hire pros with the skills you need
                             </h2>
                             <p className="xl:mt-5 mt-3 text-zinc-800 text-lg">
-                                A quick search can put you in touch with independent pros and teams who can get your job done.
+                                A quick search can put you in touch with independent pros and teams who can get your service done.
                             </p>
 
                             <form className="flex flex-grow border-2 lg:max-w-lg rounded-full items-center px-1 py-1 bg-[#f9fffdfd] relative border-[#a9cac6fd] mt-7" onSubmit={SearchForm}>
@@ -404,7 +404,7 @@ const Hire = () => {
                                 </span>
                             </form>
                             <p className="mt-3 text-zinc-500">
-                                Looking for work? <span className="font-semibold text-cyan-800 cursor-pointer transition hover:underline">
+                                Looking for service? <span className="font-semibold text-cyan-800 cursor-pointer transition hover:underline">
                                     Apply as an independent pro 
                                 </span>
                             </p>
@@ -454,7 +454,7 @@ const Hire = () => {
                                 </span>
                                 <div className="flex items-center space-x-2 mt-3">
                                     <span className="text-green-500 text-lg"> <FaStar/> </span>
-                                    <span className="text-zinc-500 text-lg"> 4.9/5 (15 jobs) </span>
+                                    <span className="text-zinc-500 text-lg"> 4.9/5 (15 services) </span>
                                 </div>
                             </div>
                         </div>
@@ -504,7 +504,7 @@ const Hire = () => {
                                     </h5>
                                 </div>
                                 <p className="text-[17px] text-zinc-500 my-2">
-                                    Find pros who can start right away and handle any job
+                                    Find pros who can start right away and handle any service
                                 </p>
                             </div>
                         </div>
