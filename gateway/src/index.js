@@ -15,9 +15,9 @@ app.use(jwt({
 
 // Service Routing
 const services = {
-    '/users': 'http://user-service:3001',
-    '/orders': 'http://order-service:3002',
-    '/messages': 'http://messenger-service:3003'
+    '/users': 'http://user-service:9191',
+    '/orders': 'http://order-service:9192',
+    '/messages': 'http://messenger-service:9193'
 };
 
 Object.entries(services).forEach(([path, target]) => {

@@ -248,11 +248,12 @@ export default function Home() {
                             See all services
                         </button>
                     </div>
-                    <JobFeed limit={4}/>
+                    <JobFeed limit={4} linkBase="/jobs"/> {/* Додано пропс linkBase */}
                 </section>
 
                 <section className="container mx-auto mt-16 py-3 md:px-5 sm:px-7 px-3">
-                    <h2 className="text-[#0C4A6E] text-2xl font-bold mb-6">Top Companies with the best services provide their services Now</h2>
+                    <h2 className="text-[#0C4A6E] text-2xl font-bold mb-6">Top Companies with the best services provide
+                        their services Now</h2>
                     <CompanySlider/>
                 </section>
 
@@ -467,10 +468,11 @@ export default function Home() {
                             >
                                 For Talent
                             </motion.h5>
-                            <motion.h3 className="font-semibold lg:text-5xl text-4xl text-zinc-700 lg:mt-7 mt-5 lg:mb-3 mb-1"
-                                       initial={{y: "100", opacity: 0}}
-                                       whileInView={{y: 0, opacity: 1}}
-                                       transition={{duration: 1}}
+                            <motion.h3
+                                className="font-semibold lg:text-5xl text-4xl text-zinc-700 lg:mt-7 mt-5 lg:mb-3 mb-1"
+                                initial={{y: "100", opacity: 0}}
+                                whileInView={{y: 0, opacity: 1}}
+                                transition={{duration: 1}}
                             >
                                 Find great work
                             </motion.h3>

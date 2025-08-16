@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:9091/api'; // Замініть на URL вашого бекенду
+const API_BASE_URL = 'http://localhost:9191/api'; // Замініть на URL вашого бекенду
 
 export const UserService = {
     // Отримати всіх користувачів

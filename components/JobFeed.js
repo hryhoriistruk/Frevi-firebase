@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaMoneyBillWave, FaClock, FaBroom, FaTools, FaTruckMoving, FaHome } from 'react-icons/fa';
+import Link from 'next/link';
+import {
+    FaMapMarkerAlt,
+    FaMoneyBillWave,
+    FaClock,
+    FaBroom,
+    FaTools,
+    FaTruckMoving,
+    FaHome
+} from 'react-icons/fa';
 
-const ServiceFeed = ({ limit }) => {
+const JobFeed = ({ limit }) => {
     const router = useRouter();
     const [services, setServices] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -117,47 +126,51 @@ const ServiceFeed = ({ limit }) => {
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-                <motion.div
+                <Link
+                    href={`/jobs/${service.id}`}
                     key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer"
-                    onClick={() => router.push(`/services/${service.id}`)}
+                    passHref
                 >
-                    <div className="flex items-center mb-4">
-                        <img
-                            src={service.logo}
-                            alt={service.company}
-                            className="w-12 h-12 object-contain mr-4"
-                        />
-                        <div>
-                            <h3 className="font-bold text-lg">{service.title}</h3>
-                            <p className="text-gray-600">{service.company}</p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition cursor-pointer"
+                    >
+                        <div className="flex items-center mb-4">
+                            <img
+                                src={service.logo}
+                                alt={service.company}
+                                className="w-12 h-12 object-contain mr-4"
+                            />
+                            <div>
+                                <h3 className="font-bold text-lg">{service.title}</h3>
+                                <p className="text-gray-600">{service.company}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="space-y-2">
-                        <p className="flex items-center text-gray-600">
-                            <FaMapMarkerAlt className="mr-2" />
-                            {service.location}
-                        </p>
-                        <p className="flex items-center text-gray-600">
-                            <FaMoneyBillWave className="mr-2" />
-                            {service.price}
-                        </p>
-                        <p className="flex items-center text-gray-600">
-                            {getServiceIcon(service.type)}
-                            {service.type}
-                        </p>
-                        <p className="text-sm text-gray-500">
-                            <FaClock className="inline mr-2" />
-                            {service.posted}
-                        </p>
-                    </div>
-                </motion.div>
+                        <div className="space-y-2">
+                            <p className="flex items-center text-gray-600">
+                                <FaMapMarkerAlt className="mr-2" />
+                                {service.location}
+                            </p>
+                            <p className="flex items-center text-gray-600">
+                                <FaMoneyBillWave className="mr-2" />
+                                {service.price}
+                            </p>
+                            <p className="flex items-center text-gray-600">
+                                {getServiceIcon(service.type)}
+                                {service.type}
+                            </p>
+                            <p className="text-sm text-gray-500">
+                                <FaClock className="inline mr-2" />
+                                {service.posted}
+                            </p>
+                        </div>
+                    </motion.div>
+                </Link>
             ))}
         </div>
     );
 };
 
-export default ServiceFeed;
+export default JobFeed;
